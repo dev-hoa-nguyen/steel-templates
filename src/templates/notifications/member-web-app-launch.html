@@ -1,0 +1,909 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            /* ===== FONT ===== */
+            body,
+            table,
+            td,
+            p,
+            div,
+            span,
+            a,
+            h1,
+            h2,
+            h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* ===== RESET ===== */
+            body,
+            table,
+            td,
+            a {
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+            }
+            table,
+            td {
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                border-collapse: collapse !important;
+            }
+            img {
+                -ms-interpolation-mode: bicubic;
+                border: 0;
+                height: auto;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;
+                display: block;
+            }
+            body {
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            /* ===== BASE COLORS ===== */
+            .bg-page {
+                background-color: #f4f4f4;
+            }
+            .bg-dark {
+                background-color: #1a1a1a;
+            }
+            .bg-darker {
+                background-color: #111111;
+            }
+            .bg-olive {
+                background-color: #2b2925;
+            }
+            .bg-cream {
+                background-color: #fafaf8;
+            }
+            .bg-white {
+                background-color: #ffffff;
+            }
+            .bg-badge {
+                background-color: #e5e2dc;
+            }
+            .bg-intro-box {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .bg-benefit-box {
+                background-color: #3a3733;
+            }
+
+            /* ===== OUTER WRAPPER ===== */
+            .outer-table {
+                table-layout: fixed;
+            }
+            .wrapper {
+                width: 700px;
+            }
+            .wrapper-shadow {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            /* ===== HEADER ===== */
+            .header-cell {
+                padding: 40px 30px;
+                border-bottom: 5px solid #c5a880;
+            }
+            /* ===== TYPOGRAPHY SCALE ===== */
+            /* Base: 14px body, 12px secondary, 11px caption */
+
+            .header-tagline {
+                color: #c5a880;
+                font-size: 11px;
+                font-weight: bold;
+                margin: 8px 0 16px 0;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+            .header-badge-cell {
+                padding: 14px 36px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #111111;
+                letter-spacing: 1px;
+            }
+            .header-badge-table {
+                border-radius: 30px;
+                margin-bottom: 30px;
+            }
+            .intro-box-cell {
+                padding: 20px;
+                text-align: left;
+                font-size: 13px;
+                line-height: 1.6;
+                border-radius: 4px;
+            }
+            .intro-box-title {
+                color: #f5f5f5;
+                font-size: 14px;
+                line-height: 1.65;
+                display: block;
+                margin-bottom: 8px;
+            }
+            .intro-box-sub {
+                color: #b3b3b3;
+                font-style: italic;
+                font-size: 13px;
+                line-height: 1.6;
+                display: block;
+            }
+            .intro-box-mb {
+                margin-bottom: 20px;
+            }
+
+            /* ===== EXPERIENCE TITLE ===== */
+            .section-pad {
+                padding: 50px 40px 30px 40px;
+            }
+            .section-title {
+                font-family: "Times New Roman", Times, Georgia, serif;
+                font-style: italic;
+                letter-spacing: 1px;
+                color: #111111;
+                font-size: 22px;
+                font-weight: normal;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 1.25;
+            }
+            .section-sub {
+                font-size: 12px;
+                letter-spacing: 4px;
+                color: #555555;
+                margin: 8px 0 20px 0;
+                text-transform: uppercase;
+            }
+            .section-arrow {
+                font-size: 18px;
+                color: #333333;
+            }
+
+            /* ===== STEPS ===== */
+            .steps-wrapper {
+                padding: 30px 30px 0 30px;
+            }
+            .steps-wrapper-last {
+                padding-bottom: 40px;
+            }
+            .step-row {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .step-row-reverse {
+                flex-direction: row-reverse;
+            }
+            .step-col-text {
+                flex: 1;
+            }
+            .step-col-img {
+                flex: 0 0 44%;
+                text-align: center;
+            }
+            .step-box {
+                background-color: #f2f0eb;
+                /*border: 1px solid #d3d0c9;*/
+                text-align: left;
+                border-radius: 6px;
+            }
+            .step-box td {
+                padding: 6px;
+            }
+
+            .step-number {
+                font-size: 18px;
+                font-weight: bold;
+                color: #111111;
+                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+            }
+            .step-text-vi {
+                font-size: 14px;
+                color: #1a1a1a;
+                font-weight: 600;
+                line-height: 1.65;
+                margin-bottom: 6px;
+            }
+            .step-text-vi a {
+                color: #1a1a1a;
+                text-decoration: underline;
+            }
+            .step-text-en {
+                font-size: 13px;
+                color: #666666;
+                font-style: italic;
+                line-height: 1.55;
+            }
+            .step-text-en a {
+                color: #666666;
+            }
+            .step-img {
+                width: 220px;
+                height: 380px;
+                object-fit: contain;
+                object-position: center bottom;
+                display: block;
+                margin: 0 auto;
+            }
+            .spacer-row {
+                height: 20px;
+            }
+
+            /* ===== BENEFITS ===== */
+            .benefits-title-cell {
+                padding: 50px 40px 30px 40px;
+                border-top: 1px solid #3d3a35;
+            }
+            .benefits-tagline {
+                font-size: 11px;
+                letter-spacing: 3px;
+                color: #c5a880;
+                margin: 0 0 8px 0;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .benefits-title {
+                font-family: "Times New Roman", Times, Georgia, serif;
+                font-style: italic;
+                letter-spacing: 1px;
+                color: #ffffff;
+                font-size: 24px;
+                font-weight: normal;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 1.25;
+            }
+            .benefits-list-cell {
+                padding: 10px 30px 40px 30px;
+            }
+            .benefit-box {
+                margin-bottom: 15px;
+                border-radius: 4px;
+            }
+            .benefit-box-cell {
+                padding: 16px 20px;
+                font-size: 13px;
+                color: #f0ede8;
+                font-weight: bold;
+                line-height: 1.45;
+                letter-spacing: 0.3px;
+            }
+            .benefit-check {
+                color: #4ade80;
+                margin-right: 8px;
+            }
+            .benefit-sub {
+                font-size: 12px;
+                color: #aaa9a0;
+                font-style: italic;
+                font-weight: normal;
+                margin-top: 5px;
+                line-height: 1.5;
+            }
+
+            /* ===== FOOTER NOTE (asterisk) ===== */
+            .footer-cell {
+                padding: 24px 30px;
+                border-top: 1px solid #2b2925;
+            }
+            .footer-note-vi {
+                font-size: 11px;
+                color: #999999;
+                line-height: 1.65;
+                margin: 0 0 12px 0;
+            }
+            .footer-note-en {
+                font-size: 11px;
+                color: #777777;
+                line-height: 1.65;
+                margin: 0;
+                font-style: italic;
+            }
+
+            /* ===== FOOTER LEGAL ===== */
+            .footer-legal-cell {
+                padding: 28px 30px;
+                border-top: 1px solid #2a2a2a;
+                text-align: left;
+            }
+            .footer-legal-en {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+            }
+            .footer-divider {
+                font-size: 11px;
+                color: #666666;
+
+                letter-spacing: 2px;
+            }
+            .footer-legal-vi {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+                margin: 0;
+            }
+
+            /* ===== SIGNATURE ===== */
+            .signature-cell {
+                padding: 32px 30px;
+                border-top: 1px solid #2a2a2a;
+                text-align: center;
+            }
+            .signature-tagline {
+                font-size: 12px;
+                color: #cccccc;
+                font-style: italic;
+                margin: 0 0 14px 0;
+                letter-spacing: 0.5px;
+            }
+            .signature-logo {
+                display: block;
+                margin: 0 auto 12px auto;
+            }
+            .signature-website {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0 0 4px 0;
+                text-decoration: none;
+            }
+            .signature-email {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0;
+                text-decoration: none;
+            }
+            .signature-website a,
+            .signature-email a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+
+            @media screen and (max-width: 480px) {
+                .wrapper {
+                    width: 100% !important;
+                    max-width: 100% !important;
+                }
+                .mobile-stack {
+                    display: block !important;
+                    width: 100% !important;
+                    box-sizing: border-box !important;
+                }
+                .step-col-img-left,
+                .step-col-img-right {
+                    padding: 0 !important;
+                }
+                .step-row,
+                .step-row-reverse {
+                    flex-direction: column !important;
+                    gap: 16px !important;
+                }
+                /* Step 02: image goes below text on mobile */
+                .step-row-reverse {
+                    flex-direction: column-reverse !important;
+                }
+                .step-col-text,
+                .step-col-img {
+                    width: 100% !important;
+                    flex: none !important;
+                }
+                .step-col-img img {
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-page">
+        <center>
+            <table
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+                class="outer-table bg-page"
+            >
+                <tr>
+                    <td align="center" valign="top">
+                        <!-- Main Container -->
+                        <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="600"
+                            class="wrapper bg-white wrapper-shadow"
+                        >
+                            <!-- ===== HEADER ===== -->
+                            <tr>
+                                <td
+                                    align="center"
+                                    valign="top"
+                                    class="bg-dark header-cell"
+                                >
+                                    <!-- Logo -->
+                                    <img
+                                        src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                                        alt="STEEL"
+                                        width="120"
+                                    />
+
+                                    <!-- Tagline -->
+                                    <p class="header-tagline">
+                                        STEEL CHÍNH THỨC RA MẮT
+                                    </p>
+
+                                    <!-- Badge -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        class="bg-badge header-badge-table"
+                                    >
+                                        <tr>
+                                            <td
+                                                align="center"
+                                                valign="middle"
+                                                class="header-badge-cell"
+                                            >
+                                                STEEL MEMBER WEB APP
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- Intro box 1 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="bg-intro-box intro-box-mb"
+                                    >
+                                        <tr>
+                                            <td class="intro-box-cell">
+                                                <strong class="intro-box-title"
+                                                    >STEEL chính thức đưa Member
+                                                    App vào sử dụng nhằm mang
+                                                    đến trải nghiệm check-in
+                                                    nhanh chóng và thuận tiện
+                                                    hơn cho Hội viên.</strong
+                                                >
+                                                <span class="intro-box-sub"
+                                                    >STEEL is officially
+                                                    launching the Member App to
+                                                    provide Members with a
+                                                    faster and more convenient
+                                                    check-in experience.</span
+                                                >
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- Intro box 2 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="bg-intro-box"
+                                    >
+                                        <tr>
+                                            <td class="intro-box-cell">
+                                                <strong class="intro-box-title"
+                                                    >Việc check-in tại STEEL giờ
+                                                    đây đã được tích hợp ngay
+                                                    trên điện thoại của
+                                                    bạn.</strong
+                                                >
+                                                <span class="intro-box-sub"
+                                                    >Your STEEL check-in is now
+                                                    on your phone.</span
+                                                >
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- ===== EXPERIENCE TITLE ===== -->
+                            <tr>
+                                <td
+                                    align="center"
+                                    valign="top"
+                                    class="bg-cream section-pad"
+                                >
+                                    <h2 class="section-title">
+                                        YOUR NEW STEEL<br />CHECK-IN EXPERIENCE
+                                    </h2>
+                                    <p class="section-sub">STARTS HERE</p>
+                                    <span class="section-arrow">↓</span>
+                                </td>
+                            </tr>
+
+                            <!-- ===== STEP 01 ===== -->
+                            <tr>
+                                <td class="bg-cream steps-wrapper">
+                                    <div class="step-row">
+                                        <div class="step-col-text">
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                class="step-box"
+                                            >
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div
+                                                            class="step-number"
+                                                        >
+                                                            &#8594; 01
+                                                        </div>
+                                                        <div
+                                                            class="step-text-vi"
+                                                        >
+                                                            Truy cập địa chỉ web
+                                                            <a
+                                                                href="https://member.steelsaigon.com/"
+                                                                >https://member.steelsaigon.com/</a
+                                                            >
+                                                            trên trình duyệt
+                                                            web.
+                                                        </div>
+                                                        <div
+                                                            class="step-text-en"
+                                                        >
+                                                            Go to
+                                                            <a
+                                                                href="https://member.steelsaigon.com/"
+                                                                >https://member.steelsaigon.com/</a
+                                                            >
+                                                            on your device's
+                                                            browser.
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="step-col-img">
+                                            <img
+                                                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779706632/Step-1_q7qpsr.png"
+                                                alt="Step 1"
+                                                class="step-img"
+                                            />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ===== STEP 02 ===== -->
+                            <tr>
+                                <td class="bg-cream steps-wrapper">
+                                    <div class="step-row step-row-reverse">
+                                        <!-- IMAGE first in DOM = left on desktop; column-reverse on mobile puts it below text -->
+                                        <div class="step-col-img">
+                                            <img
+                                                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779719263/step-2_yu9shr.png"
+                                                alt="Step 2"
+                                                class="step-img"
+                                            />
+                                        </div>
+                                        <div class="step-col-text">
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                class="step-box"
+                                            >
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div
+                                                            class="step-number"
+                                                        >
+                                                            &#8594; 02
+                                                        </div>
+                                                        <div
+                                                            class="step-text-vi"
+                                                        >
+                                                            Nhập địa chỉ email
+                                                            đã đăng ký với
+                                                            STEEL.
+                                                        </div>
+                                                        <div
+                                                            class="step-text-en"
+                                                        >
+                                                            Enter your
+                                                            registered email
+                                                            address.
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ===== STEP 03 ===== -->
+                            <tr>
+                                <td
+                                    class="bg-cream steps-wrapper steps-wrapper-last"
+                                >
+                                    <div class="step-row">
+                                        <div class="step-col-text">
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                class="step-box"
+                                            >
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div
+                                                            class="step-number"
+                                                        >
+                                                            &#8594; 03
+                                                        </div>
+                                                        <div
+                                                            class="step-text-vi"
+                                                        >
+                                                            Kiểm tra email để
+                                                            nhận mã OTP và nhập
+                                                            mã OTP để truy cập
+                                                            tài khoản.
+                                                        </div>
+                                                        <div
+                                                            class="step-text-en"
+                                                        >
+                                                            Check your email
+                                                            inbox for the OTP
+                                                            and enter the OTP to
+                                                            access your account.
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="step-col-img">
+                                            <img
+                                                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779719263/step-3_srwbw1.png"
+                                                alt="Step 3"
+                                                class="step-img"
+                                            />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ===== BENEFITS TITLE ===== -->
+                            <tr>
+                                <td
+                                    align="center"
+                                    valign="top"
+                                    class="bg-olive benefits-title-cell"
+                                >
+                                    <p class="benefits-tagline">
+                                        ENJOY EXCLUSIVE
+                                    </p>
+                                    <h2 class="benefits-title">
+                                        BENEFITS AND PRIVILEGES
+                                    </h2>
+                                </td>
+                            </tr>
+
+                            <!-- ===== BENEFITS LIST ===== -->
+                            <tr>
+                                <td
+                                    align="center"
+                                    valign="top"
+                                    class="bg-olive benefits-list-cell"
+                                >
+                                    <!-- Benefit 1 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="benefit-box bg-benefit-box"
+                                    >
+                                        <tr>
+                                            <td
+                                                valign="top"
+                                                class="benefit-box-cell"
+                                            >
+                                                <span class="benefit-check"
+                                                    >✓</span
+                                                >
+                                                SỬ DỤNG MÃ QR MEMBERSHIP ĐỂ
+                                                CHECK-IN TẠI CÂU LẠC BỘ
+                                                <div class="benefit-sub">
+                                                    Your membership QR Code for
+                                                    club check-in
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- Benefit 2 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="benefit-box bg-benefit-box"
+                                    >
+                                        <tr>
+                                            <td
+                                                valign="top"
+                                                class="benefit-box-cell"
+                                            >
+                                                <span class="benefit-check"
+                                                    >✓</span
+                                                >
+                                                QUẢN LÝ THÔNG TIN GÓI TẬP HIỆN
+                                                TẠI VÀ CÁC GÓI TẬP TRƯỚC ĐÂY
+                                                <div class="benefit-sub">
+                                                    Your current and past
+                                                    subscription details
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- Benefit 3 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="benefit-box bg-benefit-box"
+                                    >
+                                        <tr>
+                                            <td
+                                                valign="top"
+                                                class="benefit-box-cell"
+                                            >
+                                                <span class="benefit-check"
+                                                    >✓</span
+                                                >
+                                                THEO DÕI ĐIỂM THƯỞNG TÍCH LŨY
+                                                <div class="benefit-sub">
+                                                    Your reward point credit
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- Benefit 4 -->
+                                    <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        width="100%"
+                                        class="benefit-box bg-benefit-box"
+                                    >
+                                        <tr>
+                                            <td
+                                                valign="top"
+                                                class="benefit-box-cell"
+                                            >
+                                                <span class="benefit-check"
+                                                    >✓</span
+                                                >
+                                                ĐẶT LỊCH LỚP GROUP CLASS
+                                                <div class="benefit-sub">
+                                                    Group class booking
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- ===== FOOTER NOTE ===== -->
+                            <tr>
+                                <td
+                                    align="left"
+                                    valign="top"
+                                    class="bg-dark footer-cell"
+                                >
+                                    <p class="footer-note-vi">
+                                        * Sau khi đăng nhập, Member Web App sẽ
+                                        duy trì trạng thái đăng nhập trong vòng
+                                        30 ngày kể từ lần sử dụng gần nhất trên
+                                        1 thiết bị. Sau thời gian này, Quý Hội
+                                        viên sẽ cần đăng nhập lại để tiếp tục sử
+                                        dụng.<br />
+                                        Trong trường hợp gặp khó khăn khi đăng
+                                        nhập, Quý Hội viên vui lòng liên hệ đội
+                                        ngũ Front Desk hoặc Consultant để được
+                                        hỗ trợ.
+                                    </p>
+                                    <p class="footer-note-en">
+                                        * Once logged in, your Member Web App
+                                        will stay signed in for 30 days from
+                                        your last use on one device. After that
+                                        period, you will be required to log in
+                                        again.<br />
+                                        If you have any trouble logging in,
+                                        please contact our Front Desk team or
+                                        your Consultant for assistance.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <!-- ===== FOOTER LEGAL ===== -->
+                            <tr>
+                                <td class="bg-darker footer-legal-cell">
+                                    <p class="footer-legal-en">
+                                        You've received this transactional email
+                                        for informational purposes to update you
+                                        about important changes related to your
+                                        STEEL membership, account, or service
+                                        access.<br />This message is part of
+                                        STEEL's official service communications
+                                        and is not a marketing email.<br />This
+                                        message was sent from a
+                                        notification-only email address that
+                                        doesn't accept incoming emails. If you
+                                        have any questions, please contact STEEL
+                                        Front Desk or your Consultant for
+                                        assistance.
+                                    </p>
+                                    <p class="footer-divider">&mdash;</p>
+                                    <p class="footer-legal-vi">
+                                        Quý Hội viên nhận được email giao dịch
+                                        này nhằm cập nhật các thay đổi quan
+                                        trọng liên quan đến Membership, tài
+                                        khoản hoặc quyền truy cập dịch vụ tại
+                                        STEEL.<br />Đây là một phần trong các
+                                        thông báo dịch vụ chính thức của STEEL
+                                        và không phải email quảng cáo.<br />Email
+                                        này được gửi từ địa chỉ chỉ dùng để gửi
+                                        đi thông báo, và không nhận lại được
+                                        phản hồi. Nếu cần hỗ trợ, Quý Hội viên
+                                        vui lòng liên hệ Front Desk hoặc
+                                        Consultant của STEEL.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <!-- ===== SIGNATURE ===== -->
+                            <tr>
+                                <td class="bg-darker signature-cell">
+                                    <p class="signature-tagline">
+                                        With Strength,
+                                    </p>
+                                    <img
+                                        src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                                        alt="STEEL"
+                                        width="80"
+                                        class="signature-logo"
+                                    />
+                                    <p class="signature-website">
+                                        <a href="https://www.steelsaigon.com"
+                                            >www.steelsaigon.com</a
+                                        >
+                                    </p>
+                                    <p class="signature-email">
+                                        <a href="mailto:hello@steelsaigon.com"
+                                            >hello@steelsaigon.com</a
+                                        >
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,2207 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Hợp đồng cung cấp dịch vụ – Monthly Subscription / Service
+            Contract – Monthly Subscription
+        </title>
+        <style>
+            /* ---------- page ---------- */
+            @page {
+                size: A4;
+                margin: 18mm 16mm 16mm;
+            }
+
+            :root {
+                --ink: #000;
+                --en: #1c4587;
+                --muted: #666;
+                --rule: #d4d4d4;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0 auto;
+                padding: 18mm 16mm;
+                max-width: 210mm;
+                background: #fff;
+                color: var(--ink);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10.5pt;
+                line-height: 1.45;
+                text-align: justify;
+            }
+
+            /* ---------- masthead ---------- */
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 6pt;
+                border-bottom: 1px solid var(--rule);
+            }
+            .masthead img {
+                width: 124px;
+                height: auto;
+            }
+            .masthead div {
+                text-align: right;
+                font-size: 9pt;
+                color: var(--muted);
+                line-height: 1.35;
+            }
+
+            /* ---------- headings ---------- */
+            h1 {
+                margin: 18pt 0 6pt;
+                font-size: 14pt;
+                line-height: 1.3;
+                text-align: center;
+            }
+            h2 {
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
+                line-height: 1.3;
+                text-align: left;
+            }
+            h3 {
+                margin: 12pt 0 4pt;
+                font-size: 10.5pt;
+                text-align: left;
+            }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- text ---------- */
+            p {
+                margin: 5pt 0;
+                orphans: 3;
+                widows: 3;
+            }
+            .en {
+                color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
+            }
+            li {
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .space {
+                height: 26mm;
+            }
+
+            /* ---------- print ---------- */
+            @media print {
+                body {
+                    max-width: none;
+                    padding: 0;
+                    font-size: 10pt;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                body {
+                    padding: 16px;
+                    font-size: 11pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="masthead">
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1789133802/image1_buslce.png"
+                alt="STEEL Saigon"
+            />
+            <div>
+                <strong>HỢP ĐỒNG HỘI VIÊN - MEMBERSHIP CONTRACT</strong
+                ><br />WWW.STEELSAIGON.COM
+            </div>
+        </header>
+
+        <h1>
+            HỢP ĐỒNG CUNG CẤP DỊCH VỤ<br /><span class="en"
+                >SERVICE CONTRACT</span
+            ><br />(LOẠI HÌNH THANH TOÁN HÀNG THÁNG TỰ ĐỘNG /
+            <span class="en">MONTHLY SUBSCRIPTION</span>)
+        </h1>
+        <p class="center">Số/<em>No.</em>: {A}</p>
+
+        <ul class="dash">
+            <li>
+                Căn cứ Bộ luật Dân sự số 91/2015/QH13 ngày 24 tháng 11 năm 2015;
+                <p class="en">
+                    Pursuant to the Civil Code No. 91/2015/QH13 dated November
+                    24, 2015;
+                </p>
+            </li>
+            <li>
+                Căn cứ Luật Thương mại số 36/2005/QH11 ngày 14 tháng 06 năm 2005;
+                <p class="en">
+                    Pursuant to the Commercial Law No. 36/2005/QH11 dated June
+                    14, 2005;
+                </p>
+            </li>
+            <li>
+                Căn cứ vào nhu cầu và khả năng của các bên.
+                <p class="en">
+                    Based on the demand and abilities of the Parties.
+                </p>
+            </li>
+        </ul>
+
+        <p>
+            Hôm nay, ngày {B}, các bên gồm: /
+            <span class="en">Today, {B}, we are:</span>
+        </p>
+
+        <div class="party">
+            <h3>
+                BÊN A – BÊN CUNG CẤP DỊCH VỤ /
+                <span class="en">PARTY A – SERVICE PROVIDER:</span>
+            </h3>
+            <p>
+                <strong>CÔNG TY CỔ PHẦN STEEL SÀI GÒN</strong> (Gọi tắt là
+                “STEEL”)
+            </p>
+            <p class="en">
+                <strong>STEEL SAIGON JOINT STOCK COMPANY</strong> (hereinafter
+                referred to as “STEEL”)
+            </p>
+            <p>
+                <strong>Địa chỉ:</strong> B2.2A, Tầng hầm 2, T. Maldives, GĐ 2,
+                Số 1, Đường 104, KP3, Phường Bình Trưng, TP Hồ Chí Minh, Việt
+                Nam.
+            </p>
+            <p class="en">
+                <strong>Address:</strong> B2.2A, Basement 2, Maldives Tower,
+                Phase 2, No. 1, Street 104, Ward 3, Binh Trung Ward, Ho Chi Minh
+                City, Vietnam.
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong> 0931 302 177
+            </p>
+            <p>
+                <strong>Mã số thuế</strong>
+                <strong class="en">/ Tax Code:</strong> 0316376471
+            </p>
+            <p>
+                <strong>Đại diện</strong>
+                <strong class="en">/ Represented by:</strong> Ông
+                <em>(Mr.)</em> Bùi Trương Việt Anh
+            </p>
+        </div>
+
+        <div class="party">
+            <h3>
+                BÊN B – KHÁCH HÀNG / <span class="en">PARTY B – CUSTOMER:</span>
+            </h3>
+            <p>
+                <strong>Họ và tên</strong>
+                <strong class="en">/ Full name:</strong> {C}
+            </p>
+            <p>
+                <strong>Ngày sinh</strong>
+                <strong class="en">/ Date of birth:</strong> {D}
+            </p>
+            <p>
+                <strong>Giới tính</strong>
+                <strong class="en">/ Gender:</strong> {E}
+            </p>
+            <p>
+                <strong>CCCD hoặc Hộ chiếu số</strong>
+                <strong class="en">/ ID or Passport No.:</strong> {F}
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong> {G}
+            </p>
+            <p><strong>Email:</strong> {H}</p>
+            <p>
+                <em>(Sau đây gọi là “Khách Hàng”)/</em>
+                <span class="en">(hereinafter referred to as “Customer”)</span>
+            </p>
+        </div>
+
+        <p>
+            Hai bên đã thỏa thuận và đồng ý ký kết hợp đồng cung cấp dịch vụ
+            (“Hợp Đồng”) này với các nội dung như sau:
+        </p>
+        <p class="en">
+            The two parties have agreed and consented to sign this Service
+            Contract (hereinafter referred to as “Contract”) as follows:
+        </p>
+
+        <h2>
+            ĐIỀU 1. CHỨNG NHẬN SỨC KHỎE VÀ MIỄN TRỪ TRÁCH NHIỆM<br /><span
+                class="en"
+                >ARTICLE 1. HEALTH ATTESTATION AND LIABILITY WAIVER.</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>1.1.</b>Khách Hàng có trách nhiệm xác định và đảm bảo rằng bản
+                thân có đủ sức khỏe để tham gia tập luyện trước khi ký vào Hợp
+                Đồng này.
+                <p class="en">
+                    The Customer is responsible for determining and ensuring that
+                    they are in good health to participate in training before
+                    signing this Contract.
+                </p>
+            </li>
+            <li>
+                <b>1.2.</b>Khách Hàng phải cam đoan bản thân mình đang ở thể
+                trạng tốt, không bị yêu cầu hạn chế tập luyện bởi bất kỳ khuyến
+                cáo y khoa nào và có thể chủ động thực hiện các bài tập mà không
+                gây ảnh hưởng tiêu cực đến tình trạng sức khỏe và an toàn của
+                Khách Hàng. Trường hợp Khách Hàng nhận thấy tình trạng sức khỏe
+                có chuyển biến xấu hoặc gặp chấn thương trong quá trình tập
+                luyện, Khách Hàng vui lòng thông báo ngay lập tức cho nhân viên
+                gần nhất của STEEL để được hỗ trợ kịp thời.
+                <p class="en">
+                    The Customer must affirm that they are in good physical
+                    condition, not subject to any medical restrictions on
+                    exercising and able to voluntarily perform exercises without
+                    endangering their health and safety. In the event the
+                    Customer feels their health condition deteriorating or
+                    experiences an injury during the training process, the
+                    Customer shall immediately inform the nearest STEEL staff
+                    member for timely assistance.
+                </p>
+            </li>
+            <li>
+                <b>1.3.</b>Khách Hàng hiểu và thừa nhận rằng, có những nguy cơ và
+                rủi ro liên quan đến việc tập luyện thể chất có thể xảy ra.
+                Những rủi ro này bao gồm, nhưng không giới hạn ở: Huyết áp bất
+                thường, ngất xỉu, rối loạn tim mạch, bong gân, căng cơ. Đồng
+                thời, việc tập luyện vượt quá giới hạn thể chất của bản thân
+                và/hoặc tai nạn liên quan đến thiết bị tập có thể dẫn đến chấn
+                thương nghiêm trọng.
+                <p class="en">
+                    The Customer understands and acknowledges that there are
+                    risks and hazards associated with physical training that may
+                    occur. These risks include, but are not limited to: abnormal
+                    blood pressure, fainting, cardiovascular disorders, sprains,
+                    and muscle strains. Additionally, training beyond one’s
+                    physical limits and/or accidents related to training
+                    equipment may result in serious injury.
+                </p>
+            </li>
+            <li>
+                <b>1.4.</b>Khách Hàng đồng ý miễn trừ và đảm bảo cho STEEL cùng
+                các nhân viên của STEEL không chịu bất kỳ thiệt hại, tổn thất hay
+                chi phí nào phát sinh từ các trường hợp dưới đây dẫn đến các
+                chấn thương cá nhân và/hoặc thiệt hại về tài sản xuất phát từ
+                hành vi bất cẩn hoặc cố ý của Khách Hàng.
+                <p class="en">
+                    The Customer agrees to exempt STEEL and STEEL’s staff from any
+                    damages, losses, or costs arising from the following cases
+                    that result in personal injuries and/or property damage
+                    caused by the Customer’s negligent or intentional acts.
+                </p>
+                <p>
+                    Các trường hợp đó sẽ bao gồm nhưng không giới hạn như sau: /
+                    <span class="en"
+                        >These cases shall include, but are not limited to, the
+                        following:</span
+                    >
+                </p>
+                <ol type="a">
+                    <li>
+                        Khách Hàng không cung cấp hoặc cung cấp không đầy đủ,
+                        không chính xác thông tin về Người liên lạc khẩn cấp tại
+                        “Phiếu điền thông tin hội viên mới” khi đăng ký tại quầy
+                        lễ tân STEEL, hoặc không cập nhật khi thông tin này thay
+                        đổi, dẫn đến việc chậm trễ trong quá trình liên lạc và sơ
+                        cứu.
+                        <p class="en">
+                            The Customer fails to provide, or provides incomplete
+                            or inaccurate, Emergency Contact information in the
+                            “New Member Information Form” at STEEL’s reception
+                            upon registration, or fails to update such
+                            information when it changes, leading to delays in
+                            communication and first aid.
+                        </p>
+                    </li>
+                    <li>
+                        Khách Hàng không trung thực về tình trạng sức khỏe của
+                        bản thân
+                        <p class="en">
+                            The Customer is not truthful about their health
+                            condition.
+                        </p>
+                    </li>
+                    <li>
+                        Khách Hàng có vấn đề về sức khỏe trong quá trình tập
+                        luyện nhưng không thông báo cho STEEL.
+                        <p class="en">
+                            The Customer experiences health issues during
+                            training but does not notify STEEL.
+                        </p>
+                    </li>
+                    <li>
+                        Khách Hàng không tuân thủ hướng dẫn của HLV/nhân viên
+                        của STEEL, sử dụng sai mục đích, sai hướng dẫn sử dụng
+                        và/hoặc vượt quá khuyến nghị sử dụng đối với các thiết
+                        bị/dụng cụ tập luyện tại STEEL.
+                        <p class="en">
+                            The Customer does not comply with the instructions of
+                            STEEL’s PT/staff, uses the training equipment/tools
+                            for unintended purposes, contrary to the usage
+                            instructions, and/or beyond the recommended usage at
+                            STEEL.
+                        </p>
+                    </li>
+                    <li>
+                        Khách Hàng tập luyện vượt quá khả năng thể chất, không
+                        phù hợp với tình trạng sức khỏe của Khách Hàng.
+                        <p class="en">
+                            The Customer engages in training beyond their
+                            physical capacity, not suitable for their health
+                            condition.
+                        </p>
+                    </li>
+                    <li>
+                        Các mất mát, hư hỏng tài sản cá nhân của Khách Hàng. Để
+                        làm rõ, trong trường hợp này, STEEL sẽ hỗ trợ và phối hợp
+                        với cơ quan chức năng khi cần thiết để điều tra.
+                        <p class="en">
+                            Loss or damage to the Customer’s personal property.
+                            For clarification, in this case, STEEL will assist
+                            and cooperate with the authorities when necessary for
+                            investigation.
+                        </p>
+                    </li>
+                    <li>
+                        Các sự kiện bất khả kháng phát sinh nằm ngoài tầm kiểm
+                        soát hợp lý của STEEL. /
+                        <span class="en"
+                            >Force majeure events arising beyond STEEL’s
+                            reasonable control.</span
+                        >
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 2. LOẠI HÌNH DỊCH VỤ &amp; QUYỀN LỢI<br /><span class="en"
+                >ARTICLE 2. SERVICE TYPE &amp; BENEFITS</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>2.1.</b>Khách Hàng đăng ký Gói Hội Viên Thanh Toán Tự Động
+                Hàng Tháng (Monthly Subscription Membership, sau đây gọi tắt là
+                “Gói Monthly Subscription”), loại gói: ☐ Solo ☐ Club ☐ House,
+                theo thông tin chi tiết tại Phụ lục 02.
+                <p class="en">
+                    The Customer registers for the Monthly Subscription
+                    Membership with automatic monthly payments (hereinafter
+                    referred to as the “Monthly Subscription Plan”), membership
+                    type: ☐ Solo ☐ Club ☐ House, as detailed in Appendix 02.
+                </p>
+            </li>
+            <li>
+                <b>2.2.</b>Khách Hàng được hưởng các quyền lợi Hội viên tương ứng
+                với hạng gói đã chọn, được liệt kê đầy đủ tại Phụ lục 02.
+                <p class="en">
+                    The Customer is entitled to the Member benefits of the
+                    selected tier, as fully listed in Appendix 02.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 3. THỜI HẠN HỢP ĐỒNG<br /><span class="en"
+                >ARTICLE 3. CONTRACT TERM</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>3.1.</b>Hợp Đồng có hiệu lực kể từ Ngày kích hoạt, là ngày
+                Khách Hàng hoàn tất Khoản thanh toán ban đầu theo Phụ lục 02.
+                <p class="en">
+                    This Contract takes effect from the Activation Date, which is
+                    the date on which the Customer completes the initial payment
+                    under Appendix 02.
+                </p>
+            </li>
+            <li>
+                <b>3.2.</b>Hợp Đồng có thời hạn mặc định là 12 (mười hai) tháng
+                kể từ Ngày kích hoạt và tự động gia hạn theo từng chu kỳ 12
+                (mười hai) tháng tiếp theo, trừ khi được chấm dứt theo Điều 7.
+                Trong suốt thời hạn Hợp Đồng, phí dịch vụ được thanh toán theo
+                từng kỳ hàng tháng, và Khách Hàng không phải thanh toán trước
+                giá trị của cả thời hạn Hợp Đồng. Trường hợp có nhu cầu chấm dứt
+                trước thời hạn, Khách Hàng có quyền chấm dứt Hợp Đồng theo Khoản
+                7.2. Giá trị Hợp Đồng được xác định theo số kỳ thanh toán thực
+                tế.
+                <p class="en">
+                    This Contract has a default term of twelve (12) months from
+                    the Activation Date and shall automatically renew for
+                    successive twelve (12)-month terms unless terminated in
+                    accordance with Article 7. Throughout the term, the service
+                    fee is paid in monthly billing cycles, and the Customer is
+                    not required to prepay the value of the full term. If the
+                    Customer wishes to terminate before the end of the term, the
+                    Customer may do so in accordance with Clause 7.2. The
+                    Contract Value shall be determined based on the actual
+                    number of payment periods.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 4. PHÍ DỊCH VỤ &amp; THANH TOÁN<br /><span class="en"
+                >ARTICLE 4. FEES &amp; PAYMENT</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>4.1.</b>Phí dịch vụ hàng tháng được quy định tại Phụ lục 02
+                theo hạng gói Khách Hàng đã chọn (đã bao gồm thuế VAT).
+                <p class="en">
+                    The monthly service fee is set out in Appendix 02 according
+                    to the tier selected by the Customer (inclusive of VAT).
+                </p>
+            </li>
+            <li>
+                <b>4.2.</b>Khoản thanh toán ban đầu gồm phí dịch vụ tháng đầu
+                tiên và phí đặt cọc tương đương 01 (một) tháng phí dịch vụ, chi
+                tiết theo hạng gói tại Phụ lục 02. Khoản thanh toán ban đầu phải
+                được hoàn tất để kích hoạt dịch vụ.
+                <p class="en">
+                    The initial payment consists of the first month's service fee
+                    and a security deposit equal to one (01) month's service fee,
+                    as detailed by tier in Appendix 02. The initial payment must
+                    be completed to activate the service.
+                </p>
+            </li>
+            <li>
+                <b>4.3.</b>Khách Hàng đồng ý cho phép STEEL thực hiện việc tự
+                động trích phí dịch vụ hàng tháng từ phương thức thanh toán mà
+                Khách Hàng đã đăng ký.
+                <p class="en">
+                    The Customer agrees to authorize STEEL to automatically debit
+                    the monthly service fee from the registered payment method.
+                </p>
+            </li>
+            <li>
+                <b>4.4.</b>Khách Hàng có trách nhiệm đảm bảo:
+                <span class="en">The Customer is responsible for ensuring that:</span>
+                <ul>
+                    <li>
+                        Tài khoản thanh toán luôn có đủ số dư để thực hiện giao
+                        dịch;
+                        <p class="en">
+                            The payment account maintains sufficient balance for
+                            the transaction;
+                        </p>
+                    </li>
+                    <li>
+                        Việc thanh toán được thực hiện đầy đủ và đúng hạn theo
+                        quy định của Hợp Đồng.
+                        <p class="en">
+                            All payments are made in full and on time in
+                            accordance with this Contract.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    STEEL thông báo cho Khách Hàng qua email hoặc tin nhắn trong
+                    vòng 03 (ba) ngày làm việc kể từ lần trích phí không thành
+                    công đầu tiên.
+                </p>
+                <p class="en">
+                    STEEL shall notify the Customer by email or text message
+                    within three (03) business days of the first failed debit.
+                </p>
+                <p>
+                    Thời gian bị tạm ngưng không được cộng thêm vào thời hạn sử
+                    dụng và không được tính vào Thời gian sử dụng thực tế tại
+                    Khoản 7.4.
+                </p>
+                <p class="en">
+                    The suspension period shall not extend the service period and
+                    shall not count toward the Actual Usage Period under Clause
+                    7.4.
+                </p>
+            </li>
+            <li>
+                <b>4.5.</b>Trường hợp thanh toán không thành công vì bất kỳ lý do
+                nào:
+                <span class="en">In the event that a payment fails for any reason:</span>
+                <ul>
+                    <li>
+                        STEEL có quyền thực hiện lại giao dịch trích phí;
+                        <p class="en">
+                            STEEL reserves the right to retry the debit
+                            transaction.
+                        </p>
+                    </li>
+                    <li>
+                        STEEL có quyền tạm ngưng quyền ra vào CLB và sử dụng các
+                        dịch vụ, tiện ích của STEEL đối với Khách Hàng cho đến
+                        khi khoản thanh toán được hoàn tất đầy đủ.
+                        <p class="en">
+                            STEEL reserves the right to suspend the Customer’s
+                            access to the Club premises and use of STEEL’s
+                            services and facilities until the outstanding payment
+                            has been paid in full.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 5. CHÍNH SÁCH BẢO LƯU<br /><span class="en"
+                >ARTICLE 5. FREEZE POLICY</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>5.1.</b>Do Gói Monthly Subscription áp dụng thanh toán tự động
+                hàng tháng, gói không được tạm ngưng (đóng băng) và việc trích
+                phí hàng tháng vẫn diễn ra bình thường. Tuy vậy, sau mỗi kỳ trích
+                phí thành công, Khách Hàng vẫn được cộng 05 (năm) ngày bảo lưu
+                vào tài khoản Hội viên.
+                <p class="en">
+                    As the Monthly Subscription Plan is paid by automatic monthly
+                    debit, the membership cannot be suspended (frozen) and
+                    monthly debits continue as scheduled. However, after each
+                    successful monthly debit, the Customer shall still receive
+                    five (05) freeze days in their Member account.
+                </p>
+                <p>
+                    Khi có nhu cầu bảo lưu, Khách Hàng thông báo cho STEEL qua
+                    email membership@steelsaigon.com hoặc tại quầy lễ tân CLB
+                    trước ngày bắt đầu bảo lưu, nêu rõ ngày bắt đầu và ngày kết
+                    thúc. Trường hợp thời gian đăng ký vượt quá số ngày bảo lưu
+                    Khách Hàng đang có, STEEL chỉ ghi nhận số ngày bảo lưu bằng
+                    số ngày Khách Hàng đang có. Trong thời gian bảo lưu, Khách
+                    Hàng không sử dụng dịch vụ tại CLB. Khi kết thúc thời gian
+                    bảo lưu, STEEL quy đổi số ngày bảo lưu Khách Hàng đã sử dụng
+                    thực tế thành STEEL Reward Points theo tỷ lệ 01 (một) ngày
+                    bảo lưu = 100 (một trăm) điểm, rồi cộng vào tài khoản STEEL
+                    Reward Points của Khách Hàng (sau đây gọi là “Điểm Bảo
+                    Lưu”).
+                </p>
+                <p class="en">
+                    To use freeze days, the Customer shall notify STEEL by email
+                    membership@steelsaigon.com or at the Club reception before
+                    the freeze start date, stating the start and end dates. If
+                    the requested period exceeds the Customer’s available freeze
+                    days, STEEL shall record a freeze period equal to the number
+                    of days available. The Customer shall not use the Club’s
+                    services during the freeze period. When the freeze period
+                    ends, STEEL shall convert the number of freeze days actually
+                    used into STEEL Reward Points at the rate of one (01) freeze
+                    day = one hundred (100) points and credit them to the
+                    Customer’s STEEL Reward Points account (hereinafter referred
+                    to as “Freeze Points”).
+                </p>
+            </li>
+            <li>
+                <b>5.2.</b>Ngày bảo lưu chưa sử dụng trong tháng được cộng dồn
+                sang các tháng tiếp theo và có hiệu lực đến hết ngày cuối cùng
+                của tháng thứ 12 (mười hai) tính từ Ngày kích hoạt. Khi Hợp Đồng
+                tự động gia hạn sang chu kỳ 12 tháng tiếp theo, số ngày bảo lưu
+                chưa sử dụng của chu kỳ trước hết hiệu lực và không được chuyển
+                sang chu kỳ mới. Ngày bảo lưu chưa sử dụng cũng hết hiệu lực khi
+                Hợp Đồng chấm dứt, không được quy đổi thành điểm, tiền mặt hay
+                cấn trừ vào bất kỳ khoản phí nào.
+                <p class="en">
+                    Unused freeze days in a month shall be carried forward to the
+                    following months and remain valid until the last day of the
+                    twelfth (12th) month from the Activation Date. When this
+                    Contract automatically renews for the next twelve (12)-month
+                    term, unused freeze days from the previous term shall expire
+                    and shall not be carried over to the new term. Unused freeze
+                    days also expire upon termination of this Contract and may
+                    not be converted into points or cash, or offset against any
+                    fee.
+                </p>
+                <p>
+                    Điểm Bảo Lưu sau khi được cộng vào tài khoản được sử dụng và
+                    có thời hạn như STEEL Reward Points theo Điều 5 Phụ lục 01
+                    (mua buổi tập PT, buổi Recovery, Invite Guest Pass, sản phẩm
+                    chính thức của CLB).
+                </p>
+                <p class="en">
+                    Once credited, Freeze Points may be used and remain valid in
+                    the same manner as STEEL Reward Points under Article 5 of
+                    Appendix 01 (to purchase PT sessions, Recovery sessions,
+                    Invite Guest Passes, and official Club merchandise).
+                </p>
+            </li>
+            <li>
+                <b>5.3.</b>Việc đăng ký bảo lưu và sử dụng Điểm Bảo Lưu không làm
+                thay đổi ngày trích phí hàng tháng. Khách Hàng vẫn có trách
+                nhiệm đảm bảo các khoản thanh toán được thực hiện đầy đủ và đúng
+                hạn theo thỏa thuận.
+                <p class="en">
+                    Registering freeze days and using Freeze Points shall not
+                    alter the monthly billing date. The Customer remains
+                    responsible for ensuring that all payments are made in full
+                    and on time in accordance with the agreed terms.
+                </p>
+            </li>
+            <li>
+                <b>5.4.</b>Điểm Bảo Lưu không có giá trị quy đổi thành tiền mặt,
+                không được chuyển nhượng và không được dùng để thanh toán phí
+                dịch vụ hàng tháng hoặc phí đặt cọc của Gói Monthly
+                Subscription.
+                <p class="en">
+                    Freeze Points have no cash value, are non-transferable, and
+                    may not be used to pay the monthly service fee or the
+                    security deposit of the Monthly Subscription Plan.
+                </p>
+            </li>
+            <li>
+                <b>5.5.</b>Trong các trường hợp bất khả kháng buộc STEEL tạm ngưng
+                cung cấp dịch vụ như hỏa hoạn, thời tiết, chiến tranh, nghị định
+                của chính phủ, khủng bố, dịch bệnh hoặc các tình huống nằm ngoài
+                tầm kiểm soát của STEEL, STEEL tạm ngừng trích phí trong thời
+                gian tạm ngưng. Phần phí của kỳ đã thu tương ứng với số ngày
+                không được cung cấp dịch vụ sẽ được cấn trừ vào kỳ trích phí tiếp
+                theo khi STEEL hoạt động trở lại.
+                <p class="en">
+                    In cases of force majeure requiring STEEL to suspend services,
+                    such as fire, weather conditions, war, government decrees,
+                    terrorism, pandemics, or situations beyond STEEL's control,
+                    STEEL shall pause all debits during the suspension. The
+                    portion of the fee already collected for days on which no
+                    service was provided shall be credited against the next
+                    billing cycle once STEEL resumes operations.
+                </p>
+            </li>
+            <li>
+                <b>5.6.</b><strong
+                    >Tạm ngưng đặc biệt do mang thai hoặc vấn đề sức khỏe nghiêm
+                    trọng</strong
+                >
+                <ol type="a">
+                    <li>
+                        Khách Hàng được đề nghị tạm ngưng Gói Monthly
+                        Subscription trong hai trường hợp: (i) đang mang thai;
+                        hoặc (ii) gặp vấn đề sức khỏe nghiêm trọng theo định
+                        nghĩa tại điểm b Khoản này. Trong thời gian tạm ngưng,
+                        STEEL ngừng trích phí dịch vụ và Khách Hàng không sử dụng
+                        dịch vụ tại CLB.
+                        <p class="en">
+                            The Customer may request a pause of the Monthly
+                            Subscription Plan in either of the following cases:
+                            (i) pregnancy; or (ii) a serious health condition as
+                            defined in point b of this Clause. During the pause,
+                            STEEL shall stop debiting the service fee and the
+                            Customer shall not use the Club’s services.
+                        </p>
+                    </li>
+                    <li>
+                        “Vấn đề sức khỏe nghiêm trọng” là chấn thương, bệnh lý
+                        hoặc tình trạng sau phẫu thuật đáp ứng đồng thời hai điều
+                        kiện sau:
+                        <p class="en">
+                            A “serious health condition” means an injury,
+                            illness, or post-surgical condition that meets both
+                            of the following conditions:
+                        </p>
+                        <p>
+                            (i) Ảnh hưởng đến khả năng sinh hoạt hằng ngày của
+                            Khách Hàng. Cụ thể, Khách Hàng phải điều trị nội trú,
+                            phải nằm nghỉ theo chỉ định, phải dùng dụng cụ hỗ trợ
+                            (nẹp, bó bột, nạng, xe lăn), hoặc không thể tự đi
+                            lại, làm việc hay tự chăm sóc bản thân như bình
+                            thường; và
+                        </p>
+                        <p class="en">
+                            (i) It affects the Customer’s ability to carry out
+                            daily activities, meaning the Customer requires
+                            inpatient treatment, must rest as medically
+                            instructed, must use a support device (brace, cast,
+                            crutches, wheelchair), or is unable to walk, work, or
+                            care for themselves as usual; and
+                        </p>
+                        <p>
+                            (ii) Có chỉ định bằng văn bản của bác sĩ về việc
+                            không tập luyện thể thao liên tục trên 30 (ba mươi)
+                            ngày.
+                        </p>
+                        <p class="en">
+                            (ii) A physician has instructed in writing that the
+                            Customer must not exercise for more than thirty (30)
+                            consecutive days.
+                        </p>
+                        <p>
+                            Các trường hợp thường đáp ứng định nghĩa này bao gồm:
+                            gãy xương phải bó bột hoặc phẫu thuật, đứt dây chằng
+                            phải phẫu thuật, phẫu thuật lớn, điều trị ung thư,
+                            biến cố tim mạch hoặc đột quỵ.
+                        </p>
+                        <p class="en">
+                            Cases that typically meet this definition include
+                            fractures requiring a cast or surgery, ligament
+                            ruptures requiring surgery, major surgery, cancer
+                            treatment, and cardiovascular events or stroke.
+                        </p>
+                        <p>
+                            Các trường hợp sau không được xem là vấn đề sức khỏe
+                            nghiêm trọng:
+                        </p>
+                        <ul>
+                            <li>
+                                Chấn thương hoặc bệnh thông thường không ảnh
+                                hưởng đến sinh hoạt hằng ngày như bong gân, căng
+                                cơ, đau lưng, cảm cúm, sốt, kể cả khi có chỉ định
+                                hạn chế tập luyện;
+                            </li>
+                            <li>Chỉ định không tập luyện từ 30 ngày trở xuống;</li>
+                            <li>
+                                Chỉ định chỉ hạn chế một số bài tập hoặc một vùng
+                                cơ thể, trong khi Khách Hàng vẫn có thể tập các
+                                nội dung khác;
+                            </li>
+                            <li>
+                                Phẫu thuật hoặc thủ thuật thẩm mỹ theo nhu cầu cá
+                                nhân.
+                            </li>
+                        </ul>
+                        <p class="en">
+                            The following are not considered serious health
+                            conditions:
+                        </p>
+                        <ul class="en">
+                            <li>
+                                Common injuries or illnesses that do not affect
+                                daily activities, such as sprains, muscle
+                                strains, back pain, colds, or fever, even if
+                                training is medically restricted;
+                            </li>
+                            <li>
+                                A no-exercise instruction of thirty (30) days or
+                                fewer;
+                            </li>
+                            <li>
+                                A restriction limited to certain exercises or
+                                body areas, where the Customer can still perform
+                                other training;
+                            </li>
+                            <li>Elective cosmetic surgery or procedures.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Hồ sơ đề nghị gồm giấy tờ do cơ sở khám bệnh, chữa bệnh
+                        hợp pháp cấp, cụ thể như sau:
+                        <p class="en">
+                            The request must include documents issued by a
+                            licensed medical facility, as follows:
+                        </p>
+                        <p>
+                            (i) Trường hợp mang thai: giấy xác nhận có thai hoặc
+                            sổ khám thai, ghi rõ tuổi thai hoặc ngày dự sinh; /
+                            <span class="en"
+                                >(i) For pregnancy: a pregnancy confirmation or
+                                prenatal record stating the gestational age or
+                                expected due date;</span
+                            >
+                        </p>
+                        <p>
+                            (ii) Trường hợp vấn đề sức khỏe nghiêm trọng: giấy
+                            chỉ định của bác sĩ, ghi rõ họ tên Khách Hàng, chẩn
+                            đoán, chỉ định không tập luyện, thời gian không tập
+                            luyện cụ thể (từ ngày đến ngày hoặc số ngày), họ tên
+                            và chữ ký của bác sĩ, dấu của cơ sở y tế. Trường hợp
+                            nhập viện, hồ sơ kèm giấy ra viện. Giấy tờ có chỉ
+                            định không tập luyện nhưng không ghi thời gian cụ
+                            thể chưa đủ điều kiện xét duyệt. /
+                            <span class="en"
+                                >(ii) For a serious health condition: a
+                                physician’s instruction clearly stating the
+                                Customer’s full name, diagnosis, no-exercise
+                                instruction, the specific no-exercise period
+                                (from-to dates or number of days), and the
+                                physician’s full name and signature, together
+                                with the seal of the medical facility. In case of
+                                hospitalization, the hospital discharge paper
+                                must be included. Documents that include a
+                                no-exercise instruction without a specific period
+                                are not eligible for review.</span
+                            >
+                        </p>
+                        <p>
+                            Giấy tờ do cơ sở y tế nước ngoài cấp phải kèm bản
+                            dịch tiếng Việt hoặc tiếng Anh. /
+                            <span class="en"
+                                >Documents issued by a foreign medical facility
+                                must be accompanied by a Vietnamese or English
+                                translation.</span
+                            >
+                        </p>
+                    </li>
+                    <li>
+                        Khách Hàng gửi đề nghị kèm hồ sơ theo kênh quy định tại
+                        điểm b Khoản 7.2, ít nhất 07 (bảy) ngày trước ngày trích
+                        phí kế tiếp; nếu gửi muộn hơn, việc tạm ngưng áp dụng từ
+                        kỳ trích phí sau đó. Trường hợp khẩn cấp như nhập viện
+                        hoặc phẫu thuật, Khách Hàng hoặc người thân được gửi hồ
+                        sơ trong vòng 14 (mười bốn) ngày kể từ ngày nhập viện;
+                        khi đó thời gian tạm ngưng được tính từ ngày nhập viện,
+                        và phần phí đã trích tương ứng được cấn trừ vào kỳ trích
+                        phí đầu tiên sau khi kích hoạt lại. STEEL có quyền đề
+                        nghị bổ sung giấy tờ khi hồ sơ chưa rõ và phản hồi kết
+                        quả xét duyệt trong vòng 03 (ba) ngày làm việc kể từ khi
+                        nhận đủ hồ sơ.
+                        <p class="en">
+                            The Customer shall submit the request and documents
+                            through a channel set out in point b of Clause 7.2 at
+                            least seven (07) days before the next billing date;
+                            if submitted later, the pause shall apply from the
+                            following billing cycle. In an emergency such as
+                            hospitalization or surgery, the Customer or a family
+                            member may submit the documents within fourteen (14)
+                            days of admission; in that case, the pause shall
+                            start from the admission date, and the corresponding
+                            portion of fees already debited shall be credited
+                            against the first billing cycle after reactivation.
+                            STEEL may request additional documents if the file is
+                            unclear and shall notify the Customer of the review
+                            result within three (03) business days of receiving
+                            the complete file.
+                        </p>
+                    </li>
+                    <li>
+                        Thời gian tạm ngưng được xác định như sau: /
+                        <span class="en"
+                            >The pause period shall be determined as
+                            follows:</span
+                        >
+                        <p>
+                            (i) Trường hợp mang thai: tối thiểu 01 (một) tháng và
+                            tối đa [09 (chín)] tháng, bao gồm thời gian sau
+                            sinh; /
+                            <span class="en"
+                                >(i) For pregnancy: at least one (01) month and
+                                at most [nine (09)] months, including the
+                                postpartum period;</span
+                            >
+                        </p>
+                        <p>
+                            (ii) Trường hợp vấn đề sức khỏe nghiêm trọng: bằng
+                            thời gian không tập luyện ghi trong chỉ định của bác
+                            sĩ, tối đa 03 (ba) tháng mỗi lần. /
+                            <span class="en"
+                                >(ii) For a serious health condition: the
+                                no-exercise period stated in the physician’s
+                                instruction, up to three (03) months each
+                                time.</span
+                            >
+                        </p>
+                        <p>
+                            Khách Hàng được gia hạn thời gian tạm ngưng khi có
+                            giấy tờ y tế mới, với tổng thời gian tạm ngưng không
+                            quá [12 (mười hai)] tháng. /
+                            <span class="en"
+                                >The pause may be extended upon submission of new
+                                medical documents, provided that the total pause
+                                period does not exceed [twelve (12)]
+                                months.</span
+                            >
+                        </p>
+                    </li>
+                    <li>
+                        Trong thời gian tạm ngưng: (i) thời hạn Hợp Đồng được kéo
+                        dài thêm đúng bằng thời gian tạm ngưng; (ii) thời gian
+                        tạm ngưng không được tính vào Thời gian sử dụng thực tế
+                        theo Khoản 7.4; (iii) Khách Hàng không được cộng ngày bảo
+                        lưu theo Khoản 5.1; (iv) phí đặt cọc được giữ nguyên; (v)
+                        Khách Hàng được giữ mức phí đang áp dụng khi kích hoạt
+                        lại.
+                        <p class="en">
+                            During the pause: (i) the Contract term shall be
+                            extended by the length of the pause; (ii) the pause
+                            shall not count toward the Actual Usage Period under
+                            Clause 7.4; (iii) the Customer shall not receive
+                            freeze days under Clause 5.1; (iv) the security
+                            deposit shall remain unchanged; and (v) the Customer
+                            shall keep the current fee upon reactivation.
+                        </p>
+                    </li>
+                    <li>
+                        Gói được tự động kích hoạt lại vào ngày kết thúc thời
+                        gian tạm ngưng. STEEL gửi email thông báo ít nhất 07
+                        (bảy) ngày trước ngày kích hoạt lại và trích phí kỳ đầu
+                        tiên vào ngày kích hoạt lại; từ đó, ngày trích phí hàng
+                        tháng được tính theo ngày kích hoạt lại. Nếu Khách Hàng
+                        quay lại tập sớm hơn, gói được kích hoạt lại từ ngày
+                        Khách Hàng check-in.
+                        <p class="en">
+                            The membership shall be reactivated automatically on
+                            the end date of the pause. STEEL shall notify the
+                            Customer by email at least seven (07) days before
+                            reactivation and shall debit the first cycle on the
+                            reactivation date; from then on, the monthly billing
+                            date shall follow the reactivation date. If the
+                            Customer returns earlier, the membership shall be
+                            reactivated from the date of check-in.
+                        </p>
+                    </li>
+                    <li>
+                        Khi tổng thời gian tạm ngưng sắp đạt mức tối đa tại điểm
+                        e, STEEL gửi email cho Khách Hàng ít nhất 15 (mười lăm)
+                        ngày trước ngày kết thúc để Khách Hàng chọn một trong hai
+                        phương án: /
+                        <span class="en"
+                            >When the total pause period is about to reach the
+                            maximum under point e, STEEL shall email the Customer
+                            at least fifteen (15) days before the end date so
+                            that the Customer can choose one of the following
+                            options:</span
+                        >
+                        <p>
+                            (i) Kích hoạt lại gói theo điểm g; hoặc /
+                            <span class="en"
+                                >(i) Reactivate the membership under point g;
+                                or</span
+                            >
+                        </p>
+                        <p>
+                            (ii) Chấm dứt Hợp Đồng mà không cần báo trước 30 ngày
+                            theo Khoản 7.2. Trong trường hợp này, phí đặt cọc
+                            được STEEL giữ lại thay cho thời gian báo trước được
+                            miễn và không được hoàn trả. /
+                            <span class="en"
+                                >(ii) Terminate this Contract without the 30-day
+                                notice under Clause 7.2. In this case, the
+                                security deposit shall be retained by STEEL in
+                                lieu of the waived notice period and shall not be
+                                refunded.</span
+                            >
+                        </p>
+                        <p>
+                            Khách Hàng có xác nhận y tế về việc không thể tập
+                            luyện lâu dài được chọn phương án (ii) vào bất kỳ
+                            thời điểm nào trong thời gian tạm ngưng. /
+                            <span class="en"
+                                >A Customer with medical confirmation of a
+                                long-term inability to train may choose option
+                                (ii) at any time during the pause.</span
+                            >
+                        </p>
+                        <p>
+                            Trường hợp đến ngày kết thúc thời gian tạm ngưng tối
+                            đa mà STEEL không nhận được phản hồi, STEEL không
+                            trích phí và liên hệ lại Khách Hàng qua email và điện
+                            thoại. Nếu sau 07 (bảy) ngày kể từ ngày kết thúc mà
+                            Khách Hàng vẫn không phản hồi, Hợp Đồng tự động chấm
+                            dứt theo phương án (ii).
+                        </p>
+                        <p class="en">
+                            If STEEL receives no response by the end of the
+                            maximum pause period, STEEL shall not debit any fee
+                            and shall contact the Customer again by email and
+                            phone. If the Customer still does not respond within
+                            seven (07) days after the end date, this Contract
+                            shall terminate automatically under option (ii).
+                        </p>
+                    </li>
+                    <li>
+                        STEEL chỉ sử dụng giấy tờ y tế của Khách Hàng để xét
+                        duyệt đề nghị tạm ngừng hoặc chấm dứt theo Khoản này,
+                        không lưu giữ bản gốc, chỉ những nhân sự được phân công
+                        xử lý hồ sơ mới được tiếp cận, và bản sao được xóa sau
+                        khi hồ sơ được giải quyết. Trường hợp giấy tờ được cung
+                        cấp không trung thực, STEEL có quyền chấm dứt Hợp Đồng
+                        theo Khoản 7.3.
+                        <p class="en">
+                            STEEL shall use the Customer’s medical documents
+                            solely to review requests under this Clause, shall
+                            not keep original documents, shall restrict access to
+                            the staff assigned to handle the request, and shall
+                            delete copies once the request has been resolved. If
+                            the documents provided are untruthful, STEEL may
+                            terminate this Contract under Clause 7.3.
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 6. CHUYỂN NHƯỢNG<br /><span class="en">ARTICLE 6. TRANSFER</span>
+        </h2>
+        <p>
+            Gói Monthly Subscription không áp dụng chuyển nhượng.
+            <span class="en">This package is non-transferable.</span>
+        </p>
+
+        <h2>
+            ĐIỀU 7. CHẤM DỨT HỢP ĐỒNG &amp; HOÀN TRẢ ĐẶT CỌC<br /><span class="en"
+                >ARTICLE 7. TERMINATION &amp; DEPOSIT POLICY</span
+            >
+        </h2>
+
+        <h3>7.1. Các trường hợp chấm dứt Hợp Đồng<br /><span class="en">7.1. Cases of Termination</span></h3>
+        <p>
+            Hợp Đồng có thể bị chấm dứt trong các trường hợp sau:
+            <span class="en">The Contract may be terminated in any of the following cases:</span>
+        </p>
+        <ol type="a">
+            <li>
+                Các Bên thỏa thuận chấm dứt Hợp Đồng;
+                <p class="en">The Parties mutually agree to terminate the Contract;</p>
+            </li>
+            <li>
+                Xảy ra Sự kiện bất khả kháng theo quy định của Hợp Đồng;
+                <p class="en">A force majeure event occurs as defined under this Contract;</p>
+            </li>
+            <li>
+                Một trong các Bên đơn phương chấm dứt Hợp Đồng theo quy định tại
+                Điều này;
+                <p class="en">
+                    Either Party unilaterally terminates the Contract in
+                    accordance with this Article;
+                </p>
+            </li>
+            <li>
+                Theo quy định của pháp luật hiện hành.
+                <p class="en">In accordance with applicable laws.</p>
+            </li>
+        </ol>
+
+        <h3>7.2. Quyền chấm dứt của Khách Hàng<br /><span class="en">7.2. Customer’s Right of Termination</span></h3>
+        <p>
+            Khách Hàng có quyền chấm dứt Hợp Đồng vào bất kỳ thời điểm nào bằng
+            cách gửi thông báo chấm dứt hợp lệ đến STEEL. Hợp Đồng chấm dứt vào
+            ngày cuối cùng của kỳ thanh toán đang diễn ra tại thời điểm đủ 30
+            (ba mươi) ngày kể từ ngày gửi thông báo hợp lệ. Trong thời gian báo
+            trước, STEEL vẫn trích phí theo lịch (hoặc cấn trừ bằng phí đặt cọc
+            nếu đủ điều kiện theo Khoản 7.5 - 7.6) và Khách Hàng tiếp tục được sử
+            dụng dịch vụ. STEEL ngừng trích phí kể từ kỳ kế tiếp sau ngày chấm
+            dứt.
+        </p>
+        <p class="en">
+            The Customer may terminate this Contract at any time by sending a
+            valid termination notice to STEEL. This Contract terminates on the
+            last day of the billing cycle in progress when thirty (30) days have
+            passed from the date the valid notice was sent. During the notice
+            period, STEEL continues to debit fees as scheduled (or applies the
+            security deposit if eligible under Clauses 7.5 - 7.6) and the
+            Customer continues to use the services. STEEL shall stop all debits
+            from the cycle following the termination date.
+        </p>
+        <p>
+            Thông báo chấm dứt được xem là hợp lệ khi đáp ứng đủ các điều kiện
+            sau: /
+            <span class="en"
+                >A termination notice is valid only if it meets all of the
+                following conditions:</span
+            >
+        </p>
+        <ol type="a">
+            <li>
+                Người gửi là Khách Hàng đứng tên Hợp Đồng. Trường hợp người khác
+                gửi thay, thông báo phải kèm giấy ủy quyền có chữ ký của Khách
+                Hàng và bản sao CCCD/Hộ chiếu của người được ủy quyền.
+                <p class="en">
+                    It is sent by the Customer named in this Contract. If sent by
+                    another person on the Customer’s behalf, it must be
+                    accompanied by a power of attorney signed by the Customer and
+                    a copy of the authorized person’s ID card or passport.
+                </p>
+            </li>
+            <li>
+                Thông báo được gửi qua một trong hai kênh sau: (i) email gửi từ
+                địa chỉ email Khách Hàng đã đăng ký tại Hợp Đồng đến địa chỉ
+                membership@steelsaigon.com; hoặc (ii) văn bản có chữ ký của Khách
+                Hàng, nộp trực tiếp tại quầy lễ tân CLB và được nhân viên STEEL
+                ký nhận. Các yêu cầu qua điện thoại, tin nhắn, mạng xã hội hoặc
+                trao đổi trực tiếp với nhân viên không được xem là thông báo
+                chấm dứt.
+                <p class="en">
+                    It is sent through one of the following channels: (i) an email
+                    from the Customer’s email address registered in this Contract
+                    to membership@steelsaigon.com; or (ii) a written notice signed
+                    by the Customer, submitted in person at the Club reception and
+                    acknowledged in writing by STEEL staff. Requests made by
+                    phone, text message, social media, or verbally to staff shall
+                    not constitute a termination notice.
+                </p>
+            </li>
+            <li>
+                Thông báo ghi đủ họ tên Khách Hàng, số Hợp Đồng, số điện thoại đã
+                đăng ký và nêu rõ đề nghị chấm dứt Hợp Đồng, không kèm điều kiện.
+                <p class="en">
+                    It states the Customer’s full name, Contract number, and
+                    registered phone number, and clearly requests termination of
+                    this Contract without conditions.
+                </p>
+            </li>
+        </ol>
+        <p>
+            Ngày gửi thông báo là ngày email đến hộp thư của STEEL hoặc ngày nhân
+            viên STEEL ký nhận văn bản tại CLB. Trong vòng 02 (hai) ngày làm việc
+            kể từ ngày nhận, STEEL gửi email xác nhận cho Khách Hàng, nêu rõ ngày
+            chấm dứt Hợp Đồng và kỳ trích phí cuối cùng. Trường hợp thông báo
+            chưa hợp lệ, STEEL báo lý do trong cùng thời hạn để Khách Hàng bổ
+            sung; khi đó thời hạn 30 ngày được tính từ ngày Khách Hàng gửi thông
+            báo đã bổ sung đầy đủ.
+        </p>
+        <p class="en">
+            The notice date is the date the email reaches STEEL’s mailbox or the
+            date STEEL staff acknowledge receipt of the written notice at the
+            Club. Within two (02) business days of receipt, STEEL shall send the
+            Customer a confirmation email stating the termination date and the
+            final billing cycle. If the notice is invalid, STEEL shall state the
+            reason within the same period so that the Customer can complete it;
+            the 30-day period shall then be counted from the date the Customer
+            sends the completed notice.
+        </p>
+
+        <h3>7.3. Quyền chấm dứt của STEEL<br /><span class="en">7.3. STEEL’s Right of Termination</span></h3>
+        <p>
+            STEEL có quyền đơn phương chấm dứt Hợp Đồng bằng cách thông báo cho
+            Khách Hàng trước ít nhất 05 (năm) ngày trong các trường hợp sau:
+        </p>
+        <p class="en">
+            STEEL shall have the right to unilaterally terminate the Contract by
+            giving at least 05 (five) days’ prior notice to the Customer in the
+            following cases:
+        </p>
+        <ol type="a">
+            <li>
+                Khách Hàng vi phạm Hợp Đồng, Phụ lục hoặc Nội quy mà không khắc
+                phục trong thời hạn yêu cầu;
+                <p class="en">
+                    The Customer breaches this Contract, any Appendix, or
+                    Membership Policies and fails to remedy within the required
+                    period;
+                </p>
+            </li>
+            <li>
+                Khách Hàng vi phạm nghĩa vụ thanh toán;
+                <p class="en">The Customer fails to fulfill payment obligations;</p>
+            </li>
+            <li>
+                Xảy ra Sự kiện bất khả kháng;
+                <p class="en">A force majeure event occurs;</p>
+            </li>
+            <li>
+                Các trường hợp khác theo quy định của Hợp Đồng.
+                <p class="en">Other cases as provided under this Contract.</p>
+            </li>
+        </ol>
+        <p>
+            Trong các trường hợp trên, STEEL không có nghĩa vụ hoàn trả bất kỳ
+            khoản phí nào, trừ khi có quy định khác trong Hợp Đồng.
+            <span class="en"
+                >In such cases, STEEL shall not be obligated to refund any fees
+                unless otherwise stated herein.</span
+            >
+        </p>
+        <p>
+            Trừ trường hợp tại Mục 5 Điều 1 Phụ lục 01, STEEL được chấm dứt ngay
+            mà không cần thông báo trước.
+            <span class="en"
+                >Except for the circumstances specified in Section 5 of Article 1
+                of Appendix 01, STEEL shall have the right to terminate the
+                Agreement immediately without prior notice.</span
+            >
+        </p>
+
+        <h3>7.4. Nguyên tắc xác định thời gian sử dụng<br /><span class="en">7.4. Determination of Actual Usage Period</span></h3>
+        <p>
+            Thời gian sử dụng thực tế được tính bằng số kỳ thanh toán hàng tháng
+            đã được trích phí thành công kể từ Ngày kích hoạt đến ngày chấm dứt
+            Hợp Đồng, không bao gồm: (i) thời gian bị tạm ngưng sử dụng dịch vụ
+            do thanh toán không thành công; (ii) thời gian được cộng thêm từ
+            chương trình ưu đãi, khuyến mãi.
+        </p>
+        <p class="en">
+            The Actual Usage Period is the number of monthly billing cycles
+            successfully paid from the Activation Date to the termination date,
+            excluding: (i) any period of service suspension due to failed
+            payment; and (ii) any additional days granted under promotional
+            programs.
+        </p>
+
+        <h3>7.5. Chính sách hoàn trả phí đặt cọc<br /><span class="en">7.5. Security Deposit Refund Policy</span></h3>
+        <ol type="a">
+            <li>
+                <strong>Trường hợp sử dụng dưới 06 (sáu) tháng</strong> /
+                <span class="en"
+                    ><strong>In case of usage less than 06 (six) months</strong></span
+                >
+                <p>
+                    Nếu Thời gian sử dụng thực tế &lt; 06 tháng, Khách Hàng:
+                    <span class="en"
+                        >If the Actual Usage Period is less than 06 months, the
+                        Customer:</span
+                    >
+                </p>
+                <ul>
+                    <li>
+                        Không được hoàn trả phí đặt cọc với bất kỳ lý do nào.
+                        <p class="en">
+                            Shall not be entitled to any refund of the security
+                            deposit under any circumstances.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Trường hợp sử dụng từ đủ 06 (sáu) tháng trở lên</strong>
+                /
+                <span class="en"
+                    ><strong
+                        >In case of usage equal to or more than 06 (six)
+                        months</strong
+                    ></span
+                >
+                <p>
+                    Nếu Thời gian sử dụng thực tế ≥ 06 tháng, Khách Hàng:
+                    <span class="en"
+                        >If the Actual Usage Period is equal to or exceeds 06
+                        months, the Customer:</span
+                    >
+                </p>
+                <ul>
+                    <li>
+                        Được cấn trừ 100% phí đặt cọc vào phí dịch vụ của kỳ
+                        thanh toán cuối cùng theo Khoản 7.6. Trường hợp phí dịch
+                        vụ kỳ cuối cao hơn phí đặt cọc (do STEEL đã điều chỉnh
+                        phí theo Phụ lục 02), Khách Hàng thanh toán phần chênh
+                        lệch; trường hợp thấp hơn, STEEL hoàn trả phần chênh lệch
+                        theo Khoản 8.2.
+                        <p class="en">
+                            Is entitled to have 100% of the security deposit
+                            applied to the service fee of the final billing cycle
+                            under Clause 7.6. If the final cycle fee exceeds the
+                            deposit (due to a fee adjustment under Appendix 02),
+                            the Customer shall pay the difference; if it is
+                            lower, STEEL shall refund the difference under Clause
+                            8.2.
+                        </p>
+                    </li>
+                    <li>
+                        Điều kiện: Khách Hàng đã gửi thông báo chấm dứt hợp lệ
+                        theo Khoản 7.2
+                        <p class="en">
+                            Condition: the Customer has sent a valid termination
+                            notice under Clause 7.2.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>7.6. Thời gian và phương thức hoàn trả<br /><span class="en">7.6. Refund Timeline and Method</span></h3>
+        <p>
+            Phí đặt cọc (nếu đủ điều kiện) sẽ được hoàn trả bằng cách quy đổi để
+            thanh toán vào tháng cuối cùng trước khi hợp đồng kết thúc.
+        </p>
+        <p class="en">
+            The security deposit (if eligible) will be used to pay for the final
+            month before the Contract ends, instead of being refunded in cash.
+        </p>
+
+        <h3>7.7. Các trường hợp không hoàn trả phí đặt cọc<br /><span class="en">7.7. Non-refundable Cases</span></h3>
+        <p>
+            Phí đặt cọc sẽ không được hoàn trả trong các trường hợp sau:
+            <span class="en"
+                >The security deposit shall not be refunded in the following
+                cases:</span
+            >
+        </p>
+        <ol type="a">
+            <li>
+                Không đáp ứng điều kiện về thời gian sử dụng tối thiểu 06 tháng;
+                <p class="en">Failure to meet the minimum 06-month Actual Usage Period;</p>
+            </li>
+            <li>
+                Không gửi thông báo chấm dứt hợp lệ theo Khoản 7.2, bao gồm trường
+                hợp Khách Hàng tự ngừng thanh toán hoặc hủy liên kết thẻ mà không
+                gửi thông báo;
+                <p class="en">
+                    Failure to send a valid termination notice under Clause 7.2,
+                    including where the Customer stops paying or removes the
+                    registered card without sending a notice;
+                </p>
+            </li>
+            <li>
+                Vi phạm Quy định Hội viên (Phụ lục 1) hoặc các điều khoản của Hợp
+                Đồng dẫn đến việc chấm dứt từ phía STEEL.
+                <p class="en">
+                    Violation of the Membership Policies (Appendix 1) or any terms
+                    of this Contract resulting in termination by STEEL.
+                </p>
+            </li>
+            <li>
+                Hợp Đồng chấm dứt theo phương án (ii) điểm h Khoản 5.6.
+                <p class="en">
+                    This Contract is terminated under option (ii) of point h,
+                    Clause 5.6.
+                </p>
+            </li>
+        </ol>
+        <p>
+            Các trường hợp tại Khoản này không áp dụng khi Hợp Đồng chấm dứt do
+            STEEL ngừng hoạt động vĩnh viễn (điểm a Khoản 8.1) hoặc do sự kiện bất
+            khả kháng (điểm c Khoản 7.3 hoặc Khoản 12.4). Khi đó, phí đặt cọc
+            được hoàn trả 100% theo Khoản 8.2.
+        </p>
+        <p class="en">
+            The cases in this Clause do not apply where this Contract is
+            terminated due to STEEL’s permanent closure (point a of Clause 8.1)
+            or a force majeure event (point c of Clause 7.3 or Clause 12.4). In
+            such cases, 100% of the security deposit shall be refunded in
+            accordance with Clause 8.2.
+        </p>
+
+        <h3>7.8. Nghĩa vụ khi chấm dứt Hợp Đồng<br /><span class="en">7.8. Obligations upon Termination</span></h3>
+        <p>
+            Khi chấm dứt Hợp Đồng, Khách Hàng có trách nhiệm:
+            <span class="en">Upon termination of the Contract, the Customer shall:</span>
+        </p>
+        <ul>
+            <li>
+                Thanh toán đầy đủ các khoản phí phát sinh đến ngày chấm dứt
+                <p class="en">Settle all outstanding fees up to the termination date</p>
+            </li>
+            <li>
+                Hoàn trả toàn bộ tài sản, thiết bị (nếu có) do STEEL cung cấp
+                <p class="en">
+                    Return all assets and equipment provided by STEEL (if any)
+                </p>
+            </li>
+        </ul>
+        <p>
+            Nghĩa vụ của STEEL: Chậm nhất vào ngày Hợp Đồng chấm dứt, STEEL hủy
+            ủy quyền trích phí tự động, ngừng mọi giao dịch trích phí đối với
+            phương thức thanh toán của Khách Hàng và gửi xác nhận chấm dứt Hợp
+            Đồng qua email cho Khách Hàng.
+        </p>
+        <p class="en">
+            STEEL's obligation: No later than the termination date, STEEL shall
+            cancel the auto-debit authorization, stop all debits on the
+            Customer's payment method, and send a termination confirmation to the
+            Customer by email.
+        </p>
+
+        <h2>
+            ĐIỀU 8. CHÍNH SÁCH HOÀN PHÍ<br /><span class="en"
+                >ARTICLE 8. REFUND POLICY</span
+            >
+        </h2>
+
+        <p>
+            <strong>8.1.</strong> STEEL không áp dụng chính sách hoàn phí sau khi Khách Hàng đã thanh
+            toán gói dịch vụ, trừ các trường hợp sau:
+        </p>
+        <p class="en">
+            STEEL does not apply any refund policy after the Customer has made
+            payment for the service package, except in the following cases:
+        </p>
+        <ol type="a">
+            <li>
+                Trường hợp STEEL đóng cửa và ngừng cung cấp dịch vụ vĩnh viễn tại
+                cơ sở mà Khách Hàng đã ký Hợp Đồng vì bất kỳ lý do gì, STEEL ngừng
+                trích phí kể từ ngày thông báo, hoàn trả phần phí dịch vụ của kỳ
+                đã thanh toán tương ứng với số ngày chưa sử dụng và hoàn trả 100%
+                phí đặt cọc.
+                <p class="en">
+                    If STEEL permanently closes and ceases services at the
+                    location where the Customer signed this Contract for any
+                    reason, STEEL shall stop all debits from the date of the
+                    announcement, refund the service fee for the unused days of
+                    the paid billing cycle, and refund 100% of the security
+                    deposit.
+                </p>
+            </li>
+            <li>
+                Việc hoàn phí sẽ được thực hiện trong vòng 90 (chín mươi) ngày
+                làm việc kể từ ngày STEEL ra thông báo chính thức về việc đóng
+                cửa vĩnh viễn.
+                <p class="en">
+                    The refund shall be processed within 90 (ninety) business days
+                    from the date of STEEL’s official announcement regarding the
+                    permanent closure.
+                </p>
+            </li>
+            <li>
+                Trường hợp được quy định cụ thể tại Điều khoản chấm dứt Hợp Đồng.
+                <p class="en">
+                    In cases specifically provided for in the Termination
+                    Article.
+                </p>
+            </li>
+            <li>
+                Trường hợp STEEL trích phí sai (trích trùng, trích sai số tiền
+                hoặc trích phí sau ngày Hợp Đồng đã chấm dứt), STEEL hoàn trả toàn
+                bộ khoản trích sai trong vòng 10 (mười) ngày làm việc kể từ ngày
+                xác nhận sai sót.
+                <p class="en">
+                    If STEEL debits incorrectly (a duplicate debit, an incorrect
+                    amount, or a debit after this Contract has terminated), STEEL
+                    shall refund the full incorrect amount within ten (10)
+                    business days of confirming the error.
+                </p>
+            </li>
+            <li>
+                Trường hợp Hợp Đồng chấm dứt do sự kiện bất khả kháng theo điểm c
+                Khoản 7.3 hoặc Khoản 12.4, STEEL ngừng trích phí kể từ ngày chấm
+                dứt và hoàn trả cho Khách Hàng: (i) phần phí dịch vụ đã thanh
+                toán tương ứng với số ngày chưa được cung cấp dịch vụ, bao gồm cả
+                các khoản đã được ghi nhận để cấn trừ theo Khoản 5.5 và Khoản
+                12.3 nhưng chưa được cấn trừ; và (ii) 100% phí đặt cọc. Việc hoàn
+                trả được thực hiện theo Khoản 8.2, trong vòng 90 (chín mươi) ngày
+                làm việc kể từ ngày Hợp Đồng chấm dứt.
+                <p class="en">
+                    If this Contract is terminated due to a force majeure event
+                    under point c of Clause 7.3 or Clause 12.4, STEEL shall stop
+                    all debits from the termination date and refund to the
+                    Customer: (i) the portion of the service fee paid for days on
+                    which no service was provided, including any amounts
+                    recorded for credit under Clauses 5.5 and 12.3 that have not
+                    yet been credited; and (ii) 100% of the security deposit. The
+                    refund shall be made in accordance with Clause 8.2 within
+                    ninety (90) business days from the termination date.
+                </p>
+            </li>
+        </ol>
+
+        <h3>8.2. Phương thức hoàn phí<br /><span class="en">8.2. Refund Method</span></h3>
+        <p>
+            Mọi khoản hoàn phí (nếu có) theo quy định tại Điều 8.1 sẽ được STEEL
+            thực hiện bằng hình thức chuyển khoản vào tài khoản ngân hàng do
+            Khách Hàng cung cấp. Khách Hàng có trách nhiệm cung cấp đầy đủ và
+            chính xác thông tin tài khoản ngân hàng để phục vụ việc hoàn phí.
+            STEEL không thực hiện hoàn phí bằng tiền mặt hoặc bất kỳ hình thức
+            thanh toán nào khác.
+        </p>
+        <p class="en">
+            Any refund (if applicable) under Clause 8.1 shall be processed by
+            STEEL via bank transfer to the bank account designated by the
+            Customer. The Customer is responsible for providing complete and
+            accurate bank account information for the refund process. STEEL does
+            not process refunds in cash or through any other payment method.
+        </p>
+
+        <h3>8.3. Trách nhiệm cung cấp thông tin<br /><span class="en">8.3. Responsibility to Provide Information</span></h3>
+        <p>
+            Khách Hàng có trách nhiệm cung cấp đầy đủ và chính xác thông tin tài
+            khoản ngân hàng để phục vụ cho việc hoàn phí. STEEL không chịu trách
+            nhiệm đối với việc chậm trễ hoàn phí do Khách Hàng cung cấp sai hoặc
+            thiếu thông tin.
+        </p>
+        <p class="en">
+            The Customer is responsible for providing complete and accurate bank
+            account information for the refund process. STEEL shall not be held
+            liable for delays caused by incorrect or incomplete information
+            provided by the Customer.
+        </p>
+
+        <h3>8.4. Các khoản không hoàn lại<br /><span class="en">8.4. Non-refundable Items</span></h3>
+        <p>
+            Các khoản khuyến mãi, ưu đãi, phần quà tặng kèm hoặc các dịch vụ đã
+            sử dụng sẽ không được hoàn phí dưới bất kỳ hình thức nào.
+            <span class="en"
+                >Promotional bonus, gifts, or services already used are
+                non-refundable under any circumstances.</span
+            >
+        </p>
+
+        <h2>
+            ĐIỀU 9. CHÍNH SÁCH BẢO MẬT VÀ QUYỀN RIÊNG TƯ<br /><span class="en"
+                >ARTICLE 9. PRIVACY AND SECURITY POLICIES</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>9.1.</b>Thông tin về các dữ liệu được STEEL thu thập, Khách
+                Hàng xem tại:
+                <a href="https://www.steelsaigon.com/vi/chinh-sach-bao-mat"
+                    >https://www.steelsaigon.com/vi/chinh-sach-bao-mat</a
+                >
+                <p class="en">
+                    Information regarding the data collected by STEEL can be
+                    viewed at:
+                    <a href="https://www.steelsaigon.com/vi/chinh-sach-bao-mat"
+                        >https://www.steelsaigon.com/vi/chinh-sach-bao-mat</a
+                    >
+                </p>
+                <p>
+                    Theo đó, bằng việc ký tên vào Hợp Đồng này, Khách Hàng cam kết
+                    đã đọc, và đồng ý với Chính sách bảo mật dữ liệu cá nhân của
+                    STEEL.
+                </p>
+                <p class="en">
+                    Accordingly, by signing this Contract, the Customer commits
+                    that they have read and agree to STEEL’s Personal data
+                    privacy policy.
+                </p>
+            </li>
+            <li>
+                <b>9.2.</b>STEEL có quyền thu thập, lưu trữ và sử dụng hình ảnh
+                chân dung của Hội Viên cùng bản sao giấy tờ định danh hợp lệ (bao
+                gồm nhưng không giới hạn: Căn cước công dân (CCCD), Hộ chiếu,
+                hoặc Giấy phép lái xe) cho các mục đích sau:
+                <p class="en">
+                    STEEL reserves the right to collect, store, and utilize
+                    Members’ portrait photographs and copies of valid
+                    identification documents (including but not limited to
+                    National ID cards, Passports, or Driver’s Licenses) for the
+                    following purposes:
+                </p>
+                <ul class="dash">
+                    <li>
+                        Xác minh danh tính và định danh tài khoản Hội Viên trong
+                        hệ thống quản lý của STEEL;
+                        <p class="en">
+                            To verify and authenticate Member identity and
+                            account information within STEEL’s management
+                            system;
+                        </p>
+                    </li>
+                    <li>
+                        Lưu trữ thông tin phương thức thanh toán đã được mã hóa
+                        (token) thông qua đơn vị trung gian thanh toán để thực
+                        hiện trích phí tự động hàng tháng. STEEL không lưu trữ
+                        đầy đủ số thẻ, mã CVV/CVC hoặc mã OTP của Khách Hàng;
+                        <p class="en">
+                            To store tokenized payment method information through
+                            the payment service provider for automatic monthly
+                            debits. STEEL does not store the Customer's full card
+                            number, CVV/CVC code, or OTP.
+                        </p>
+                    </li>
+                    <li>
+                        Cung cấp thông tin hoặc phối hợp với các cơ quan chức
+                        năng của Nhà nước khi có yêu cầu bằng văn bản theo quy
+                        định của pháp luật.
+                        <p class="en">
+                            To cooperate with or provide information to competent
+                            governmental authorities upon official written
+                            request, in accordance with applicable laws.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>9.3.</b>Chúng tôi có camera giám sát tại các khu vực (không
+                bao gồm khu vực phòng thay đồ, phòng tắm, phòng vệ sinh, phòng
+                trị liệu) trong không gian của STEEL. STEEL có các công cụ bảo
+                mật để có thể bảo vệ thông tin cá nhân của Khách Hàng một cách
+                toàn diện nhất. Tuy nhiên, trong trường hợp cơ quan pháp luật có
+                yêu cầu bằng văn bản, chúng tôi sẽ phải cung cấp những thông tin
+                này theo đúng quy định của pháp luật.
+                <p class="en">
+                    We have CCTV in designated areas (excluding changing rooms,
+                    bathrooms, restrooms, and treatment and assessment rooms)
+                    within the premises of STEEL. STEEL implements security
+                    methods to protect Customers' personal information
+                    comprehensively. However, in cases where law enforcement
+                    agencies request information in writing, we must provide
+                    such information in accordance with legal regulations.
+                </p>
+            </li>
+            <li>
+                <b>9.4.</b>Tại một số thời điểm nhất định, STEEL sẽ có những
+                chiến dịch quảng cáo cần quay phim/ chụp ảnh Khách Hàng. STEEL sẽ
+                xin phép sử dụng và cần sự chấp thuận của Khách Hàng trước khi
+                thực hiện. STEEL theo đây cam kết việc sử dụng các kết quả của
+                những chiến dịch này không trái quy định của pháp luật.
+                <p class="en">
+                    At certain times, STEEL may conduct advertising campaigns that
+                    require filming/photographing Customers. STEEL will request
+                    permission and require the consent of Customers before using.
+                    STEEL hereby commits that the use of the results from these
+                    campaigns shall comply with applicable laws.
+                </p>
+            </li>
+            <li>
+                <b>9.5.</b>Trong quá trình tập luyện, Khách Hàng sẽ gửi kết quả
+                luyện tập kèm ảnh chụp kết quả trong suốt quá trình với mục đích
+                phối hợp với HLV cá nhân để đạt mục tiêu tập luyện mong muốn.
+                Ngoài mục đích đã nêu tại Khoản 9.1 Điều này, STEEL sẽ xin phép
+                sử dụng và cần sự chấp thuận của Khách Hàng trước khi hình ảnh và
+                các thông tin kết quả luyện tập của Khách Hàng được sử dụng cho
+                các mục đích khác.
+                <p class="en">
+                    During training progress, Customers will submit training
+                    results along with photos of the results throughout the
+                    process for the purpose of coordinating with the PT to
+                    achieve the desired training goals. In addition to the
+                    purpose stated in Clause 9.1 of this Article, STEEL will
+                    request permission and require the consent of Customers
+                    before using images and information regarding Customers'
+                    training results for other purposes.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 10. QUYỀN &amp; NGHĨA VỤ CỦA STEEL<br /><span class="en"
+                >ARTICLE 10. RIGHTS AND OBLIGATIONS OF STEEL</span
+            >
+        </h2>
+
+        <h3>10.1. Quyền của STEEL / <span class="en">Rights of STEEL</span></h3>
+        <ol type="a">
+            <li>
+                Nhận đầy đủ phí dịch vụ từ Khách Hàng như quy định tại Phụ lục của
+                Hợp Đồng này.
+                <p class="en">
+                    Receive full service fees from Customers prescribed in
+                    Appendices of this Contract.
+                </p>
+            </li>
+            <li>
+                Chấm dứt thực hiện Hợp Đồng với Khách Hàng theo quy định tại Hợp
+                Đồng này.
+                <p class="en">
+                    Terminate the performance of the Contract with the Customer in
+                    accordance with the provisions of this Contract.
+                </p>
+            </li>
+            <li>
+                Thay đổi bảng giá dịch vụ. Đối với Gói Monthly Subscription, việc
+                điều chỉnh phí dịch vụ hàng tháng chỉ được áp dụng sau thời hạn
+                bảo đảm giá 06 (sáu) tháng và phải được thông báo cho Khách Hàng
+                ít nhất 30 (ba mươi) ngày trước kỳ trích phí áp dụng mức phí mới,
+                theo Phụ lục 02.
+                <p class="en">
+                    Change service price lists. For the Monthly Subscription Plan,
+                    any adjustment to the monthly service fee may only apply after
+                    the 06 (six)-month price guarantee period and must be notified
+                    to the Customer at least thirty (30) days before the billing
+                    cycle in which the new fee applies, in accordance with
+                    Appendix 02.
+                </p>
+            </li>
+            <li>
+                STEEL có toàn quyền thay đổi tên hoặc địa điểm của Câu lạc bộ đến
+                bất kỳ vị trí nào mà STEEL cho là phù hợp, với điều kiện địa điểm
+                mới nằm trong bán kính năm (05) km tính từ địa điểm hiện tại.
+                STEEL sẽ thông báo trước bằng văn bản cho Hội viên về bất kỳ thay
+                đổi nào liên quan đến tên hoặc địa điểm Câu lạc bộ. Trong trường
+                hợp việc thay đổi địa điểm gây bất tiện cho Hội viên, STEEL sẽ sắp
+                xếp cho Hội viên được tập luyện tại một Câu lạc bộ khác trong hệ
+                thống của STEEL hoặc các đối tác liên kết, đảm bảo quyền lợi sử
+                dụng dịch vụ của Hội viên.
+                <p class="en">
+                    STEEL shall have the full right to change the name or location
+                    of the Club to any location deemed appropriate by STEEL,
+                    provided that the new location is within a five (05) km
+                    radius from the current location. STEEL shall notify the
+                    Member in writing of any changes related to the Club’s name or
+                    location. In the event that the change of location causes
+                    inconvenience to the Member, STEEL shall arrange for the
+                    Member to train at another Club within the STEEL system or
+                    with affiliated partners, ensuring the Member’s rights to use
+                    the services.
+                </p>
+            </li>
+        </ol>
+
+        <h3>10.2. Nghĩa vụ của STEEL / <span class="en">Obligations of STEEL</span></h3>
+        <ol type="a">
+            <li>
+                Cung cấp đầy đủ dịch vụ, lợi ích cho Khách Hàng.
+                <p class="en">Provide full services and benefits to Customers.</p>
+            </li>
+            <li>
+                Tạo điều kiện thuận lợi trong quá trình Khách Hàng sử dụng dịch vụ
+                tại STEEL.
+                <p class="en">
+                    Create favorable conditions for Customers during their use of
+                    services at STEEL.
+                </p>
+            </li>
+            <li>
+                Công bố công khai và niêm yết về Nội quy phòng tập, các cảnh báo
+                sức khỏe tại phòng tập, các chương trình khuyến mãi, các chính
+                sách áp dụng cho Khách Hàng.
+                <p class="en">
+                    Publicly announce and post Rules in the gym, health warnings in
+                    the gym, promotional programs, and policies applicable to
+                    Customers.
+                </p>
+            </li>
+            <li>
+                Thông tin đến Khách Hàng khi có bất kỳ sự thay đổi nào trong bảng
+                giá dịch vụ và các thông tin liên quan đến Điểm c. Khoản này.
+                <p class="en">
+                    Inform Customers of any changes in the service price list and
+                    relevant information regarding this Point c. of this Clause.
+                </p>
+            </li>
+            <li>
+                Gửi xác nhận thanh toán hoặc hóa đơn điện tử sau mỗi kỳ trích phí
+                thành công và thông báo cho Khách Hàng khi giao dịch trích phí
+                không thành công.
+                <p class="en">
+                    Send a payment confirmation or e-invoice after each successful
+                    debit and notify the Customer of any failed debit.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 11. QUYỀN &amp; NGHĨA VỤ CỦA KHÁCH HÀNG<br /><span class="en"
+                >ARTICLE 11. RIGHTS AND OBLIGATIONS OF CUSTOMERS</span
+            >
+        </h2>
+
+        <h3>11.1. Quyền của Khách Hàng / <span class="en">Rights of Customers</span></h3>
+        <ol type="a">
+            <li>
+                Khách Hàng được hưởng toàn bộ dịch vụ thuộc hạng gói đã chọn theo
+                Phụ lục 02 - Thông tin Gói Monthly Subscription.
+                <p class="en">
+                    The Customer is entitled to all services under the selected
+                    tier as set out in Appendix 02 - Monthly Subscription Plan
+                    Information.
+                </p>
+            </li>
+            <li>
+                Trong quá trình tập luyện và sử dụng các thiết bị tại STEEL, nếu
+                Khách Hàng chưa hoặc không biết cách sử dụng thiết bị hoặc bài
+                tập, vui lòng liên hệ HLV để được hướng dẫn.
+                <p class="en">
+                    During training and the use of equipment at STEEL, if
+                    Customers are unfamiliar with or do not know how to use
+                    equipment or exercises, please contact the PT for guidance.
+                </p>
+            </li>
+            <li>
+                Khách Hàng được tự do phản hồi bất kỳ dịch vụ nào của STEEL nếu
+                dịch vụ đó chưa đạt tiêu chuẩn về kỹ năng và chất lượng phục vụ,
+                hoặc nếu các phương pháp tập luyện của STEEL là sai và không đúng
+                như giới thiệu. Khách Hàng phản hồi thông qua các kênh sau:
+                <p class="en">
+                    Customers have the freedom to provide feedback on any service
+                    of STEEL if the service does not meet standards of skill and
+                    quality of service, or if the training methods of STEEL are
+                    incorrect and not as introduced. Customers can provide
+                    feedback through the following channels:
+                </p>
+                <ul class="dash">
+                    <li>
+                        Email:
+                        <a href="mailto:hello@steelsaigon.com"
+                            >hello@steelsaigon.com</a
+                        >
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>11.2. Nghĩa vụ của Khách Hàng / <span class="en">Obligations of Customers</span></h3>
+        <ol type="a">
+            <li>
+                Thanh toán đầy đủ, đúng hạn phí dịch vụ hàng tháng theo Phụ lục
+                02; duy trì phương thức thanh toán đã đăng ký luôn hợp lệ, đủ số
+                dư và thông báo cho STEEL khi thẻ hết hạn, bị khóa hoặc thay đổi.
+                <p class="en">
+                    Pay the monthly service fee in full and on time in accordance
+                    with Appendix 02; keep the registered payment method valid and
+                    sufficiently funded, and notify STEEL when the card expires,
+                    is blocked, or is changed.
+                </p>
+            </li>
+            <li>
+                Cung cấp đầy đủ các thông tin cần thiết trong Phiếu điền thông tin
+                hội viên mới và giấy tờ tùy thân hợp lệ khi được yêu cầu. Đồng
+                thời, Khách Hàng chịu trách nhiệm về tính hợp pháp, trung thực và
+                chính xác của các thông tin, tài liệu đã cung cấp cho STEEL để sử
+                dụng dịch vụ theo Hợp Đồng này.
+                <p class="en">
+                    Provide all necessary information in the New Member
+                    Information Form and valid identification documents when
+                    requested. At the same time, the Customer shall be responsible
+                    for the legality, truthfulness, and accuracy of the
+                    information and documents provided to STEEL for the use of
+                    services under this Contract.
+                </p>
+            </li>
+            <li>
+                Đảm bảo sức khỏe theo quy định tại Điều 1 của Hợp Đồng này.
+                <p class="en">
+                    Ensure health in accordance with the provisions of Article 1
+                    of this Contract.
+                </p>
+            </li>
+            <li>
+                Chấp hành Nội quy phòng tập, các Quy định, Phụ lục, các chính sách
+                được ban hành bởi STEEL tại từng thời điểm.
+                <p class="en">
+                    Comply with gym Rules, Regulations, Appendices, and policies
+                    issued by STEEL from time to time.
+                </p>
+            </li>
+            <li>
+                Phối hợp điều tra theo yêu cầu của cơ quan có thẩm quyền (nếu có).
+                <p class="en">
+                    Cooperate with investigations as requested by the competent
+                    authorities (if any).
+                </p>
+            </li>
+            <li>
+                Không cho người khác mượn thẻ hội viên của Khách Hàng để tập luyện
+                tại phòng tập của STEEL. Trường hợp vi phạm điều khoản này, đồng
+                thời, người được Khách Hàng cho mượn thẻ hội viên gây ra bất cứ
+                thiệt hại nào cho STEEL và/hoặc Khách Hàng, nhân viên của STEEL,
+                Khách Hàng có trách nhiệm bồi thường toàn bộ thiệt hại thực tế
+                phát sinh.
+                <p class="en">
+                    The Customer shall not lend their membership card to any other
+                    person for training at STEEL’s gym. In the event of a
+                    violation of this provision, and if the person borrowing the
+                    membership card causes any damage to STEEL and/or other
+                    Customers or STEEL’s staff, the Customer shall be fully
+                    responsible for compensating all actual damages incurred.
+                </p>
+            </li>
+            <li>
+                Bồi thường cho STEEL toàn bộ thiệt hại thực tế xảy ra do hành vi
+                vi phạm của Khách Hàng nêu tại Hợp Đồng này, nội quy, quy chế của
+                STEEL tại từng thời điểm.
+                <p class="en">
+                    Indemnify STEEL for all actual damages incurred as a result of
+                    the Customer’s violations under this Contract, as well as
+                    STEEL’s rules and regulations in effect at the relevant time.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 12. SỰ KIỆN BẤT KHẢ KHÁNG<br /><span class="en"
+                >ARTICLE 12. FORCE MAJEURE EVENTS</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>12.1.</b>Sự kiện bất khả kháng là sự kiện xảy ra mang tính
+                khách quan, không thể lường trước và nằm ngoài tầm kiểm soát của
+                một hoặc các Bên, ngăn cản một hoặc các Bên thực hiện nghĩa vụ
+                theo Hợp Đồng. Các sự kiện này bao gồm nhưng không giới hạn ở:
+                thiên tai, hỏa hoạn, bão lụt, dịch bệnh, đình công, chiến tranh,
+                tình trạng khẩn cấp, hoặc các sự kiện khác theo quy định của pháp
+                luật được coi là sự kiện bất khả kháng.
+                <p class="en">
+                    Force majeure event is an event that occurs objectively, is
+                    unforeseeable, and is beyond the control of one or both
+                    Parties, preventing one or both Parties from performing
+                    obligations under the Contract. Such events include, but are
+                    not limited to: natural disasters, fire, storms and floods,
+                    epidemics, strikes, war, states of emergency, or other events
+                    as prescribed by law recognized as force majeure events.
+                </p>
+            </li>
+            <li>
+                <b>12.2.</b>Khi xảy ra sự kiện bất khả kháng, Bên bị ảnh hưởng
+                phải:
+                <span class="en"
+                    >Upon the occurrence of a force majeure event, the affected
+                    Party shall:</span
+                >
+                <ol type="a">
+                    <li>
+                        Tiến hành các biện pháp ngăn ngừa hợp lý và các biện pháp
+                        cần thiết để hạn chế tối đa ảnh hưởng của sự kiện bất khả
+                        kháng.
+                        <p class="en">
+                            Implement reasonable preventive measures and
+                            necessary actions to minimize the impact of the force
+                            majeure event.
+                        </p>
+                    </li>
+                    <li>
+                        Thông báo ngay bằng văn bản cho Bên còn lại trong vòng 07
+                        (bảy) ngày làm việc kể từ khi biết tình trạng sự kiện bất
+                        khả kháng, đồng thời cung cấp bằng chứng xác thực.
+                        <p class="en">
+                            Immediately notify the other Party in writing within
+                            07 (seven) business days from the date of becoming
+                            aware of the force majeure event, and provide
+                            authentic evidence.
+                        </p>
+                    </li>
+                    <li>
+                        Sau khi hết sự kiện bất khả kháng, tiếp tục thực hiện các
+                        nghĩa vụ còn lại theo Hợp đồng.
+                        <p class="en">
+                            After the force majeure event ends, continue to
+                            perform the remaining obligations under the Contract.
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <b>12.3.</b>Trong thời gian sự kiện bất khả kháng xảy ra và ảnh
+                hưởng trực tiếp đến việc thực hiện nghĩa vụ của một Bên, nghĩa vụ
+                đó sẽ được tạm ngừng thực hiện trong phạm vi và thời hạn bị ảnh
+                hưởng. Đối với Gói Monthly Subscription, thay cho việc gia hạn Hợp
+                Đồng, STEEL tạm ngừng trích phí trong thời gian sự kiện bất khả
+                kháng khiến STEEL không cung cấp được dịch vụ; phần phí đã thu
+                tương ứng với số ngày không sử dụng được cấn trừ vào kỳ trích phí
+                tiếp theo, thống nhất với Khoản 5.5. Bên bị ảnh hưởng không phải
+                chịu trách nhiệm bồi thường thiệt hại hoặc phạt vi phạm đối với
+                việc chậm trễ hoặc không thực hiện nghĩa vụ do Sự kiện bất khả
+                kháng gây ra.
+                <p class="en">
+                    During the period in which a force majeure event occurs and
+                    directly affects the performance of a Party’s obligations,
+                    such obligations shall be suspended to the extent and
+                    duration of the impact. For the Monthly Subscription Plan,
+                    instead of extending this Contract, STEEL shall pause all
+                    debits while a force majeure event prevents STEEL from
+                    providing services; the portion of fees collected for the
+                    days without service shall be credited against the next
+                    billing cycle, consistent with Clause 5.5. The affected Party
+                    shall not be liable for any damages or penalties for delay or
+                    non-performance of obligations caused by the force majeure
+                    event.
+                </p>
+            </li>
+            <li>
+                <b>12.4.</b>Trường hợp sự kiện bất khả kháng kéo dài quá 60 (sáu
+                mươi) ngày liên tục kể từ ngày thông báo, Bên không bị ảnh hưởng
+                có quyền chấm dứt Hợp Đồng bằng văn bản gửi cho Bên bị ảnh hưởng.
+                Trong trường hợp này, việc chấm dứt sẽ không làm phát sinh nghĩa
+                vụ bồi thường giữa các Bên, ngoại trừ các nghĩa vụ đã phát sinh
+                trước khi xảy ra Sự kiện bất khả kháng.
+                <p class="en">
+                    In the event that a force majeure event continues for more
+                    than 60 (sixty) consecutive days from the date of
+                    notification, the unaffected Party shall have the right to
+                    terminate the Contract by sending a written notice to the
+                    affected Party. In this case, the termination shall not give
+                    rise to any compensation obligations between the Parties,
+                    except for obligations that arose prior to the occurrence of
+                    the force majeure event.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 13. LUẬT ĐIỀU CHỈNH VÀ GIẢI QUYẾT TRANH CHẤP<br /><span
+                class="en"
+                >ARTICLE 13. REGULATORY LAW AND DISPUTE RESOLUTION</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>13.1.</b>Hợp Đồng này được điều chỉnh theo Pháp luật Việt Nam.
+                <p class="en">This Contract is governed by the laws of Vietnam.</p>
+            </li>
+            <li>
+                <b>13.2.</b>Hợp Đồng này được lập song ngữ tiếng Anh và tiếng
+                Việt, trong trường hợp có sự mâu thuẫn giữa hai ngôn ngữ thì bản
+                tiếng Việt sẽ được ưu tiên áp dụng.
+                <p class="en">
+                    This Contract is bilingual in English and Vietnamese, and in
+                    case of conflict between the two languages, the Vietnamese
+                    version shall prevail.
+                </p>
+            </li>
+            <li>
+                <b>13.3.</b>Các tranh chấp phát sinh từ hoặc liên quan đến Hợp
+                Đồng này sẽ được Các Bên bàn bạc xử lý trên tinh thần hợp tác,
+                bình đẳng và tôn trọng lẫn nhau. Trường hợp Các Bên không tự thỏa
+                thuận được hoặc không muốn thỏa thuận với nhau, một trong Các Bên
+                có quyền khởi kiện ra Tòa án nhân dân có thẩm quyền để giải quyết
+                theo quy định của pháp luật.
+                <p class="en">
+                    Disputes arising from or related to this Contract shall be
+                    discussed and resolved by the Parties in a spirit of
+                    cooperation, equality, and mutual respect. In case the
+                    Parties cannot reach an agreement or do not wish to negotiate
+                    with each other, either Party has the right to bring a
+                    lawsuit to the competent Court for resolution according to
+                    the law.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 14. ĐIỀU KHOẢN KHÁC<br /><span class="en"
+                >ARTICLE 14. MISCELLANEOUS</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>14.1.</b>Các Bên xác nhận khi ký Hợp đồng này, các bên đã đọc
+                lại và đồng ý bị ràng buộc bởi tất cả các Điều của Hợp Đồng này.
+                <p class="en">
+                    The Parties acknowledge that by signing this Contract, each
+                    party has reviewed and agreed to be bound by all the
+                    provisions of this Contract.
+                </p>
+            </li>
+            <li>
+                <b>14.2.</b>Trường hợp phát sinh bất kỳ thiệt hại nào do hành vi
+                vi phạm của một Bên, Bên vi phạm có trách nhiệm bồi thường toàn
+                bộ thiệt hại thực tế phát sinh cho Bên bị vi phạm.
+                <p class="en">
+                    In the event that any damage arises from the violation of one
+                    Party, the breaching Party shall be responsible for fully
+                    compensating the actual damages incurred to the non-breaching
+                    Party.
+                </p>
+            </li>
+            <li>
+                <b>14.3.</b>Nếu bất kỳ quy định nào của Hợp Đồng này trở nên vô
+                hiệu, trái luật hoặc không có khả năng thi hành, thì những điều
+                khoản vô hiệu, trái luật hoặc không có khả năng thi hành đó sẽ
+                không ảnh hưởng đến các điều khoản còn lại của Hợp Đồng này.
+                <p class="en">
+                    If any provision of this Contract becomes invalid, illegal, or
+                    unenforceable, such invalid, illegal, or unenforceable
+                    provision shall not affect the remaining provisions of this
+                    Contract.
+                </p>
+            </li>
+            <li>
+                <b>14.4.</b>Hợp Đồng này thể hiện toàn bộ thỏa thuận giữa các Bên
+                liên quan đến nội dung giao dịch và thay thế mọi trao đổi, tư
+                vấn, cam kết, quảng cáo, tài liệu giới thiệu hay thỏa thuận trước
+                đây, dù bằng lời nói hay văn bản. Khách Hàng xác nhận không dựa
+                vào bất kỳ tuyên bố, tư vấn, cam kết nào khác ngoài những gì được
+                ghi nhận rõ ràng trong Hợp Đồng này khi quyết định giao kết. Mọi
+                sửa đổi, bổ sung Hợp Đồng này chỉ có giá trị khi được lập thành
+                văn bản và có chữ ký của đại diện hợp pháp các Bên.
+                <p class="en">
+                    This Contract constitutes the entire agreement between the
+                    Parties regarding the subject matter of the transaction and
+                    supersedes all prior communications, advice, representations,
+                    advertisements, promotional materials, or agreements, whether
+                    spoken or in writing. The Customer acknowledges that they
+                    have not relied on any statements, advice, or representations
+                    other than those expressly set forth in this Contract when
+                    deciding to enter into it. Any amendments or supplements to
+                    this Contract shall only be valid if made in writing and
+                    signed by the authorized representatives of the Parties.
+                </p>
+            </li>
+            <li>
+                <b>14.5.</b>Hợp Đồng có hiệu lực kể từ Ngày kích hoạt theo Khoản
+                3.1, được lập thành 02 (hai) bản, mỗi Bên giữ 01 (một) bản, có
+                giá trị pháp lý như nhau.
+                <p class="en">
+                    This Contract takes effect from the Activation Date under
+                    Clause 3.1 and is made in two (02) copies, each Party keeping
+                    one (01) copy of equal legal validity.
+                </p>
+            </li>
+        </ol>
+
+        <table class="sign">
+            <tr>
+                <td>
+                    <p><strong>ĐẠI DIỆN BÊN A</strong></p>
+                    <p class="en"><strong>ON BEHALF OF PARTY A</strong></p>
+                    <img
+                        alt=""
+                        src="https://res.cloudinary.com/duayxbt5d/image/upload/v1784636008/image4_ekqh6y-removebg-preview_kfxrqr.png"
+                        style="
+                            width: 333px;
+                            margin-bottom: 4px;
+                            transform: rotate(0rad) translateZ(0px);
+                            -webkit-transform: rotate(0rad) translateZ(0px);
+                        "
+                    />
+                    <p>
+                        <strong>GĐ</strong> <strong class="en">(CEO)</strong
+                        ><strong>. BÙI TRƯƠNG VIỆT ANH</strong>
+                    </p>
+                </td>
+                <td>
+                    <p><strong>Bên B</strong></p>
+                    <p class="en"><strong>PARTY B</strong></p>
+                    <div class="space"></div>
+                    <p><strong>{W}</strong></p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STEEL Fitness – Kích hoạt chuyển nhượng gói tập</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                margin: 0;
+                background: #ffffff;
+                color: #1a1a1a;
+            }
+
+            .lang-hint {
+                font-size: 12px;
+                font-style: italic;
+                color: #999;
+                margin: 0 0 14px;
+            }
+
+            .greeting-label {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+            .greeting-name {
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin: 0 0 8px;
+            }
+
+            .body-text {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 12px;
+            }
+            .body-text strong {
+                color: #1a1a1a;
+            }
+
+            .divider {
+                border: none;
+                border-top: 0.5px solid #e5e2da;
+                margin: 24px 0;
+            }
+
+            /* Language separator */
+            .lang-divider {
+                border-top: 0.5px solid #e5e2da;
+                text-align: center;
+                margin: 44px 0 30px;
+            }
+            .lang-divider span {
+                display: inline-block;
+                background: #ffffff;
+                padding: 0 14px;
+                transform: translateY(-50%);
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #999;
+            }
+
+            .section-label {
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #333;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+
+            /* Info table */
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #eee;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 24px;
+            }
+            .info-table tr {
+                border-bottom: 0.5px solid #ddd;
+            }
+            .info-table tr:last-child {
+                border-bottom: none;
+            }
+            .info-table td {
+                padding: 10px 14px;
+                vertical-align: top;
+                background: transparent;
+            }
+            .info-table td.td-label {
+                font-size: 13px;
+                color: #333;
+                width: 70%;
+            }
+            .info-table td.td-value {
+                font-size: 14px;
+                font-weight: 600;
+                color: #1a1a1a;
+                width: 30%;
+                white-space: nowrap;
+            }
+
+            /* Notice box */
+            .notice-box {
+                background: #fdf9f3;
+                border-left: 3px solid #c8a96e;
+                border-radius: 0 8px 8px 0;
+                padding: 14px 18px;
+                margin-bottom: 24px;
+            }
+            .notice-box .notice-title {
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #333;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+            .notice-box p {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 4px;
+            }
+            .notice-box p:last-child {
+                margin: 0;
+            }
+            .notice-box .notice-item {
+                margin: 0 0 14px;
+            }
+            .notice-box .notice-item:last-child {
+                margin: 0;
+            }
+
+            /* Sign-off */
+            .signoff {
+                margin-top: 8px;
+                margin-bottom: 28px;
+            }
+            .signoff .thanks {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 4px;
+            }
+
+            /* Contact */
+            .contact-label {
+                font-size: 13px;
+                color: #333;
+                margin: 0 0 10px;
+                line-height: 1.75;
+            }
+            .contact-item {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+            .contact-item a {
+                color: #c8a96e;
+                text-decoration: none;
+            }
+
+            /* ── Mobile ── */
+            @media (max-width: 480px) {
+                body {
+                    padding: 20px;
+                }
+
+                .info-table,
+                .info-table tbody,
+                .info-table tr,
+                .info-table td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .info-table tr {
+                    border-bottom: 0.5px solid #ddd;
+                }
+
+                .info-table td.td-label {
+                    padding-bottom: 2px;
+                    border-bottom: none;
+                    width: 100%;
+                }
+
+                .info-table td.td-value {
+                    padding-top: 4px;
+                    padding-bottom: 14px;
+                    width: 100%;
+                    white-space: normal;
+                }
+            }
+
+            /* ===== FOOTER LEGAL ===== */
+            .footer-legal-wrap {
+                background-color: #111111;
+                padding: 24px 8px;
+                border-top: 1px solid #2a2a2a;
+                text-align: left;
+            }
+            .footer-legal-en {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+            }
+            .footer-divider {
+                font-size: 11px;
+                color: #666666;
+                letter-spacing: 2px;
+            }
+            .footer-legal-vi {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+            }
+
+            /* ===== SIGNATURE ===== */
+            .signature-wrap {
+                background-color: #111111;
+                padding: 24px 8px;
+                border-top: 1px solid #2a2a2a;
+                text-align: center;
+            }
+            .signature-tagline {
+                font-size: 12px;
+                color: #cccccc;
+                font-style: italic;
+                margin: 0 0 14px 0;
+                letter-spacing: 0.5px;
+            }
+            .signature-logo {
+                display: block;
+                margin: 0 auto 12px auto;
+            }
+            .signature-website {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0 0 4px 0;
+                text-decoration: none;
+            }
+            .signature-email {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0;
+                text-decoration: none;
+            }
+            .signature-website a,
+            .signature-email a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ============================================================ -->
+        <!-- ===================  TIẾNG VIỆT  =========================== -->
+        <!-- ============================================================ -->
+
+        <!-- Language hint -->
+        <p class="lang-hint">For English, see below</p>
+
+        <!-- Greeting -->
+        <p class="greeting-label">Kính gửi</p>
+        <p class="greeting-name">{{ $json.customer_name }}</p>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL xin xác nhận hợp đồng chuyển nhượng gói tập
+            <strong>{{$json.package_name}}</strong> của khách hàng
+            <strong>{{$json.previous_customer}}</strong> sang khách hàng
+            <strong>{{$json.customer_name}}</strong> đã được
+            <strong>kích hoạt thành công</strong>.
+        </p>
+
+        <!-- Attachment note -->
+        <div class="notice-box">
+            <p>
+                Bản scan <strong>Phụ lục Hợp đồng chuyển nhượng</strong> đã ký
+                vào ngày <strong>{{$json.addendum_signed_date}}</strong> được
+                đính kèm trong email này.
+            </p>
+        </div>
+
+        <!-- Transfer details -->
+        <p class="section-label">Chi tiết chuyển nhượng</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Khách hàng chuyển nhượng</td>
+                <td class="td-value">{{$json.previous_customer}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Khách hàng được chuyển nhượng</td>
+                <td class="td-value">{{$json.customer_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Ngày ký phụ lục</td>
+                <td class="td-value">{{$json.addendum_signed_date}}</td>
+            </tr>
+        </table>
+
+        <!-- Package info -->
+        <p class="section-label">Thông tin gói tập</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Tên gói tập</td>
+                <td class="td-value">{{$json.package_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Gói hội viên</td>
+                <td class="td-value">{{$json.membership_plan}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Câu lạc bộ</td>
+                <td class="td-value">{{$json.club_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Thời hạn thẻ hội viên</td>
+                <td class="td-value">{{$json.membership_months}} tháng</td>
+            </tr>
+            <tr>
+                <td class="td-label">Thời hạn bảo lưu</td>
+                <td class="td-value">{{$json.freeze_days}} ngày</td>
+            </tr>
+        </table>
+
+        <!-- Included services -->
+        <p class="section-label">Các dịch vụ đi kèm</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">HLV cá nhân 1:1</td>
+                <td class="td-value">{{$json.personal_sessions}} buổi</td>
+            </tr>
+            <tr>
+                <td class="td-label">HLV Pilates 2:1</td>
+                <td class="td-value">{{$json.pilates_sessions}} buổi</td>
+            </tr>
+            <tr>
+                <td class="td-label">Giãn cơ phục hồi</td>
+                <td class="td-value">{{$json.recovery_sessions}} buổi</td>
+            </tr>
+            <tr>
+                <td class="td-label">Massage thể thao</td>
+                <td class="td-value">{{$json.sports_massage_sessions}} buổi</td>
+            </tr>
+            <tr>
+                <td class="td-label">Invite Pass (thẻ tặng khách mời)</td>
+                <td class="td-value">{{$json.invite_pass_qty}} thẻ</td>
+            </tr>
+        </table>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                Xin chân thành cảm ơn Quý Khách đã tin tưởng và lựa chọn tập
+                luyện cùng STEEL.
+            </p>
+        </div>
+
+        <!-- Contact -->
+        <p class="contact-label">
+            Nếu có bất kỳ thắc mắc nào, Quý Khách vui lòng phản hồi qua email
+            hoặc liên hệ bộ phận chăm sóc khách hàng qua số hotline để được hỗ
+            trợ.
+        </p>
+
+        <p class="contact-item">
+            Email:
+            <a href="mailto:membership@steelsaigon.com"
+                >membership@steelsaigon.com</a
+            >
+        </p>
+        <p class="contact-item">0931 302 177 — STEEL Đảo Kim Cương</p>
+        <p class="contact-item">0901 316 892 — STEEL Phú Mỹ Hưng</p>
+
+        <!-- ============================================================ -->
+        <!-- ===================  ENGLISH  ============================== -->
+        <!-- ============================================================ -->
+        <div class="lang-divider"></div>
+
+        <!-- Greeting -->
+        <p class="greeting-label">Dear</p>
+        <p class="greeting-name">{{ $json.customer_name }}</p>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL confirms that the transfer of membership package
+            <strong>{{$json.package_name}}</strong> from
+            <strong>{{$json.previous_customer}}</strong> to
+            <strong>{{$json.customer_name}}</strong> has been successfully
+            activated.
+        </p>
+
+        <!-- Attachment note -->
+        <div class="notice-box">
+            <p>
+                A scanned copy of the signed
+                <strong>Transfer Addendum</strong> dated
+                <strong>{{$json.addendum_signed_date_en}}</strong> is attached
+                to this email.
+            </p>
+        </div>
+
+        <!-- Transfer details -->
+        <p class="section-label">Transfer Details</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Transferring Member</td>
+                <td class="td-value">{{$json.previous_customer}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Receiving Member</td>
+                <td class="td-value">{{$json.customer_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Addendum Signed Date</td>
+                <td class="td-value">{{$json.addendum_signed_date_en}}</td>
+            </tr>
+        </table>
+
+        <!-- Package info -->
+        <p class="section-label">Package Information (as of transfer date)</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Package Name</td>
+                <td class="td-value">{{$json.package_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Subscription</td>
+                <td class="td-value">{{$json.membership_plan}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Club</td>
+                <td class="td-value">{{$json.club_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Membership Duration</td>
+                <td class="td-value">
+                    {{$json.membership_months}} months remaining
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Freeze Allowance</td>
+                <td class="td-value">{{$json.freeze_days}} days remaining</td>
+            </tr>
+        </table>
+
+        <!-- Included services -->
+        <p class="section-label">Included Services</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Personal Training Sessions (1:1)</td>
+                <td class="td-value">{{$json.personal_sessions}} sessions</td>
+            </tr>
+            <tr>
+                <td class="td-label">Pilates Training Sessions (2:1)</td>
+                <td class="td-value">{{$json.pilates_sessions}} sessions</td>
+            </tr>
+            <tr>
+                <td class="td-label">Recovery & Stretching Sessions</td>
+                <td class="td-value">{{$json.recovery_sessions}} sessions</td>
+            </tr>
+            <tr>
+                <td class="td-label">Sports Massage Sessions</td>
+                <td class="td-value">
+                    {{$json.sports_massage_sessions}} sessions
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Guest Invite Passes</td>
+                <td class="td-value">{{$json.invite_pass_qty}} passes</td>
+            </tr>
+        </table>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                Thank you for your trust and for choosing STEEL as your fitness
+                partner.
+            </p>
+        </div>
+
+        <!-- Contact -->
+        <p class="contact-label">
+            For any inquiries, please reply via email or contact STEEL's
+            customer service team via hotline for support.
+        </p>
+
+        <p class="contact-item">
+            Email:
+            <a href="mailto:membership@steelsaigon.com"
+                >membership@steelsaigon.com</a
+            >
+        </p>
+        <p class="contact-item">0931 302 177 — Diamond Island Club</p>
+        <p class="contact-item">0901 316 892 — Phu My Hung Club</p>
+
+        <!-- Signature -->
+        <div class="signature-wrap">
+            <p class="signature-tagline">With Strength,</p>
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                alt="STEEL"
+                width="80"
+                class="signature-logo"
+            />
+            <p class="signature-website">
+                <a href="https://www.steelsaigon.com">www.steelsaigon.com</a>
+            </p>
+            <p class="signature-email">
+                <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+            </p>
+        </div>
+
+        <!-- Footer Legal -->
+        <div class="footer-legal-wrap">
+            <p class="footer-legal-vi">
+                Quý Hội viên nhận được email giao dịch này nhằm cập nhật các
+                thay đổi quan trọng liên quan đến Membership, tài khoản hoặc
+                quyền truy cập dịch vụ tại STEEL.<br />Đây là một phần trong các
+                thông báo dịch vụ chính thức của STEEL và không phải email quảng
+                cáo.<br />Email này được gửi từ địa chỉ chỉ dùng để gửi đi thông
+                báo, và không nhận lại được phản hồi. Nếu cần hỗ trợ, Quý Hội
+                viên vui lòng liên hệ Front Desk hoặc Consultant của STEEL.
+            </p>
+            <p class="footer-divider">&mdash;</p>
+            <p class="footer-legal-en">
+                You've received this transactional email for informational
+                purposes to update you about important changes related to your
+                STEEL membership, account, or service access.<br />This message
+                is part of STEEL's official service communications and is not a
+                marketing email.<br />This message was sent from a
+                notification-only email address that doesn't accept incoming
+                emails. If you have any questions, please contact STEEL Front
+                Desk or your Consultant for assistance.
+            </p>
+        </div>
+    </body>
+</html>

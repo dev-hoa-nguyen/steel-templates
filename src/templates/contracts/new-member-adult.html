@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hợp đồng cung cấp dịch vụ</title>
+        <style>
+            :root {
+                --ink: #000;
+                --en: #244061;
+                --muted: #666;
+                --rule: #d4d4d4;
+            }
+
+            /* ---------- page ---------- */
+            @page {
+                size: A4;
+                margin: 18mm 16mm 16mm;
+            }
+
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+                color: #000;
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 40px 24px;
+            }
+
+            /* ---------- headings ---------- */
+            h1 {
+                margin: 18pt 0 12pt;
+                font-size: 14pt;
+                line-height: 1.3;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            h2 {
+                margin: 20pt 0 8pt;
+                font-size: 11.5pt;
+                line-height: 1.3;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            h3 {
+                margin: 14pt 0 6pt;
+                font-size: 10.5pt;
+                line-height: 1.3;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- masthead ---------- */
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 6pt;
+                border-bottom: 1px solid var(--rule);
+            }
+            .masthead img {
+                width: 124px;
+                height: auto;
+            }
+            .masthead div {
+                text-align: right;
+                font-size: 9pt;
+                color: var(--muted);
+                line-height: 1.35;
+            }
+            .masthead strong {
+                font-weight: 700;
+                font-style: italic;
+            }
+
+            .letterhead {
+                display: block;
+                width: 234px;
+                height: auto;
+                margin: 0 0 16px;
+            }
+            .subtitle {
+                font-family: Arial, sans-serif;
+                font-size: 13pt;
+                font-style: italic;
+                text-align: center;
+                color: #333;
+                margin: 0 0 4px;
+            }
+            .no {
+                text-align: center;
+                margin: 2px 0 16px;
+            }
+
+            i {
+                font-weight: normal;
+                color: #333;
+            }
+            p {
+                margin: 6px 0;
+                text-align: justify;
+            }
+            ul,
+            ol {
+                margin: 6px 0;
+                padding-left: 28px;
+            }
+            li {
+                margin: 6px 0;
+                text-align: justify;
+            }
+            i {
+                font-style: italic;
+            }
+            .note {
+                color: #c00;
+                font-style: italic;
+            }
+            table.sign {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 32px;
+            }
+            table.sign td {
+                width: 50%;
+                vertical-align: top;
+                text-align: center;
+                padding: 8px 8px 24px;
+            }
+            .sig {
+                display: block;
+                max-width: 300px;
+                height: auto;
+                margin: 4px auto;
+            }
+
+            /* ---------- print ---------- */
+            @media print {
+                body {
+                    max-width: none;
+                    padding: 0;
+                    font-size: 10pt;
+                }
+                .masthead {
+                    padding-bottom: 4pt;
+                }
+                li,
+                p,
+                h1,
+                h2,
+                h3 {
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                body {
+                    padding: 16px;
+                    font-size: 11pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="masthead">
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1789133802/image1_buslce.png"
+                alt="STEEL Saigon"
+            />
+            <div>
+                <strong>HỢP ĐỒNG HỘI VIÊN - MEMBERSHIP CONTRACT</strong><br />
+                WWW.STEELSAIGON.COM
+            </div>
+        </header>
+
+        <h1>
+            HỢP ĐỒNG CUNG CẤP DỊCH VỤ
+            <p class="subtitle">SERVICES CONTRACT</p>
+        </h1>
+        <p class="no">Số/ <i>No.</i>: {{ $json.contract_number }}</p>
+
+        <ul>
+            <li>
+                Căn cứ Bộ luật Dân sự số 91/2015/QH13 ngày 24 tháng 11 năm
+                2015<br />
+                <i
+                    >Pursuant to the Civil Code No. 91/2015/QH13 dated on
+                    November 24, 2015;</i
+                >
+            </li>
+            <li>
+                Căn cứ Luật Thương mại số 36/2005/QH11 ngày 14 tháng 06 năm
+                2005;<br />
+                <i
+                    >Pursuant to the Commercial Law No. 36/2005/QH11 dated on
+                    June 14th, 2005;</i
+                >
+            </li>
+            <li>
+                Căn cứ vào nhu cầu và khả năng của các bên của các bên.<br />
+                <i>Based on the demand and abilities of the Parties.</i>
+            </li>
+        </ul>
+
+        <p>Hôm nay, ngày {{ $json.meta.today.vi }}, các bên gồm:</p>
+        <p><i>Today, {{ $json.meta.today.short }}, we are:</i></p>
+
+        <p>
+            <b>BÊN A – BÊN CUNG CẤP DỊCH VỤ:</b><br />
+            <b><i>PARTY A - SERVICES PROVIDER:</i></b>
+        </p>
+        <p>
+            <b>{{ $json.meta.company.name }}</b> (Gọi tắt là "STEEL")<br />
+            <b><i>{{ $json.meta.company.name_en }}</i></b>
+            <i>(hereinafter referred to as "STEEL")</i>
+        </p>
+        <p>
+            <b>Địa chỉ</b>: {{ $json.meta.company.address }}.<br />
+            <b><i>Address</i></b
+            ><i>: {{ $json.meta.company.address_en }}.</i>
+        </p>
+        <p>
+            <b>Điện thoại</b> <b><i>(Phone number)</i></b
+            >: {{ $json.meta.company.phone }}
+        </p>
+        <p>
+            <b>Mã số thuế</b> <b><i>(Tax Code)</i></b
+            >: {{ $json.meta.company.tax_code }}
+        </p>
+        <p>
+            <b>Đại diện</b> <b><i>(Represented by)</i></b
+            >: {{ $json.meta.company.salutation_vi }}
+            <i>{{ $json.meta.company.salutation_en }}</i> {{
+            $json.meta.company.representative }}
+        </p>
+
+        <p>
+            <b>BÊN B - KHÁCH HÀNG:</b><br />
+            <b><i>PARTY B - CUSTOMER:</i></b>
+        </p>
+        <p>
+            <b>Họ và tên</b> <b><i>(Full name)</i></b
+            >: {{ $json.meta.customer.name }}
+        </p>
+        <p>
+            <b>Ngày sinh</b> <b><i>(Date of birth)</i></b
+            >: {{ $json.meta.customer.dob }}
+        </p>
+        <p>
+            <b>Giới tính</b> <b><i>(Gender)</i></b
+            >: {{ $json.meta.customer.gender }}
+        </p>
+        <p>
+            <b>CMND/ CCCD/ Hộ chiếu số</b> <b><i>(ID/ Passport No.)</i></b
+            >: {{ $json.meta.customer.credential_id }}
+        </p>
+        <p>
+            <b>Điện thoại</b> <b><i>(Phone number)</i></b
+            >: {{ $json.meta.customer.phone }}
+        </p>
+        <p><b>Email</b>: {{ $json.meta.customer.email }}</p>
+
+        <p>
+            Hai bên đã thỏa thuận và đồng ý ký kết hợp đồng cung cấp dịch vụ
+            ("Hợp đồng") này với các nội dung như sau:<br />
+            <i
+                >The two parties have agreed and consented to sign this Services
+                Contract (hereinafter referred to as "Contract") as follows:</i
+            >
+        </p>
+
+        <h2>
+            Điều 1: Chứng nhận sức khỏe và miễn trừ trách nhiệm.<br />
+            <i>Article 1: Health attestation and Liability Waiver.</i>
+        </h2>
+        <p>
+            1.1. Khách hàng có trách nhiệm xác định bản thân có đủ sức khỏe để
+            tham gia tập luyện trước khi ký vào Hợp đồng này<br />
+            <i
+                >The customer is responsible for determining if you are in good
+                health to participate in training before signing this
+                Contract.</i
+            >
+        </p>
+        <p>
+            1.2. Khách hàng phải cam đoan bản thân mình đang ở thể trạng tốt và
+            có thể chủ động thực hiện các bài tập mà không làm hại đến sức khoẻ
+            và an toàn của bản thân. Trường hợp Khách hàng cảm thấy tình trạng
+            sức khỏe có chuyển biến xấu hoặc gặp chấn thương trong quá trình tập
+            luyện, vui lòng thông báo ngay lập tức cho nhân viên gần nhất<br />
+            <i
+                >The customer must affirm that you are in good physical
+                condition and able to voluntarily perform exercises without
+                endangering their health and safety. In the event the customer
+                feels their health condition deteriorating or experiences an
+                injury during the training process, please immediately inform
+                the nearest staff member.</i
+            >
+        </p>
+        <p>
+            1.3. STEEL sẽ không chịu trách nhiệm bao gồm nhưng không giới hạn
+            các trường hợp sau đây<br />
+            <i
+                >STEEL shall not be liable for, including but not limited to,
+                the following cases:</i
+            >
+        </p>
+        <ul>
+            <li>
+                Khách hàng không cung cấp đủ thông tin về Người liên lạc khẩn
+                cấp, dẫn đến việc chậm trễ trong quá trình liên lạc và sơ cứu<br />
+                <i
+                    >The customer fails to provide sufficient information about
+                    the Emergency Contact, leading to delays in communication
+                    and emergency response.</i
+                >
+            </li>
+            <li>
+                Khách hàng không trung thực về tình trạng sức khỏe của bản
+                thân<br />
+                <i
+                    >The customer is not truthful about their health
+                    condition.</i
+                >
+            </li>
+            <li>
+                Khách hàng có vấn đề về sức khỏe trong quá trình tập luyện nhưng
+                không thông báo cho STEEL<br />
+                <i
+                    >The customer experiences health issues during training but
+                    fails to notify STEEL.</i
+                >
+            </li>
+        </ul>
+
+        <h2>
+            Điều 2: Thời hạn hợp đồng.<br />
+            <i>Article 2: Contract term.</i>
+        </h2>
+        <p>
+            2.1. Thời hạn hợp đồng được tính như sau: Thời hạn gói tập tính từ
+            ngày ký hợp đồng cộng thêm số ngày đã bảo lưu và số ngày được cộng
+            thêm tùy vào từng trường hợp cụ thể được quyết định bởi STEEL<br />
+            <i
+                >The contract duration is calculated as follows: The training
+                package duration starts from the contract signing date plus any
+                freezed days and additional days as determined by STEEL based on
+                specific circumstances.</i
+            >
+        </p>
+        <p>
+            2.2. Thời hạn hợp đồng cũng chính là thời hạn Hội viên<br />
+            <i>The contract term is also the member's duration.</i>
+        </p>
+        <p>
+            2.3. Trường hợp Khách hàng có nhiều hơn 01 (một) hợp đồng thì có thể
+            yêu cầu tạm dừng các hợp đồng để sử dụng 01 (một) hợp đồng tại một
+            thời điểm. Nếu không, các hợp đồng sẽ hoạt động song song và thời
+            hạn của Khách hàng được tính theo hợp đồng có thời hạn dài hơn<br />
+            <i
+                >In the event the customer has more than 01 (one) contract, they
+                may request a temporary suspension of contracts to use only 01
+                (one) contract at a time. Otherwise, the contracts will operate
+                concurrently, and the customer's duration will be calculated
+                based on the contract with the longer duration.</i
+            >
+        </p>
+        <p>
+            2.4. Khách hàng có 30 ngày để gia hạn hợp đồng hoặc đăng ký một gói
+            tập khác kể từ ngày hết hạn gói tập cũ; trong khoảng thời gian này,
+            Khách hàng vẫn giữ tư cách Hội viên STEEL để tiếp tục sử dụng Reward
+            Points và các chính sách Ưu đãi đặc quyền dành riêng cho Hội viên
+            nhưng sẽ không được sử dụng dịch vụ tập luyện và các tiện ích mà
+            STEEL cung cấp; nếu sau 30 ngày kể từ ngày hết hạn gói tập mà Khách
+            hàng không gia hạn hoặc không đăng ký gói tập khác, STEEL sẽ chấm
+            dứt tư cách Hội viên cùng các lợi ích đi kèm của Khách hàng.
+        </p>
+        <p>
+            2.5. Nếu Khách hàng có lý do chính đáng và muốn gia hạn thời gian
+            quy định tại Khoản 2.4 Điều này, vui lòng gửi yêu cầu qua email
+            <b>hello@steelsaigon.com</b> để được hỗ trợ. Quyền xem xét và quyết
+            định cuối cùng thuộc về <b>STEEL</b>, và
+            <b
+                >STEEL không có nghĩa vụ phải giải trình hoặc chịu trách nhiệm
+                đối với bất kỳ khiếu nại, tranh chấp nào phát sinh liên quan đến
+                nội dung tại Khoản này</b
+            >.
+        </p>
+        <p>
+            2.6. Hợp đồng này vẫn có hiệu lực khi Khách hàng gia hạn gói tập.
+            Các Hóa đơn dịch vụ có liên quan và Thông tin gói tập sau gói tập
+            đầu tiên sẽ được bổ sung thành Phụ lục của Hợp đồng này<br />
+            <i
+                >This contract remains valid when the customer extends the
+                training package. Related service invoices and Training Package
+                Information Sheets beyond the initial package will be added as
+                appendices to this contract.</i
+            >
+        </p>
+
+        <h2>
+            Điều 3: Nội quy phòng tập.<br />
+            <i>Article 3: Gym Rules.</i>
+        </h2>
+        <p>
+            Bằng việc ký kết Hợp đồng này, Hội viên xác nhận đã đọc, hiểu và
+            đồng ý bị ràng buộc bởi tất cả các điều khoản và điều kiện được quy
+            định trong Hợp đồng này, bao gồm nhưng không giới hạn ở các phụ lục
+            đính kèm (nếu có), Quy định hoạt động của STEEL, cùng với các quy
+            định nội bộ khác của Công ty được ban hành và cập nhật theo từng
+            thời điểm.
+        </p>
+        <p>
+            Hiệu lực của Hợp đồng được xác lập kể từ ngày ghi tại phần đầu Hợp
+            đồng này hoặc kể từ ngày có hiệu lực tự động theo quy định tại Phiếu
+            Đăng ký Hội viên/Dịch vụ (tùy từng trường hợp) (gọi chung là "Ngày
+            hiệu lực").
+        </p>
+        <p>
+            Hội viên vui lòng tham khảo chi tiết các điều khoản và quy định
+            trong Phụ lục 1 – Quy định Câu lạc bộ STEEL.
+        </p>
+
+        <h2>
+            Điều 4: Chính sách hoàn phí<br />
+            <i>Article 4: Refund Policy</i>
+        </h2>
+        <p>
+            4.1. STEEL không áp dụng chính sách hoàn phí sau khi Khách hàng đã
+            thanh toán gói dịch vụ, trừ các trường hợp sau<br />
+            <i
+                >STEEL does not apply any refund policy after the Customer has
+                made payment for the service package, except in the following
+                cases:</i
+            >
+        </p>
+        <p>
+            a. Trong trường hợp STEEL quyết định đóng cửa và ngừng cung cấp dịch
+            vụ vĩnh viễn tại cơ sở mà Khách hàng đã ký hợp đồng dịch vụ vì bất
+            kỳ lý do gì, STEEL cam kết hoàn trả phần giá trị còn lại chưa sử
+            dụng của gói hội viên mà Khách hàng đã thanh toán.<br />
+            <i
+                >In the event that STEEL decides to permanently close and cease
+                operations at the location where the Customer entered into the
+                service agreement, for any reason, STEEL commits to refunding
+                the unused remaining value of the membership package that the
+                Customer has paid.</i
+            >
+        </p>
+        <p>
+            b. Việc hoàn phí sẽ được thực hiện trong vòng 90 (chín mươi) ngày
+            làm việc kể từ ngày STEEL ra thông báo chính thức về việc đóng cửa
+            vĩnh viễn.<br />
+            <i
+                >The refund shall be processed within 30 (thirty) working days
+                from the date of STEEL's official announcement regarding the
+                closure.</i
+            >
+        </p>
+        <p>
+            4.2. Phương thức hoàn phí<br />
+            <i>Refund Method</i>
+        </p>
+        <p>
+            Việc hoàn phí sẽ được thực hiện thông qua chuyển khoản ngân hàng vào
+            tài khoản do Khách hàng cung cấp. STEEL không thực hiện hoàn phí
+            bằng tiền mặt.<br />
+            <i
+                >Refunds shall be made via bank transfer to the account provided
+                by the Customer. STEEL does not process refunds in cash.</i
+            >
+        </p>
+        <p>
+            4.3. Trách nhiệm cung cấp thông tin<br />
+            <i>Responsibility to Provide Information</i>
+        </p>
+        <p>
+            Khách hàng có trách nhiệm cung cấp đầy đủ và chính xác thông tin tài
+            khoản ngân hàng để phục vụ cho việc hoàn phí. STEEL không chịu trách
+            nhiệm đối với việc chậm trễ hoàn phí do Khách hàng cung cấp sai hoặc
+            thiếu thông tin.<br />
+            <i
+                >The Customer is responsible for providing complete and accurate
+                bank account information for the refund process. STEEL shall not
+                be held liable for delays caused by incorrect or incomplete
+                information provided by the Customer.</i
+            >
+        </p>
+        <p>
+            4.4. Các khoản không hoàn lại<br />
+            <i>Non-refundable Items</i>
+        </p>
+        <p>
+            Các khoản khuyến mãi, ưu đãi, phần quà tặng kèm hoặc các dịch vụ đã
+            sử dụng sẽ không được hoàn phí dưới bất kỳ hình thức nào.<br />
+            <i
+                >Promotional bonus, gifts, or services already used are
+                non-refundable under any circumstances.</i
+            >
+        </p>
+        <p>
+            4.5. Từ chối yêu cầu hoàn phí vì lý do cá nhân<br />
+            <i>No Refunds for Personal Reasons</i>
+        </p>
+        <p>
+            STEEL không hoàn phí trong trường hợp Khách hàng không còn nhu cầu
+            sử dụng dịch vụ vì lý do cá nhân, bao gồm nhưng không giới hạn: thay
+            đổi nơi ở, công việc, lịch trình, hoặc các lý do sức khỏe không do
+            STEEL gây ra.<br />
+            <i
+                >STEEL does not process refunds for changes in the Customer's
+                personal circumstances, including but not limited to relocation,
+                work schedule changes, or health reasons not caused by STEEL.</i
+            >
+        </p>
+
+        <h2>
+            Điều 5: Bảo toàn buổi tập cùng HLV cá nhân chưa sử dụng khi hết hạn
+            hợp đồng hội viên<br />
+            <i>Article 5: Rollover PT Sessions.</i>
+        </h2>
+        <p>
+            6.1. Khi Khách hàng gia hạn hợp đồng hoặc mua một gói tập khác trong
+            vòng 30 ngày kể từ ngày hết hạn hợp đồng, toàn bộ số buổi tập cùng
+            HLV cá nhân chưa sử dụng hết sẽ được cộng dồn qua gói tập mới. Sau
+            khoảng thời gian này, chính sách cộng dồn buổi tập cùng HLV cá nhân
+            không được áp dụng<br />
+            <i
+                >When the customer renews their contract or purchases another
+                training package within 30 days from the contract expiration
+                date, all remaining PT sessions will be transfer to the new
+                training package. After this period, the policy of Rollover PT
+                Sessions will not be applicable.</i
+            >
+        </p>
+        <p>
+            6.2. Khách hàng không thể chuyển nhượng các buổi tập đã được cộng
+            dồn cho người khác<br />
+            <i>Customers cannot transfer accumulated PT sessions to others.</i>
+        </p>
+        <p>
+            6.3. Khách hàng không thể chuyển đổi các buổi tập cùng HLV cá nhân
+            chưa sử dụng sang dịch vụ khác
+        </p>
+
+        <h2>
+            Điều 6: Chính sách sử dụng dịch vụ với HLV cá nhân hoặc chuyên viên
+            phục hồi<br />
+            <i>Article 6:</i>
+        </h2>
+        <p>
+            7.1. STEEL cung cấp dịch vụ tập luyện cùng HLV cá nhân hoặc chuyên
+            viên phục hồi. Đối với dịch vụ tập luyện cùng HLV cá nhân, mỗi buổi
+            tập có thời lượng tối thiểu 45 phút và tối đa 90 phút. Trường hợp
+            buổi tập diễn ra ít hơn 45 phút mà không có xác nhận của Hội viên,
+            STEEL có quyền không ghi nhận buổi tập trên hệ thống. Trường hợp
+            buổi tập kéo dài hơn 90 phút, STEEL sẽ ghi nhận thành 02 buổi tập.
+        </p>
+        <p>
+            7.2. Khách hàng tập luyện cùng HLV cá nhân hoặc sử dụng dịch vụ phục
+            hồi<br />
+            <i
+                >Customers Training with Personal Trainers or Using Recovery
+                Services:</i
+            >
+        </p>
+        <ol>
+            <li>
+                Đối với Khách hàng tập luyện cùng HLV cá nhân, Khách hàng đặt
+                lịch trực tiếp với HLV cá nhân phụ trách hoặc ứng dụng. Khách
+                hàng được dời lịch 01 lần/ buổi tập; buổi tập đã dời sẽ không
+                được hủy<br />
+                <i
+                    >For customers training with personal trainers, customers
+                    book directly with their assigned personal trainer.
+                    Customers are allowed to reschedule once per training
+                    session; rescheduled sessions cannot be canceled.</i
+                >
+            </li>
+            <li>
+                Đối với Khách hàng sử dụng dịch vụ phục hồi, Khách hàng đặt lịch
+                thông qua hotline +84 932 301 277. Khách hàng được dời lịch 01
+                lần/ ngày trong phạm vi 02 tiếng cùng ngày với điều kiện vẫn còn
+                Therapist trống lịch trong khung giờ đó<br />
+                <i
+                    >For customers using Recovery services, appointments are
+                    booked via the hotline +84 932 301 277. Customers are
+                    allowed to reschedule appointments once per day within a
+                    2-hour timeframe on the same day, if only there are
+                    available slots with the therapist during that time
+                    frame.</i
+                >
+            </li>
+            <li>
+                Nếu Khách hàng muốn hủy lịch buổi tập đã đăng ký, Khách hàng
+                phải báo hủy trước ít nhất 02 tiếng. Kể từ thời điểm 02 tiếng
+                tính đến giờ bắt đầu buổi tập, buổi tập vẫn được hủy nhưng hệ
+                thống vẫn ghi nhận Khách hàng đã đặt lịch thành công<br />
+                <i
+                    >If customer wants to cancel a scheduled booking, they must
+                    notify STEEL at least 2 hours in advance. If cancellation
+                    occurs within the 2-hour window before the scheduled
+                    appointment, the session will still be canceled, but the
+                    system will register it as a successful appointment
+                    booking.</i
+                >
+            </li>
+            <li>
+                Khách hàng đến trễ vẫn phải kết thúc buổi tập/ buổi phục hồi
+                đúng giờ<br />
+                <i
+                    >Customers who arrive late must still end their
+                    training/recovery session at the scheduled time.</i
+                >
+            </li>
+        </ol>
+
+        <h2>
+            Điều 7: Chính sách bảo mật và quyền riêng tư.<br />
+            <i>Article 7: Privacy and Security Policy.</i>
+        </h2>
+        <p>
+            7.1. Thông tin về các dữ liệu được STEEL thu thập, Khách hàng xem
+            tại<br />
+            <i
+                >Information regarding the data collected by STEEL can be viewed
+                at: https://www.steelsaigon.com/vi/chinh-sach-bao-mat</i
+            >
+        </p>
+        <p>
+            7.2. Đối với Khách hàng sử dụng phương thức thanh toán cà thẻ, trong
+            một số trường hợp, bên chấp nhận thanh toán sẽ yêu cầu cung cấp
+            CCCD/CMT/Hộ chiếu (bao gồm hình ảnh hoặc bản scan) để xác minh tính
+            hợp pháp của giao dịch. STEEL sẽ chỉ thu thập những thông tin trên
+            khi có yêu cầu và chỉ sử dụng với mục đích để xác minh<br />
+            <i
+                >For customers payment by card, in certain cases, the accepting
+                party may request the provision of ID cards/passports to verify
+                the legality of transactions. STEEL will only collect such
+                information upon request and solely for verification
+                purposes.</i
+            >
+        </p>
+        <p>
+            7.3. Chúng tôi có camera giám sát tại các khu vực (không bao gồm khu
+            vực phòng thay đồ, phòng tắm, phòng vệ sinh, phòng đánh giá) trong
+            không gian của STEEL. STEEL có các công cụ bảo mật để có thể bảo vệ
+            thông tin cá nhân của Khách hàng một cách toàn diện nhất. Tuy nhiên,
+            trong trường hợp cơ quan pháp luật có yêu cầu bằng văn bản, chúng
+            tôi sẽ phải cung cấp những thông tin này theo đúng quy định của pháp
+            luật<br />
+            <i
+                >We have CCTV in designated areas (excluding changing rooms,
+                bathrooms, restrooms, and assessment rooms) within the premises
+                of STEEL. STEEL implements security methods to protect
+                customers' personal information comprehensively. However, in
+                cases where law enforcement agencies request information in
+                writing, we must provide such information in accordance with
+                legal regulations.</i
+            >
+        </p>
+        <p>
+            7.4. Tại một số thời điểm nhất định, STEEL sẽ có những chiến dịch
+            quảng cáo cần quay phim/ chụp ảnh Khách hàng. STEEL sẽ xin phép sử
+            dụng và cần sự chấp thuận của Khách hàng trước khi thực hiện<br />
+            <i
+                >At certain times, STEEL may conduct advertising campaigns that
+                require filming/photographing customers. STEEL will request
+                permission and require the consent of customers before
+                proceeding.</i
+            >
+        </p>
+        <p>
+            7.5. Trong quá trình tập luyện, Khách hàng sẽ gửi kết quả luyện tập
+            kèm ảnh chụp kết quả trong suốt quá trình với mục đích phối hợp với
+            HLV cá nhân để đạt mục tiêu tập luyện mong muốn. Ngoài mục đích đã
+            nêu tại Khoản 8.1 Điều này, STEEL sẽ xin phép sử dụng và cần sự chấp
+            thuận của Khách hàng trước khi hình ảnh và các thông tin kết quả
+            luyện tập của Khách hàng được sử dụng cho các mục đích khác<br />
+            <i
+                >During training progress, customers will submit training
+                results along with accompanying photos documenting their
+                progress. In addition to the purpose stated in Clause 8.1 of
+                this Article, STEEL will request permission and require the
+                consent of customers before using images and information
+                regarding customers' training results for other purposes.</i
+            >
+        </p>
+
+        <h2>
+            Điều 8: Quyền và nghĩa vụ của STEEL.<br />
+            <i>Article 8: Rights and Obligations of STEEL.</i>
+        </h2>
+        <p>
+            8.1. Quyền của STEEL<br />
+            <i>Rights of STEEL:</i>
+        </p>
+        <ol>
+            <li>
+                Nhận đầy đủ phí dịch vụ từ Khách hàng như quy định tại Phụ lục
+                của Hợp đồng này<br />
+                <i
+                    >Receive full service fees from customers prescribed in
+                    appendices of this Contract.</i
+                >
+            </li>
+            <li>
+                Chấm dứt hợp đồng hội viên ngay lập tức mà không hoàn trả bất kỳ
+                khoản phí nào đã thanh toán nếu Khách hàng vi phạm bất kỳ điều
+                khoản nào của Hợp đồng Hội viên, Quy định, Phụ lục, hoặc bất kỳ
+                Quy định và Chính sách nào khác do STEEL ban hành và có hiệu lực
+                tại thời điểm chấm dứt. Trong trường hợp STEEL xác định có vi
+                phạm, STEEL sẽ gửi cho Khách hàng một Thông báo Bằng văn bản nêu
+                rõ nội dung vi phạm và/hoặc yêu cầu chấm dứt Hợp đồng.
+            </li>
+            <li>
+                Chấm dứt hợp đồng trong trường hợp xảy ra sự kiện bất khả kháng
+                theo quy định tại Điều 11.3 của Quy định Câu lạc bộ.
+            </li>
+            <li>
+                Khi hợp đồng kết thúc theo các điều khoản này, tất cả các quyền
+                lợi, nghĩa vụ và yêu cầu của khách hàng đã phát sinh trước thời
+                điểm chấm dứt vẫn được giữ nguyên và phải tiếp tục thực hiện.
+            </li>
+            <li>
+                Trong trường hợp Khách hàng bị chấm dứt hợp đồng bởi STEEL hoặc
+                Khách hàng đơn phương chấm dứt Hợp đồng, STEEL sẽ không hoàn trả
+                bất kỳ chi phí nào.
+                <br />
+                <i
+                    >In the event that this contract is terminated by STEEL,
+                    STEEL will not refund any fees.</i
+                >
+            </li>
+            <li>
+                Thay đổi bảng giá dịch vụ<br />
+                <i>Change service price lists.</i>
+            </li>
+            <li>
+                STEEL có toàn quyền thay đổi tên hoặc địa điểm của Câu lạc bộ
+                đến bất kỳ vị trí nào mà STEEL cho là phù hợp, với điều kiện địa
+                điểm mới nằm trong bán kính năm (5) km tính từ địa điểm hiện
+                tại. STEEL sẽ thông báo trước bằng văn bản cho Hội viên về bất
+                kỳ thay đổi nào liên quan đến tên hoặc địa điểm Câu lạc bộ.
+                Trong trường hợp việc thay đổi địa điểm gây bất tiện cho Hội
+                viên, STEEL sẽ sắp xếp cho Hội viên được tập luyện tại một Câu
+                lạc bộ khác trong hệ thống của STEEL hoặc các đối tác liên kết,
+                đảm bảo quyền lợi sử dụng dịch vụ của Hội viên.
+            </li>
+        </ol>
+        <p>
+            8.2. Nghĩa vụ của STEEL<br />
+            <i>Obligations of STEEL:</i>
+        </p>
+        <ol>
+            <li>
+                Cung cấp đầy đủ dịch vụ, lợi ích cho Khách hàng<br />
+                <i>Provide full services and benefits to customers.</i>
+            </li>
+            <li>
+                Tạo điều kiện thuận lợi trong quá trình Khách hàng sử dụng dịch
+                vụ tại STEEL<br />
+                <i
+                    >Create favorable conditions for customers during their use
+                    of services at STEEL.</i
+                >
+            </li>
+            <li>
+                Công bố công khai và niêm yết về nội quy phòng tập, các cảnh báo
+                sức khỏe tại phòng tập, các chương trình khuyến mãi, các chính
+                sách áp dụng cho Khách hàng<br />
+                <i
+                    >Publicly announce and post rules in the gym, health
+                    warnings in the gym, promotional programs, and policies
+                    applicable to customers.</i
+                >
+            </li>
+        </ol>
+
+        <h2>
+            Điều 9: Quyền và nghĩa vụ của Khách hàng.<br />
+            <i>Article 9: Rights and Obligations of Customers.</i>
+        </h2>
+        <p>
+            9.1. Quyền của Khách hàng<br />
+            <i>Rights of Customers:</i>
+        </p>
+        <ol>
+            <li>
+                Khách hàng hưởng tất cả dịch vụ trong khuôn khổ gói tập đã
+                chọn<br />
+                <i
+                    >Customers are entitled to all services within the scope of
+                    the selected training package.</i
+                >
+            </li>
+            <li>
+                Trong quá trình tập luyện và sử dụng các thiết bị tại STEEL, nếu
+                Khách hàng chưa hoặc không biết cách sử dụng thiết bị hoặc bài
+                tập, vui lòng liên hệ HLV để được hướng dẫn<br />
+                <i
+                    >During training and the use of equipment at STEEL, if
+                    customers are unfamiliar with or do not know how to use
+                    equipment or exercises, please contact the Trainer for
+                    guidance.</i
+                >
+            </li>
+            <li>
+                Khách hàng được tự do phản hồi bất kỳ dịch vụ nào của STEEL nếu
+                dịch vụ đó chưa đạt tiêu chuẩn về kỹ năng và chất lượng phục vụ,
+                hoặc nếu các phương pháp tập luyện của STEEL là sai và không
+                đúng như giới thiệu. Khách hàng phản hồi thông qua các kênh
+                sau:<br />
+                <i
+                    >Customers have the freedom to provide feedback on any
+                    service of STEEL if the service does not meet standards of
+                    skill and quality of service, or if the training methods of
+                    STEEL are incorrect and not as introduced. Customers can
+                    provide feedback through the following channels:</i
+                >
+                <ul>
+                    <li>Email: hello@steelsaigon.com</li>
+                </ul>
+            </li>
+            <li>
+                Khách hàng có quyền đơn phương chấm dứt hợp đồng bất kỳ lúc nào
+                với bất kỳ lý do gì. Sau khi chấm dứt hợp đồng, Khách hàng không
+                còn là Hội viên của STEEL, không được hưởng ưu đãi, quyền lợi
+                dành riêng cho Hội viên cũng như ưu đãi, quyền lợi của gói
+                tập<br />
+                <i
+                    >Customers have the right to unilaterally terminate the
+                    contract at any time for any reason. After terminating the
+                    contract, customers are no longer member of STEEL and are
+                    not entitled to the privileges and benefits reserved for
+                    member as well as the benefits and privileges of the
+                    training package.</i
+                >
+            </li>
+            <li>
+                Có quyền bảo lưu, chuyển nhượng theo Hợp đồng này<br />
+                <i
+                    >The right to freeze, transfer, and rollover personal
+                    training sessions according to Articles 4 and 5 of this
+                    Contract.</i
+                >
+            </li>
+        </ol>
+        <p>
+            9.2. Nghĩa vụ của Khách hàng<br />
+            <i>Obligations of Customers:</i>
+        </p>
+        <ol>
+            <li>
+                Thanh toán đầy đủ Phí dịch vụ cho STEEL như quy định tại Phụ lục
+                của Hợp đồng này<br />
+                <i
+                    >Pay the full Service Fee to STEEL prescribed in appendices
+                    of this Contract.</i
+                >
+            </li>
+            <li>
+                Cung cấp đầy đủ các thông tin cần thiết trong Phiếu cung cấp
+                thông tin<br />
+                <i
+                    >Provide all necessary information in the Information
+                    Form.</i
+                >
+            </li>
+            <li>
+                Đảm bảo sức khỏe theo quy định tại Điều 1 của hợp đồng này<br />
+                <i>Ensure health prescribed in Article 1.</i>
+            </li>
+            <li>
+                Chấp hành nội quy phòng tập và các chính sách được ban hành bởi
+                STEEL<br />
+                <i>Comply with gym rules and policies issued by STEEL.</i>
+            </li>
+            <li>Phối hợp điều tra</li>
+            <li>
+                Tuân thủ theo hướng dẫn sử dụng của từng thiết bị và nội quy áp
+                dụng của từng khu vực tập luyện<br />
+                <i
+                    >Follow the instructions for using each equipment and the
+                    applicable rules of each training area.</i
+                >
+            </li>
+            <li>
+                Sử dụng thiết bị và vật dụng tại câu lạc bộ một cách cẩn thận.
+                Khách hàng sẽ chịu trách nhiệm cho bất kỳ thiệt hại nào gây ra
+                bởi việc sử dụng của mình cho các thiết bị hoặc vật dụng tại
+                STEEL<br />
+                <i
+                    >Use equipment and facilities at the gym carefully.
+                    Customers will be responsible for any damage caused by their
+                    use of equipment or facilities at STEEL</i
+                >
+            </li>
+            <li>
+                Trường hợp Khách hàng đi cùng người khác đến tập luyện, người đi
+                cùng phải nghỉ ngơi tại khu nghỉ ngơi quy định, không gây ảnh
+                hưởng đến Khách hàng khác<br />
+                <i
+                    >In the event that customers accompany others to train, the
+                    accompanying person must rest in the designated resting
+                    area, without disturbing other customers.</i
+                >
+            </li>
+        </ol>
+
+        <h2>
+            Điều 10: Luật điều chỉnh và giải quyết tranh chấp.<br />
+            <i>Article 10: Regulatory Law and Dispute Resolution.</i>
+        </h2>
+        <p>
+            10.1. Hợp đồng này được điều chỉnh theo Pháp luật Việt Nam<br />
+            <i>This contract is governed by the laws of Vietnam.</i>
+        </p>
+        <p>
+            10.2. Hợp đồng này được lập song ngữ tiếng Anh và tiếng Việt, trong
+            trường hợp có sự mâu thuẫn giữa hai ngôn ngữ thì bản tiếng Việt sẽ
+            được ưu tiên áp dụng<br />
+            <i
+                >This contract is bilingual in English and Vietnamese, and in
+                case of conflict between the two languages, the Vietnamese
+                version shall prevail.</i
+            >
+        </p>
+        <p>
+            10.3. Các tranh chấp phát sinh từ hoặc liên quan đến Hợp đồng này sẽ
+            được Các Bên bàn bạc xử lý trên tinh thần hợp tác, bình đẳng và tôn
+            trọng lẫn nhau. Trường hợp Các Bên không tự thỏa thuận được hoặc
+            không muốn thỏa thuận với nhau, một trong Các Bên có quyền khởi kiện
+            ra Tòa án nhân dân có thẩm quyền để giải quyết theo quy định của
+            pháp luật<br />
+            <i
+                >Disputes arising from or related to this contract shall be
+                discussed and resolved by the Parties in a spirit of
+                cooperation, equality, and mutual respect. In case the Parties
+                cannot reach an agreement or do not wish to negotiate with each
+                other, either Party has the right to bring a lawsuit to the
+                competent People's Court for resolution according to the law.</i
+            >
+        </p>
+
+        <h2>
+            Điều 11: Điều khoản khác.<br />
+            <i>Article 11: Miscellaneous.</i>
+        </h2>
+        <p>
+            11.1. Các Bên xác nhận khi ký hợp đồng này, các bên một đã đọc lại
+            và đồng ý bị ràng buộc bởi tất cả các Điều của Hợp đồng này<br />
+            <i
+                >The Parties acknowledge that by signing this contract, each
+                party has reviewed and agreed to be bound by all the provisions
+                of this contract.</i
+            >
+        </p>
+        <p>
+            11.2. Hợp đồng có hiệu lực kể từ ngày ký, được lập thành 02 (hai)
+            bản, mỗi Bên giữ 01 (một) bản, có giá trị pháp lý như nhau<br />
+            <i
+                >This contract shall take effect from the date of signing, and
+                it is made in 02 (two) copies, each Party keeps 01 (one) copy,
+                which has equal legal validity.</i
+            >
+        </p>
+
+        <table class="sign">
+            <tr class="sign-title">
+                <td>
+                    <b>Đại diện {{ $json.meta.company.name }}</b><br />
+                    <b><i>On behalf of STEEL</i></b>
+                </td>
+                <td>
+                    <b>Khách hàng</b><br />
+                    <b><i>Customer</i></b>
+                </td>
+            </tr>
+            <tr class="sign-space">
+                <td>
+                    <img
+                        class="sig"
+                        src="{{ $json.meta.company.signature_image }}"
+                        style="{{ $json.meta.company.signature_style }}"
+                        alt="company_sign"
+                    />
+                </td>
+                <td></td>
+            </tr>
+            <tr class="sign-name">
+                <td>
+                    <b
+                        >GĐ <i>(CEO)</i>. {{ $json.meta.company.representative
+                        }}</b
+                    >
+                </td>
+                <td>
+                    <b>{{ $json.meta.customer.name }}</b>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

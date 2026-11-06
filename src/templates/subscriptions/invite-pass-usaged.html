@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1a1a1a;
+    }
+
+    .lang-hint {
+      font-size: 12px;
+      font-style: italic;
+      color: #999;
+      margin: 0 0 14px;
+    }
+
+    .greeting-label {
+      font-size: 13px;
+      margin: 0 0 4px;
+    }
+
+    .greeting-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 8px;
+    }
+
+    .body-text {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 6px;
+    }
+
+    .body-text strong {
+      color: #1a1a1a;
+    }
+
+    .divider {
+      border: none;
+      border-top: 0.5px solid #e5e2da;
+      margin: 24px 0;
+    }
+
+    /* Language separator */
+    .lang-divider {
+      border-top: 0.5px solid #e5e2da;
+      text-align: center;
+      margin: 44px 0 30px;
+    }
+
+    .lang-divider span {
+      display: inline-block;
+      background: #ffffff;
+      padding: 0 14px;
+      transform: translateY(-50%);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #333;
+      font-weight: 600;
+      margin: 0 0 2px;
+    }
+
+    /* Info table */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .info-table tr {
+      border-bottom: 0.5px solid #ddd;
+    }
+
+    .info-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .info-table td {
+      padding: 10px 14px;
+      vertical-align: top;
+      background: transparent;
+    }
+
+    .info-table td.td-label {
+      font-size: 13px;
+      color: #333;
+      width: 45%;
+    }
+
+    .info-table td.td-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+      width: 55%;
+    }
+
+    /* Reward highlight box */
+    .reward-box {
+      background: #fdf9f3;
+      border-left: 3px solid #c8a96e;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+    }
+
+    .reward-box .reward-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #c8a96e;
+      margin: 0 0 6px;
+    }
+
+    .reward-box .reward-points {
+      font-size: 28px;
+      font-weight: 700;
+      color: #c8a96e;
+      margin: 8px 0 4px;
+      line-height: 1.2;
+    }
+
+    .reward-box .reward-points-label {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 10px;
+    }
+
+    .reward-box .reward-desc {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 4px;
+    }
+
+    /* Sign-off */
+    .signoff {
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+
+    .signoff .thanks {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 4px;
+    }
+
+    /* Contact */
+    .contact-label {
+      font-size: 13px;
+      color: #333;
+      margin: 0 0 10px;
+      line-height: 1.75;
+    }
+
+    .contact-item {
+      font-size: 13px;
+      margin: 0 0 4px;
+    }
+
+    .contact-item a {
+      color: #c8a96e;
+      text-decoration: none;
+    }
+
+    /* ── Mobile: single-column layout ── */
+    @media (max-width: 480px) {
+
+      .info-table,
+      .info-table tbody,
+      .info-table tr,
+      .info-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .info-table tr {
+        border-bottom: 0.5px solid #ddd;
+      }
+
+      .info-table td.td-label {
+        padding-bottom: 2px;
+        border-bottom: none;
+        width: 100%;
+      }
+
+      .info-table td.td-value {
+        padding-top: 4px;
+        padding-bottom: 14px;
+        width: 100%;
+      }
+    }
+
+    /* ===== FOOTER LEGAL ===== */
+    .footer-legal-wrap {
+      background-color: #111111;
+      padding: 24px 8px;
+      border-top: 1px solid #2a2a2a;
+      text-align: left;
+    }
+
+    .footer-legal-en {
+      font-size: 11px;
+      color: #aaaaaa;
+      line-height: 1.8;
+    }
+
+    .footer-divider {
+      font-size: 11px;
+      color: #666666;
+      letter-spacing: 2px;
+    }
+
+    .footer-legal-vi {
+      font-size: 11px;
+      color: #aaaaaa;
+      line-height: 1.8;
+    }
+
+    /* ===== SIGNATURE ===== */
+    .signature-wrap {
+      background-color: #111111;
+      padding: 24px 8px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+    }
+
+    .signature-tagline {
+      font-size: 12px;
+      color: #cccccc;
+      font-style: italic;
+      margin: 0 0 14px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .signature-logo {
+      display: block;
+      margin: 0 auto 12px auto;
+    }
+
+    .signature-website {
+      font-size: 12px;
+      color: #aaaaaa;
+      margin: 0 0 4px 0;
+      text-decoration: none;
+    }
+
+    .signature-email {
+      font-size: 12px;
+      color: #aaaaaa;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    .signature-website a,
+    .signature-email a {
+      color: #aaaaaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============================================================ -->
+  <!-- ===================  TIẾNG VIỆT  =========================== -->
+  <!-- ============================================================ -->
+
+  <!-- Language hint -->
+  <p class="lang-hint">For English, see below</p>
+
+  <!-- Greeting -->
+  <p class="greeting-label">Kính gửi Anh/Chị</p>
+  <p class="greeting-name">{{member_name}}</p>
+
+  <!-- Intro — Thank you -->
+  <p class="body-text">
+    STEEL xin gửi lời cảm ơn chân thành đến Quý Khách vì đã luôn tin
+    tưởng và ủng hộ dịch vụ của chúng tôi trong suốt thời gian qua.
+  </p>
+
+  <!-- Referral appreciation -->
+  <p class="body-text">
+    Đặc biệt, STEEL vô cùng trân trọng khi Quý Khách đã giới thiệu dịch
+    vụ của STEEL đến người thân, bạn bè là Anh/Chị
+    <strong>{{referred_name}}</strong>. Đây là nguồn động lực to lớn để
+    STEEL không ngừng nỗ lực cải thiện và nâng cao chất lượng dịch vụ.
+  </p>
+
+  <hr class="divider" />
+
+  <!-- Referral details -->
+  <p class="section-label">Chi tiết giới thiệu</p>
+
+  <table class="info-table">
+    <tr>
+      <td class="td-label">Người được giới thiệu</td>
+      <td class="td-value">{{referred_name}}</td>
+    </tr>
+    <tr>
+      <td class="td-label">Điểm thưởng nhận được</td>
+      <td class="td-value">{{reward_points}} điểm</td>
+    </tr>
+  </table>
+
+  <!-- Reward highlight box -->
+  <div class="reward-box">
+    <p class="reward-title">Phần thưởng của bạn</p>
+    <p class="reward-points">+{{reward_points}}</p>
+    <p class="reward-points-label">Reward Points</p>
+    <p class="reward-desc">
+      Để bày tỏ lòng biết ơn sâu sắc, STEEL xin gửi tặng Quý Khách
+      <strong>{{reward_points}} điểm "Reward Point"</strong>. Hy vọng
+      món quà nhỏ này sẽ tiếp thêm động lực để Quý Khách chinh phục mục
+      tiêu sức khoẻ của mình và khám phá tiềm năng bản thân.
+    </p>
+  </div>
+
+  <!-- Sign-off -->
+  <div class="signoff">
+    <p class="thanks">
+      STEEL chúc Quý Khách luôn tràn đầy năng lượng và có những buổi
+      tập hiệu quả tại STEEL!
+    </p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Contact -->
+  <p class="contact-label">
+    Nếu có bất kỳ thắc mắc nào, Quý Khách vui lòng phản hồi qua email
+    hoặc liên hệ bộ phận chăm sóc khách hàng qua số hotline để được hỗ
+    trợ.
+  </p>
+
+  <p class="contact-item">
+    Email:
+    <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+  </p>
+  <p class="contact-item">0931 302 177 — STEEL Đảo Kim Cương</p>
+  <p class="contact-item">0901 316 892 — STEEL Phú Mỹ Hưng</p>
+
+  <!-- ============================================================ -->
+  <!-- ===================  ENGLISH  ============================== -->
+  <!-- ============================================================ -->
+  <div class="lang-divider"></div>
+
+  <!-- Greeting -->
+  <p class="greeting-label">Dear</p>
+  <p class="greeting-name">{{member_name}}</p>
+
+  <!-- Intro — Thank you -->
+  <p class="body-text">
+    STEEL would like to extend our sincere gratitude to you for your
+    continued trust and support of our services.
+  </p>
+
+  <!-- Referral appreciation -->
+  <p class="body-text">
+    We are especially honoured that you have referred
+    <strong>{{referred_name}}</strong> to STEEL. Your recommendation is a
+    tremendous source of motivation for us to continually improve and
+    elevate the quality of our services.
+  </p>
+
+  <hr class="divider" />
+
+  <!-- Referral details -->
+  <p class="section-label">Referral Details</p>
+
+  <table class="info-table">
+    <tr>
+      <td class="td-label">Referred Member</td>
+      <td class="td-value">{{referred_name}}</td>
+    </tr>
+    <tr>
+      <td class="td-label">Reward Points Earned</td>
+      <td class="td-value">{{reward_points}} points</td>
+    </tr>
+  </table>
+
+  <!-- Reward highlight box -->
+  <div class="reward-box">
+    <p class="reward-title">Your Reward</p>
+    <p class="reward-points">+{{reward_points}}</p>
+    <p class="reward-points-label">Reward Points</p>
+    <p class="reward-desc">
+      As a token of our deepest appreciation, STEEL is pleased to reward
+      you with <strong>{{reward_points}} Reward Points</strong>. We hope
+      this small gift will inspire you to pursue your health goals and
+      unlock your full potential.
+    </p>
+  </div>
+
+  <!-- Sign-off -->
+  <div class="signoff">
+    <p class="thanks">
+      STEEL wishes you boundless energy and productive workouts ahead.
+      See you at STEEL!
+    </p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Contact -->
+  <p class="contact-label">
+    For any inquiries, please reach us via email or hotline below.
+  </p>
+
+  <p class="contact-item">
+    Email:
+    <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+  </p>
+  <p class="contact-item">0931 302 177 — Diamond Island Club</p>
+  <p class="contact-item">0901 316 892 — Phu My Hung Club</p>
+
+  <!-- Signature -->
+  <div class="signature-wrap">
+    <p class="signature-tagline">With Strength,</p>
+    <img src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg" alt="STEEL"
+      width="80" class="signature-logo" />
+    <p class="signature-website">
+      <a href="https://www.steelsaigon.com">www.steelsaigon.com</a>
+    </p>
+    <p class="signature-email">
+      <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+    </p>
+  </div>
+
+  <!-- Footer Legal -->
+  <div class="footer-legal-wrap">
+    <p class="footer-legal-en">
+      You've received this transactional email for informational
+      purposes to update you about important changes related to your
+      STEEL membership, account, or service access.<br />This message
+      is part of STEEL's official service communications and is not a
+      marketing email.<br />This message was sent from a
+      notification-only email address that doesn't accept incoming
+      emails. If you have any questions, please contact STEEL Front
+      Desk or your Consultant for assistance.
+    </p>
+    <p class="footer-divider">&mdash;</p>
+    <p class="footer-legal-vi">
+      Quý Hội viên nhận được email giao dịch này nhằm cập nhật các
+      thay đổi quan trọng liên quan đến Membership, tài khoản hoặc
+      quyền truy cập dịch vụ tại STEEL.<br />Đây là một phần trong các
+      thông báo dịch vụ chính thức của STEEL và không phải email quảng
+      cáo.<br />Email này được gửi từ địa chỉ chỉ dùng để gửi đi thông
+      báo, và không nhận lại được phản hồi. Nếu cần hỗ trợ, Quý Hội
+      viên vui lòng liên hệ Front Desk hoặc Consultant của STEEL.
+    </p>
+  </div>
+</body>
+
+</html>

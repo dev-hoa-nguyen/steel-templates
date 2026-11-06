@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                margin: 0;
+                background: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #1a1a1a;
+            }
+
+            .greeting-label {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+
+            .greeting-name {
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin: 0 0 8px;
+            }
+
+            .body-text {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 6px;
+            }
+
+            .body-text strong {
+                color: #1a1a1a;
+            }
+
+            .body-text-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                font-weight: normal;
+                margin: 0 0 20px;
+            }
+
+            .body-text-sub strong {
+                font-weight: 600;
+                color: #555;
+            }
+
+            .divider {
+                border: none;
+                border-top: 0.5px solid #e5e2da;
+                margin: 24px 0;
+            }
+
+            .section-label {
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #333;
+                font-weight: 600;
+                margin: 0 0 2px;
+            }
+
+            .section-label-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                font-weight: normal;
+                margin: 0 0 14px;
+                text-transform: none;
+                letter-spacing: normal;
+            }
+
+            /* Info table */
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #eee;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 24px;
+            }
+
+            .info-table tr {
+                border-bottom: 0.5px solid #ddd;
+            }
+
+            .info-table tr:last-child {
+                border-bottom: none;
+            }
+
+            .info-table td {
+                padding: 10px 14px;
+                vertical-align: top;
+                background: transparent;
+            }
+
+            .info-table td.td-label {
+                font-size: 13px;
+                color: #333;
+                width: 45%;
+            }
+
+            .info-table .td-label-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                margin-top: 3px;
+            }
+
+            .info-table td.td-value {
+                font-size: 14px;
+                font-weight: 600;
+                color: #1a1a1a;
+                width: 55%;
+            }
+
+            .info-table .td-value-sub {
+                display: block;
+                font-size: 12px;
+                font-weight: normal;
+                color: #666;
+                font-style: italic;
+                margin-top: 3px;
+            }
+
+            /* Notice box */
+            .notice-box {
+                background: #fdf9f3;
+                border-left: 3px solid #c8a96e;
+                border-radius: 0 8px 8px 0;
+                padding: 14px 18px;
+                margin-bottom: 24px;
+            }
+
+            .notice-box .notice-title {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+                color: #c8a96e;
+                margin: 0 0 10px;
+            }
+
+            .notice-box .notice-title-sub {
+                display: block;
+                font-size: 11px;
+                font-weight: normal;
+                color: #999;
+                font-style: italic;
+                text-transform: none;
+                letter-spacing: normal;
+                margin-top: 2px;
+            }
+
+            .notice-box ul {
+                margin: 0;
+                padding-left: 16px;
+            }
+
+            .notice-box ul li {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .notice-box ul li:last-child {
+                margin-bottom: 0;
+            }
+
+            .notice-item-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                margin-top: 3px;
+            }
+
+            /* Sign-off */
+            .signoff {
+                margin-top: 8px;
+                margin-bottom: 28px;
+            }
+
+            .signoff .thanks {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 4px;
+            }
+
+            .signoff .thanks-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                font-weight: normal;
+                margin: 0 0 16px;
+            }
+
+            /* Contact */
+            .contact-label {
+                font-size: 13px;
+                color: #333;
+                margin: 0 0 10px;
+                line-height: 1.75;
+            }
+
+            .contact-label-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                margin: 0 0 12px;
+            }
+
+            .contact-item {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+
+            .contact-item a {
+                color: #c8a96e;
+                text-decoration: none;
+            }
+
+            .contact-item-sub {
+                display: block;
+                font-size: 12px;
+                color: #666;
+                font-style: italic;
+                margin: 0 0 8px;
+            }
+
+            /* ── Mobile: single-column layout ── */
+            @media (max-width: 480px) {
+                .info-table,
+                .info-table tbody,
+                .info-table tr,
+                .info-table td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .info-table tr {
+                    border-bottom: 0.5px solid #ddd;
+                }
+
+                .info-table td.td-label {
+                    padding-bottom: 2px;
+                    border-bottom: none;
+                    width: 100%;
+                }
+
+                .info-table td.td-value {
+                    padding-top: 4px;
+                    padding-bottom: 14px;
+                    width: 100%;
+                }
+            }
+
+            /* ===== SIGNATURE ===== */
+            .signature-wrap {
+                background-color: #111111;
+                padding: 24px 8px;
+                border-top: 1px solid #2a2a2a;
+                text-align: center;
+            }
+
+            .signature-tagline {
+                font-size: 12px;
+                color: #cccccc;
+                font-style: italic;
+                margin: 0 0 14px 0;
+                letter-spacing: 0.5px;
+            }
+
+            .signature-logo {
+                display: block;
+                margin: 0 auto 12px auto;
+            }
+
+            .signature-website {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0 0 4px 0;
+                text-decoration: none;
+            }
+
+            .signature-email {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0;
+                text-decoration: none;
+            }
+
+            .signature-website a,
+            .signature-email a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Greeting -->
+        <p class="greeting-label">
+            Kính gửi Anh/Chị
+            <span
+                style="
+                    display: block;
+                    font-size: 11px;
+                    color: #bbbbbb;
+                    margin-top: 2px;
+                    letter-spacing: 0.3px;
+                "
+                >Dear</span
+            >
+        </p>
+        <p class="greeting-name">{{$json.payload.member_name}}</p>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL Fitness &amp; Health xin thông báo rằng thời hạn bảo lưu gói
+            tập <strong>{{$json.payload.package_name}}</strong> của Quý Khách
+            sắp kết thúc. Gói tập đã được bảo lưu từ ngày
+            <strong>{{$json.payload.start_date}}</strong> và sẽ hết hạn bảo lưu
+            vào ngày <strong>{{$json.payload.end_date}}</strong>.
+        </p>
+        <p class="body-text-sub">
+            STEEL Fitness &amp; Health would like to inform you that the
+            expiration date of your
+            <strong>{{$json.payload.package_name}}</strong> is approaching. Your
+            membership was frozen on
+            <strong>{{$json.payload.start_date_en}}</strong> and will expire on
+            <strong>{{$json.payload.end_date_en}}</strong>.
+        </p>
+
+        <hr class="divider" />
+
+        <!-- Freeze details -->
+        <p class="section-label">Chi tiết bảo lưu</p>
+        <p class="section-label-sub">Freeze Details</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">
+                    Tên gói tập
+                    <span class="td-label-sub">Membership Package</span>
+                </td>
+                <td class="td-value">{{$json.payload.package_name}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">
+                    Ngày bắt đầu bảo lưu
+                    <span class="td-label-sub">Freeze Start Date</span>
+                </td>
+                <td class="td-value">
+                    {{$json.payload.start_date}}
+                    <span class="td-value-sub"
+                        >{{ $json.payload.start_date_en }}</span
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">
+                    Ngày hết hạn bảo lưu
+                    <span class="td-label-sub">Freeze Expiration Date</span>
+                </td>
+                <td class="td-value">
+                    {{$json.payload.end_date}}
+                    <span class="td-value-sub"
+                        >{{$json.payload.end_date_en}}</span
+                    >
+                </td>
+            </tr>
+        </table>
+
+        <!-- Notice box -->
+        <div class="notice-box">
+            <p class="notice-title">
+                Lưu ý
+                <span class="notice-title-sub">Important Notes</span>
+            </p>
+            <ul>
+                <li>
+                    Sau ngày <strong>{{$json.payload.end_date}}</strong>, gói
+                    tập của Quý Khách sẽ tự động được kích hoạt trở lại.
+                    <span class="notice-item-sub"
+                        >After <strong>{{$json.payload.end_date_en}}</strong>,
+                        your package will be automatically reactivated.</span
+                    >
+                </li>
+                <li>
+                    Nếu có bất kỳ thắc mắc nào, Quý Khách vui lòng liên hệ bộ
+                    phận Chăm Sóc Khách Hàng qua email hoặc hotline để được hỗ
+                    trợ nhanh nhất.
+                    <span class="notice-item-sub"
+                        >For any further information, please do not hesitate to
+                        contact our Customer Service Department via email or
+                        hotline for the fastest support.</span
+                    >
+                </li>
+            </ul>
+        </div>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                STEEL hy vọng được tiếp tục đồng hành cùng Quý Khách trên hành
+                trình rèn luyện sức khoẻ. Hẹn gặp lại Quý Khách sớm tại phòng
+                tập của STEEL!
+            </p>
+            <p class="thanks-sub">
+                STEEL hopes to continue accompanying you on your fitness
+                journey. See you soon at STEEL's gym!
+            </p>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Contact -->
+        <p class="contact-label">
+            Nếu có bất kỳ thắc mắc nào, Quý Khách vui lòng phản hồi qua email
+            hoặc liên hệ bộ phận chăm sóc khách hàng qua số hotline để được hỗ
+            trợ.
+        </p>
+        <p class="contact-label-sub">
+            For any inquiries, please reach us via email or hotline below.
+        </p>
+
+        <p class="contact-item">
+            Email:
+            <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+        </p>
+        <p class="contact-item">0931 302 177 — STEEL Đảo Kim Cương</p>
+        <p class="contact-item-sub">Hotline – Diamond Island Club</p>
+        <p class="contact-item">0901 316 892 — STEEL Phú Mỹ Hưng</p>
+        <p class="contact-item-sub">Hotline – Phu My Hung Club</p>
+
+        <!-- Signature -->
+        <div class="signature-wrap">
+            <p class="signature-tagline">With Strength,</p>
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                alt="STEEL"
+                width="80"
+                class="signature-logo"
+            />
+            <p class="signature-website">
+                <a href="https://www.steelsaigon.com">www.steelsaigon.com</a>
+            </p>
+            <p class="signature-email">
+                <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+            </p>
+        </div>
+    </body>
+</html>

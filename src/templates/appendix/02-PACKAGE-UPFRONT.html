@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Phụ lục 02 – Gói tập trả trước / Appendix 02 – Upfront Paid Package
+        </title>
+        <style>
+            /* ---------- page ---------- */
+            @page {
+                size: A4;
+                margin: 18mm 16mm 16mm;
+            }
+
+            :root {
+                --ink: #000;
+                --en: #1c4587;
+                --muted: #666;
+                --rule: #d4d4d4;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0 auto;
+                padding: 18mm 16mm;
+                max-width: 210mm;
+                background: #fff;
+                color: var(--ink);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10.5pt;
+                line-height: 1.45;
+                text-align: justify;
+            }
+
+            /* ---------- masthead ---------- */
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 6pt;
+                border-bottom: 1px solid var(--rule);
+            }
+            .masthead img {
+                width: 124px;
+                height: auto;
+            }
+            .masthead div {
+                text-align: right;
+                font-size: 9pt;
+                color: var(--muted);
+                line-height: 1.35;
+            }
+
+            /* ---------- headings ---------- */
+            h1 {
+                margin: 18pt 0 6pt;
+                font-size: 14pt;
+                line-height: 1.3;
+                text-align: center;
+            }
+            h2 {
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
+                line-height: 1.3;
+                text-align: left;
+            }
+            h3 {
+                margin: 12pt 0 4pt;
+                font-size: 10.5pt;
+                text-align: left;
+            }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- text ---------- */
+            p {
+                margin: 5pt 0;
+                orphans: 3;
+                widows: 3;
+            }
+            .en {
+                color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
+            }
+            li {
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .space {
+                height: 26mm;
+            }
+
+            /* ---------- print ---------- */
+            @media print {
+                body {
+                    max-width: none;
+                    padding: 0;
+                    font-size: 10pt;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                body {
+                    padding: 16px;
+                    font-size: 11pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="masthead">
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1789133802/image1_buslce.png"
+                alt="STEEL Saigon"
+            />
+            <div>
+                <strong>HỢP ĐỒNG HỘI VIÊN - MEMBERSHIP CONTRACT</strong
+                ><br />WWW.STEELSAIGON.COM
+            </div>
+        </header>
+
+        <h1>
+            PHỤ LỤC 02 <span class="en">/ APPENDIX 02</span><br />THÔNG TIN GÓI
+            TẬP TRẢ TRƯỚC
+            <span class="en">/ UPFRONT PAID PACKAGE</span>
+        </h1>
+        <p class="center">Số/<em>No.</em>: {A}/PL {J}</p>
+
+        <ul class="dash">
+            <li>
+                Căn cứ Hợp đồng cung cấp dịch vụ số {A} ký ngày {X} (“Hợp Đồng”)
+                <p class="en">
+                    Pursuant to the Service Contract No. {A} dated on {X}
+                    (“Contract”)
+                </p>
+            </li>
+            <li>
+                Căn cứ vào nhu cầu và khả năng của các bên của các bên.
+                <p class="en">
+                    Based on the demand and abilities of the Parties.
+                </p>
+            </li>
+        </ul>
+
+        <p>
+            Hôm nay, {B}, các bên gồm: /
+            <span class="en">Today, {B}, we are:</span>
+        </p>
+
+        <div class="party">
+            <h3>
+                BÊN A – BÊN CUNG CẤP DỊCH VỤ /
+                <span class="en">PARTY A - SERVICE PROVIDER:</span>
+            </h3>
+            <p>
+                <strong>CÔNG TY CỔ PHẦN STEEL SÀI GÒN</strong> (Gọi tắt là
+                “STEEL”)
+            </p>
+            <p class="en">
+                <strong>STEEL SAIGON JOINT STOCK COMPANY</strong> (hereinafter
+                referred to as “STEEL”)
+            </p>
+            <p>
+                <strong>Địa chỉ:</strong> B2.2A, Tầng hầm 2, T. Maldives, GĐ 2,
+                Số 1, Đường 104, KP3, Phường Bình Trưng, TP Hồ Chí Minh, Việt
+                Nam.
+            </p>
+            <p class="en">
+                <strong>Address:</strong> B2.2A, Basement 2, Maldives Tower,
+                Phase 2, No. 1, Street 104, Ward 3, Binh Trung Ward, Ho Chi Minh
+                City, Vietnam.
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong> 0931 302 177
+            </p>
+            <p>
+                <strong>Mã số thuế</strong>
+                <strong class="en">/ Tax Code:</strong> 0316376471
+            </p>
+            <p>
+                <strong>Đại diện</strong>
+                <strong class="en">/ Represented by:</strong> Ông
+                <em>(Mr.)</em> Bùi Trương Việt Anh
+            </p>
+        </div>
+
+        <div class="party">
+            <h3>
+                BÊN B - KHÁCH HÀNG / <span class="en">PARTY B - CUSTOMER:</span>
+            </h3>
+            <p>
+                <strong>Họ và tên</strong>
+                <strong class="en">/ Full name:</strong> {C}
+            </p>
+            <p>
+                <strong>Ngày sinh</strong>
+                <strong class="en">/ Date of birth:</strong> {D}
+            </p>
+            <p>
+                <strong>Giới tính</strong>
+                <strong class="en">/ Gender:</strong> {E}
+            </p>
+            <p>
+                <strong>CCCD hoặc Hộ chiếu số</strong>
+                <strong class="en">/ ID or Passport No.:</strong> {F}
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong> {G}
+            </p>
+            <p><strong>Email:</strong> {H}</p>
+            <p>
+                <em>(Sau đây gọi là “Khách Hàng”)/</em>
+                <span class="en">(hereinafter referred to as “Customer”)</span>
+            </p>
+        </div>
+
+        <p>
+            Hai bên đã thỏa thuận và đồng ý ký kết Phụ lục này với các nội dung
+            như sau:
+        </p>
+        <p class="en">
+            The two parties have agreed and consented to sign this Appendix with
+            the following contents:
+        </p>
+
+        <h2>
+            ĐIỀU 1. THÔNG TIN GÓI TẬP<br /><span class="en"
+                >ARTICLE 1. PACKAGE INFORMATION</span
+            >
+        </h2>
+
+        <p>Thông tin gói tập / <span class="en">Package informations:</span></p>
+        <ul>
+            <li>
+                Tên gói tập / <span class="en">Package name:</span>
+                <strong>{N}</strong>
+            </li>
+            <li>
+                Thời hạn gói tập / <span class="en">Package duration:</span>
+                <strong>{O} tháng/ months</strong>
+            </li>
+        </ul>
+
+        <p>Đi kèm với các quyền lợi:</p>
+        <ul>
+            <li>
+                Thời gian bảo lưu tối đa /
+                <span class="en">The maximum freeze days:</span>
+                <strong>{U} ngày/ <em>days</em></strong>
+            </li>
+            <li>
+                Số lượng Lớp tập / <span class="en">Group Class pass:</span>
+                <strong>{U} ngày/ <em>days</em></strong>
+            </li>
+            <li>
+                Thời gian kích hoạt gói tập (Ngày bắt đầu)/
+                <span class="en">Package activation date (Start date):</span>
+                <strong>{BB}</strong>
+            </li>
+        </ul>
+
+        <p>
+            Các buổi dịch vụ mua kèm /
+            <span class="en">Service sessions informations:</span>
+        </p>
+        <ul>
+            <li>
+                Số buổi tập cùng HLV cá nhân 1:1 /
+                <span class="en">Private Training 1:1 sessions:</span>
+                <strong>{Q} buổi/ sessions</strong>
+            </li>
+            <li>
+                Số buổi tập cùng HLV pilates 2:1 /
+                <span class="en">Pilates Training 1:1 sessions:</span>
+                <strong>{Q} buổi/ sessions</strong>
+            </li>
+            <li>
+                Số buổi giãn cơ / <span class="en">Stretching sessions:</span>
+                <strong>{S} buổi/ sessions</strong>
+            </li>
+            <li>
+                Số buổi Sports Massage 60 phút /
+                <span class="en">Sports Massage 60 Mins sessions:</span>
+                <strong>{T} buổi/ sessions</strong>
+            </li>
+            <li>
+                Số buổi Sports Massage 90 phút /
+                <span class="en">Sports Massage 60 Mins sessions:</span>
+                <strong>{T} buổi/ sessions</strong>
+            </li>
+        </ul>
+
+        <p>Các khuyến mãi đi kèm:</p>
+        <ul>
+            <li>
+                Thông tin khuyến mãi /
+                <span class="en">Voucher or Promotion:</span>
+                <strong>{AA}</strong>
+            </li>
+        </ul>
+
+        <h2>
+            ĐIỀU 2. THÔNG TIN VÀ ĐIỀU KHOẢN THANH TOÁN.<br /><span class="en"
+                >ARTICLE 2. PAYMENT INFORMATION AND PAYMENT TERMS</span
+            >
+        </h2>
+
+        <p>Thông tin thanh toán/ <span class="en">Payment details:</span></p>
+        <ol class="clauses">
+            <li>
+                <b>2.1</b>Giá trị hợp đồng (Phí dịch vụ) /
+                <span class="en">Contract value (Service fee):</span>
+                <strong>{V} VND</strong>
+                <p>
+                    Giá trị hợp đồng đã bao gồm Thuế GTGT
+                    <span class="en">/ Price includes Value-Added Tax</span>
+                </p>
+            </li>
+            <li>
+                <b>2.2</b>Khách Hàng cần thanh toán đủ 100% giá trị ngay khi ký
+                Phụ lục này để được kích hoạt gói, trừ khi có quy định khác được
+                nêu rõ trên Hóa đơn Dịch vụ.
+                <p class="en">
+                    Payment in full upon signing this Appendix is required to
+                    activate the package, unless otherwise stated on the
+                    invoice.
+                </p>
+            </li>
+            <li>
+                <b>2.3</b>Trường hợp thanh toán được cấu trúc thành đợt đầu (đặt
+                cọc hoặc 50% đầu) và đợt hai cho phần giá trị còn lại, thì đợt
+                thanh toán thứ hai phải được thực hiện thành công trong vòng ba
+                mươi (30) ngày kể từ ngày thanh toán đợt thứ nhất.
+                <p class="en">
+                    In case of payment is structured as an initial deposit or
+                    first half payment followed by a second payment for the
+                    remaining balance, the second payment must be successfully
+                    made within thirty (30) days from the date of the first
+                    payment.
+                </p>
+            </li>
+            <li>
+                <b>2.4</b>Trường hợp chậm thanh toán theo thời hạn nêu trên,
+                STEEL có quyền tạm ngưng quyền sử dụng dịch vụ của Khách Hàng
+                cho đến khi Khách Hàng thanh toán đầy đủ. Thời hạn gói tập không
+                được kéo dài thêm do việc tạm ngưng này. STEEL có quyền yêu cầu
+                Khách Hàng thanh toán thêm một khoản lãi chậm thanh toán là
+                0.05%/ngày tính trên số tiền chậm thanh toán. Trường hợp chậm
+                thanh toán từ sáu mươi (60) ngày trở lên, STEEL có quyền đơn
+                phương chấm dứt Hợp đồng với Khách Hàng và không có trách nhiệm
+                hoàn trả các khoản đã thanh toán.
+                <p class="en">
+                    In the event of late payment according to the deadlines
+                    above, STEEL has the right to suspend the Customer’s access
+                    to services until full payment is made. The subscription
+                    period will not be extended due to this suspension. STEEL
+                    may require the Customer to pay a late fee of 0.05% per day
+                    on the overdue amount. If the payment is overdue for [60]
+                    days or more, STEEL may unilaterally terminate the contract
+                    and will have no obligation to refund any payments already
+                    made.
+                </p>
+            </li>
+            <li>
+                <b>2.5</b>Chi tiết về giá trị hợp đồng, ưu đãi được áp dụng và
+                phương thức thanh toán được thể hiện trong Hóa đơn dịch vụ.
+                <p class="en">
+                    Details regarding the contract value, discounts applied, and
+                    payment methods are outlined in the Service Invoice.
+                </p>
+            </li>
+        </ol>
+
+        <h2>
+            ĐIỀU 3. ĐIỀU KHOẢN CHUNG.<br /><span class="en"
+                >ARTICLE 2. MISCELLANEOUS.</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>3.1.</b>Các nội dung khác hai bên đã thoả thuận tại Hợp Đồng
+                không thay đổi.
+                <p class="en">
+                    Other contents agreed upon by both parties in the Contract
+                    remain unchanged.
+                </p>
+            </li>
+            <li>
+                <b>3.2.</b>Phụ lục này là một bộ phận không tách rời của Hợp
+                Đồng, Phụ lục có hiệu lực kể từ ngày ký, được lập thành 02 (hai)
+                bản mỗi Bên giữ 01 (một) bản, có giá trị pháp lý như nhau.
+                <p class="en">
+                    This Appendix forms an integral and inseparable part of the
+                    Contract. This Appendix shall take effect from the date of
+                    signing, and it is made in 02 (two) copies. Each Party keeps
+                    01 (one) copy, which has equal legal validity.
+                </p>
+            </li>
+            <li>
+                <b>3.3.</b>Trường hợp có sự khác biệt về nội dung giữa ngôn ngữ
+                tiếng Anh và tiếng Việt, ngôn ngữ tiếng Việt sẽ được ưu tiên áp
+                dụng.
+                <p class="en">
+                    In the event of any inconsistency between the English and
+                    Vietnamese versions, the Vietnamese version shall prevail.
+                </p>
+            </li>
+        </ol>
+
+        <table class="sign">
+            <tr>
+                <td>
+                    <p><strong>ĐẠI DIỆN BÊN A</strong></p>
+                    <p class="en"><strong>ON BEHALF OF PARTY A</strong></p>
+                    <img
+                        alt=""
+                        src="https://res.cloudinary.com/duayxbt5d/image/upload/v1784636008/image4_ekqh6y-removebg-preview_kfxrqr.png"
+                        style="
+                            width: 333px;
+                            margin-bottom: 4px;
+                            transform: rotate(0rad) translateZ(0px);
+                            -webkit-transform: rotate(0rad) translateZ(0px);
+                        "
+                    />
+                    <p>
+                        <strong>GĐ</strong> <strong class="en">(CEO)</strong
+                        ><strong>. BÙI TRƯƠNG VIỆT ANH</strong>
+                    </p>
+                </td>
+                <td>
+                    <p><strong>Bên B</strong></p>
+                    <p class="en"><strong>PARTY B</strong></p>
+                    <div class="space"></div>
+                    <p><strong>{W}</strong></p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STEEL Fitness – Nhắc thanh toán</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                margin: 0;
+                background: #ffffff;
+                color: #1a1a1a;
+            }
+
+            .lang-hint {
+                font-size: 12px;
+                font-style: italic;
+                color: #999;
+                margin: 0 0 14px;
+            }
+
+            .greeting-label {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+            .greeting-name {
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin: 0 0 8px;
+            }
+
+            .body-text {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 12px;
+            }
+            .body-text strong {
+                color: #1a1a1a;
+            }
+
+            .divider {
+                border: none;
+                border-top: 0.5px solid #e5e2da;
+                margin: 24px 0;
+            }
+
+            /* Language separator */
+            .lang-divider {
+                border-top: 0.5px solid #e5e2da;
+                text-align: center;
+                margin: 44px 0 30px;
+            }
+            .lang-divider span {
+                display: inline-block;
+                background: #ffffff;
+                padding: 0 14px;
+                transform: translateY(-50%);
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #999;
+            }
+
+            .section-label {
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #333;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+
+            /* Info table */
+            .info-table {
+                /*width: 100%;*/
+                border-collapse: collapse;
+                background: #eee;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 24px;
+            }
+            .info-table tr {
+                border-bottom: 0.5px solid #ddd;
+            }
+            .info-table tr:last-child {
+                border-bottom: none;
+            }
+            .info-table td {
+                padding: 10px 14px;
+                vertical-align: top;
+                background: transparent;
+            }
+            .info-table td.td-label {
+                font-size: 13px;
+                color: #333;
+                width: 70%;
+            }
+            .info-table td.td-value {
+                font-size: 14px;
+                font-weight: 600;
+                color: #1a1a1a;
+                width: 30%;
+                white-space: nowrap;
+            }
+            .info-table td.td-value.amount {
+                color: #c0392b;
+            }
+            .info-table td.td-value.deadline {
+                color: #c0392b;
+            }
+
+            /* Payment period badge */
+            .badge {
+                display: inline-block;
+                background: #fdf9f3;
+                border: 1px solid #c8a96e;
+                color: #c8a96e;
+                font-size: 13px;
+                font-weight: 700;
+                padding: 2px 10px;
+                border-radius: 20px;
+                letter-spacing: 0.5px;
+            }
+
+            /* Notice box */
+            .notice-box {
+                background: #fdf9f3;
+                border-left: 3px solid #c8a96e;
+                border-radius: 0 8px 8px 0;
+                padding: 14px 18px;
+                margin-bottom: 24px;
+            }
+            .notice-box .notice-title {
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #333;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+            .notice-box p {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 4px;
+            }
+            .notice-box p:last-child {
+                margin: 0;
+            }
+            .notice-box .notice-item {
+                margin: 0 0 14px;
+            }
+            .notice-box .notice-item:last-child {
+                margin: 0;
+            }
+
+            /* Sign-off */
+            .signoff {
+                margin-top: 8px;
+                margin-bottom: 28px;
+            }
+            .signoff .thanks {
+                font-size: 14px;
+                line-height: 1.75;
+                color: #333;
+                margin: 0 0 4px;
+            }
+
+            /* Contact */
+            .contact-label {
+                font-size: 13px;
+                color: #333;
+                margin: 0 0 10px;
+                line-height: 1.75;
+            }
+            .contact-item {
+                font-size: 13px;
+                margin: 0 0 4px;
+            }
+            .contact-item a {
+                color: #c8a96e;
+                text-decoration: none;
+            }
+
+            /* ── Mobile ── */
+            @media (max-width: 480px) {
+                body {
+                    padding: 20px;
+                }
+
+                .info-table,
+                .info-table tbody,
+                .info-table tr,
+                .info-table td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .info-table tr {
+                    border-bottom: 0.5px solid #ddd;
+                }
+
+                .info-table td.td-label {
+                    padding-bottom: 2px;
+                    border-bottom: none;
+                    width: 100%;
+                }
+
+                .info-table td.td-value {
+                    padding-top: 4px;
+                    padding-bottom: 14px;
+                    width: 100%;
+                    white-space: normal;
+                }
+            }
+
+            /* ===== FOOTER LEGAL ===== */
+            .footer-legal-wrap {
+                background-color: #111111;
+                padding: 24px 8px;
+                border-top: 1px solid #2a2a2a;
+                text-align: left;
+            }
+            .footer-legal-en {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+            }
+            .footer-divider {
+                font-size: 11px;
+                color: #666666;
+                letter-spacing: 2px;
+            }
+            .footer-legal-vi {
+                font-size: 11px;
+                color: #aaaaaa;
+                line-height: 1.8;
+            }
+
+            /* ===== SIGNATURE ===== */
+            .signature-wrap {
+                background-color: #111111;
+                padding: 24px 8px;
+                border-top: 1px solid #2a2a2a;
+                text-align: center;
+            }
+            .signature-tagline {
+                font-size: 12px;
+                color: #cccccc;
+                font-style: italic;
+                margin: 0 0 14px 0;
+                letter-spacing: 0.5px;
+            }
+            .signature-logo {
+                display: block;
+                margin: 0 auto 12px auto;
+            }
+            .signature-website {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0 0 4px 0;
+                text-decoration: none;
+            }
+            .signature-email {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0;
+                text-decoration: none;
+            }
+            .signature-website a,
+            .signature-email a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ============================================================ -->
+        <!-- ===================  TIẾNG VIỆT  =========================== -->
+        <!-- ============================================================ -->
+
+        <!-- Language hint -->
+        <p class="lang-hint">For English, see below</p>
+
+        <!-- Greeting -->
+        <p class="greeting-label">Kính gửi,</p>
+        <p class="greeting-name">{{$json.name}}</p>
+
+        <!-- Alert banner -->
+        <div class="notice-box">
+            <p>
+                Khoản thanh toán membership theo
+                <strong>Hợp đồng {{$json.contract_number}}</strong> đang đến
+                hạn. Vui lòng hoàn tất trước thời hạn để không bị gián đoạn dịch
+                vụ.
+            </p>
+        </div>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL xin gửi thông báo rằng khoản thanh toán membership của Quý
+            Khách hiện đang đến hạn theo điều khoản trong
+            <strong>Hợp đồng dịch vụ {{$json.contract_number}}</strong> và/hoặc
+            các Phụ lục đi kèm.
+        </p>
+
+        <!-- Contract details -->
+        <p class="section-label">Theo hợp đồng</p>
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Số hợp đồng</td>
+                <td class="td-value">{{$json.contract_number}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Thời hạn thanh toán</td>
+                <td class="td-value">{{$json.payment_duration}} tháng</td>
+            </tr>
+            <tr>
+                <td class="td-label">Kỳ thanh toán</td>
+                <td class="td-value">
+                    <span class="badge">Kỳ {{$json.period}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Mức thanh toán mỗi tháng</td>
+                <td class="td-value amount">
+                    {{$json.payment_amount}} VND/tháng
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Hạn hoàn tất thanh toán</td>
+                <td class="td-value deadline">{{$json.due_date}}</td>
+            </tr>
+        </table>
+
+        <!-- Warning -->
+        <div class="notice-box">
+            <p class="notice-title">Xin lưu ý</p>
+            <p class="notice-item">
+                Nếu không hoàn tất thanh toán,
+                <strong>Hợp đồng sẽ được xem như chấm dứt</strong>.
+            </p>
+            <p class="notice-item">
+                Hội Viên vẫn có thể sử dụng dịch vụ đến hết ngày
+                <strong>{{$json.service_end_date}}</strong>.
+            </p>
+            <p class="notice-item">
+                <strong>Khoản Đặt Cọc ban đầu</strong> sẽ bị khấu trừ như phí bồi
+                hoàn hợp đồng.
+            </p>
+        </div>
+
+        <!-- Already paid note -->
+        <div class="notice-box">
+            <p>
+                Nếu Quý Khách đã hoàn tất thanh toán, vui lòng bỏ qua email này.
+            </p>
+        </div>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                Xin chân thành cảm ơn Quý Khách đã tin tưởng và lựa chọn tập
+                luyện cùng STEEL.
+            </p>
+            <p class="thanks">With Strength,<br />STEEL Fitness &amp; Health</p>
+        </div>
+
+        <!-- Contact -->
+        <p class="contact-label">
+            Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ:
+        </p>
+        <p class="contact-item">
+            Email:
+            <a href="mailto:membership@steelsaigon.com"
+                >membership@steelsaigon.com</a
+            >
+        </p>
+        <p class="contact-item">0931 302 177 — STEEL Đảo Kim Cương</p>
+        <p class="contact-item">0901 316 892 — STEEL Phú Mỹ Hưng</p>
+
+        <!-- ============================================================ -->
+        <!-- ===================  ENGLISH  ============================== -->
+        <!-- ============================================================ -->
+        <div class="lang-divider"></div>
+
+        <!-- Greeting -->
+        <p class="greeting-label">Dear,</p>
+        <p class="greeting-name">{{$json.name}}</p>
+
+        <!-- Alert banner -->
+        <div class="notice-box">
+            <p>
+                The membership payment under
+                <strong>Contract {{$json.contract_number}}</strong> is now due.
+                Please complete it before the deadline to avoid any service
+                interruption.
+            </p>
+        </div>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL would like to notify you that your membership payment is now
+            due as per the terms in
+            <strong>Service Contract {{$json.contract_number}}</strong> and/or
+            its accompanying Appendices.
+        </p>
+
+        <!-- Contract details -->
+        <p class="section-label">As Per Contract</p>
+        <table class="info-table">
+            <tr>
+                <td class="td-label">Contract Number</td>
+                <td class="td-value">{{$json.contract_number}}</td>
+            </tr>
+            <tr>
+                <td class="td-label">Payment Duration</td>
+                <td class="td-value">{{$json.payment_duration}} month(s)</td>
+            </tr>
+            <tr>
+                <td class="td-label">Payment Period</td>
+                <td class="td-value">
+                    <span class="badge">Period {{$json.period}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Monthly Payment</td>
+                <td class="td-value amount">
+                    {{$json.payment_amount}} VND/month
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">Payment Due Date</td>
+                <td class="td-value deadline">{{$json.due_date_en}}</td>
+            </tr>
+        </table>
+
+        <!-- Warning -->
+        <div class="notice-box">
+            <p class="notice-title">Please Note</p>
+            <p class="notice-item">
+                If payment is not completed,
+                <strong>the Contract will be considered terminated</strong>.
+            </p>
+            <p class="notice-item">
+                Members may still use the services until
+                <strong>{{$json.service_end_date}}</strong>.
+            </p>
+            <p class="notice-item">
+                The <strong>Initial Deposit</strong> will be deducted as a
+                contract compensation fee.
+            </p>
+        </div>
+
+        <!-- Already paid note -->
+        <div class="notice-box">
+            <p>
+                If you have already completed the payment, please disregard this
+                email.
+            </p>
+        </div>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                Thank you sincerely for trusting and choosing to train with
+                STEEL.
+            </p>
+            <p class="thanks">With Strength,<br />STEEL Fitness &amp; Health</p>
+        </div>
+
+        <!-- Contact -->
+        <p class="contact-label">
+            If you have any questions, please contact:
+        </p>
+        <p class="contact-item">
+            Email:
+            <a href="mailto:membership@steelsaigon.com"
+                >membership@steelsaigon.com</a
+            >
+        </p>
+        <p class="contact-item">0931 302 177 — Diamond Island Club</p>
+        <p class="contact-item">0901 316 892 — Phu My Hung Club</p>
+
+        <!-- Signature -->
+        <div class="signature-wrap">
+            <p class="signature-tagline">With Strength,</p>
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                alt="STEEL"
+                width="80"
+                class="signature-logo"
+            />
+            <p class="signature-website">
+                <a href="https://www.steelsaigon.com">www.steelsaigon.com</a>
+            </p>
+            <p class="signature-email">
+                <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+            </p>
+        </div>
+
+        <!-- Footer Legal -->
+        <div class="footer-legal-wrap">
+            <p class="footer-legal-vi">
+                Quý Hội viên nhận được email giao dịch này nhằm cập nhật các
+                thay đổi quan trọng liên quan đến Membership, tài khoản hoặc
+                quyền truy cập dịch vụ tại STEEL.<br />Đây là một phần trong các
+                thông báo dịch vụ chính thức của STEEL và không phải email quảng
+                cáo.<br />Email này được gửi từ địa chỉ chỉ dùng để gửi đi thông
+                báo, và không nhận lại được phản hồi. Nếu cần hỗ trợ, Quý Hội
+                viên vui lòng liên hệ Front Desk hoặc Consultant của STEEL.
+            </p>
+            <p class="footer-divider">&mdash;</p>
+            <p class="footer-legal-en">
+                You've received this transactional email for informational
+                purposes to update you about important changes related to your
+                STEEL membership, account, or service access.<br />This message
+                is part of STEEL's official service communications and is not a
+                marketing email.<br />This message was sent from a
+                notification-only email address that doesn't accept incoming
+                emails. If you have any questions, please contact STEEL Front
+                Desk or your Consultant for assistance.
+            </p>
+        </div>
+    </body>
+</html>
