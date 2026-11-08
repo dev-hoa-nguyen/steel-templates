@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Phụ lục nâng cấp gói hội viên / Membership Upgrade Appendix
+        </title>
+        <style>
+            /* ---------- page ---------- */
+            @page {
+                size: A4;
+                margin: 18mm 16mm 16mm;
+            }
+
+            :root {
+                --ink: #000;
+                --en: #1c4587;
+                --muted: #666;
+                --rule: #d4d4d4;
+                --head: #f2f2f2;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0 auto;
+                padding: 18mm 16mm;
+                max-width: 210mm;
+                background: #fff;
+                color: var(--ink);
+                font-size: 10.5pt;
+                line-height: 1.45;
+            }
+
+            /* ---------- masthead ---------- */
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 6pt;
+                border-bottom: 1px solid var(--rule);
+            }
+            .masthead img {
+                width: 124px;
+                height: auto;
+            }
+            .masthead div {
+                text-align: right;
+                font-size: 9pt;
+                color: var(--muted);
+                line-height: 1.35;
+            }
+
+            /* ---------- headings ---------- */
+            h1 {
+                margin: 18pt 0 6pt;
+                font-size: 14pt;
+                line-height: 1.3;
+                text-align: center;
+            }
+            h2 {
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
+                line-height: 1.3;
+                text-align: left;
+            }
+            h3 {
+                margin: 12pt 0 4pt;
+                font-size: 10.5pt;
+                text-align: left;
+            }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- text ---------- */
+            p {
+                margin: 5pt 0;
+                orphans: 3;
+                widows: 3;
+            }
+            .en {
+                color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
+            }
+            li {
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- data tables ---------- */
+            .grid {
+                width: 100%;
+                margin: 6pt 0 8pt;
+                border-collapse: collapse;
+                text-align: left;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .grid th,
+            .grid td {
+                padding: 4pt 6pt;
+                border: 1px solid var(--ink);
+                vertical-align: top;
+            }
+            .grid th {
+                background: var(--head);
+                font-weight: normal;
+            }
+            .grid td p,
+            .grid th p {
+                margin: 0;
+            }
+            .grid .col-item {
+                width: 40%;
+            }
+            .grid .col-amount {
+                width: 38%;
+            }
+            .grid tr.total td {
+                font-weight: bold;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .hint {
+                font-size: 9pt;
+            }
+            .sign img {
+                width: 100%;
+                max-width: 333px;
+                height: auto;
+                margin-bottom: 4px;
+            }
+            .sign .space {
+                height: 24mm;
+            }
+
+            /* ---------- print ---------- */
+            @media print {
+                body {
+                    max-width: none;
+                    padding: 0;
+                    font-size: 10pt;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                body {
+                    padding: 16px;
+                    font-size: 11pt;
+                }
+                .grid th,
+                .grid td {
+                    padding: 4pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="masthead">
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1789133802/image1_buslce.png"
+                alt="STEEL Saigon"
+            />
+            <div>
+                <strong>HỢP ĐỒNG HỘI VIÊN - MEMBERSHIP CONTRACT</strong
+                ><br />WWW.STEELSAIGON.COM
+            </div>
+        </header>
+
+        <h1>
+            PHỤ LỤC NÂNG CẤP GÓI HỘI VIÊN<br /><span class="en"
+                >MEMBERSHIP UPGRADE APPENDIX</span
+            >
+        </h1>
+        <p class="center">
+            Số/<em>No.</em>: {{$json.payload.appendix_no}}
+        </p>
+
+        <ul class="dash">
+            <li>
+                Căn cứ Hợp đồng cung cấp dịch vụ số
+                {{$json.payload.contract_no}} ký ngày
+                {{$json.payload.contract_date}} giữa CÔNG TY TNHH HOUSE OF STEEL
+                và Khách Hàng (“Hợp Đồng”) cùng các Phụ lục đính kèm;
+                <p class="en">
+                    Pursuant to Service Contract No.
+                    {{$json.payload.contract_no}} dated
+                    {{$json.payload.contract_date_en}} between HOUSE OF STEEL
+                    LIMITED COMPANY and the Customer (the “Contract”) and its
+                    Appendices;
+                </p>
+            </li>
+            <li>
+                Căn cứ đề nghị nâng cấp gói của Khách Hàng ngày
+                {{$json.payload.request_date}};
+                <p class="en">
+                    Pursuant to the Customer's upgrade request dated
+                    {{$json.payload.request_date_en}};
+                </p>
+            </li>
+            <li>
+                Căn cứ việc Khách Hàng đã hoàn tất thanh toán Phí nâng cấp ngày
+                {{$json.payload.payment_date}}, mã giao dịch / số hóa đơn
+                {{$json.payload.transaction_no}}.
+                <p class="en">
+                    Pursuant to the Customer's completed payment of the Upgrade
+                    Fee on {{$json.payload.payment_date_en}}, transaction /
+                    invoice No. {{$json.payload.transaction_no}}.
+                </p>
+            </li>
+        </ul>
+
+        <p>
+            Hôm nay, ngày {{$json.payload.sign_date}}, các bên gồm: /
+            <span class="en">Today, {{$json.payload.sign_date_en}}, we are:</span>
+        </p>
+
+        <div class="party">
+            <h3>
+                BÊN A – BÊN CUNG CẤP DỊCH VỤ /
+                <span class="en">PARTY A - SERVICE PROVIDER:</span>
+            </h3>
+            <p>
+                <strong>CÔNG TY TNHH HOUSE OF STEEL</strong> (Gọi tắt là
+                “STEEL”)
+            </p>
+            <p class="en">
+                <strong>HOUSE OF STEEL LIMITED COMPANY</strong> (hereinafter
+                referred to as “STEEL”)
+            </p>
+            <p>
+                <strong>Địa chỉ:</strong> Số 92 Đường Hà Huy Tập, Phường Tân
+                Hưng, Thành phố Hồ Chí Minh, Việt Nam.
+            </p>
+            <p class="en">
+                <strong>Address:</strong> No. 92 Ha Huy Tap Street, Tan Hung
+                Ward, Ho Chi Minh City, Vietnam.
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong> 0902245520
+            </p>
+            <p>
+                <strong>Mã số thuế</strong>
+                <strong class="en">/ Tax Code:</strong> 0318576892
+            </p>
+            <p>
+                <strong>Đại diện</strong>
+                <strong class="en">/ Represented by:</strong> Ông
+                <em>(Mr.)</em> Bùi Trương Việt Anh
+            </p>
+        </div>
+
+        <div class="party">
+            <h3>
+                BÊN B - KHÁCH HÀNG / <span class="en">PARTY B - CUSTOMER:</span>
+            </h3>
+            <p>
+                <strong>Họ và tên</strong>
+                <strong class="en">/ Full name:</strong>
+                {{$json.payload.member_name}}
+            </p>
+            <p>
+                <strong>CCCD hoặc Hộ chiếu số</strong>
+                <strong class="en">/ ID or Passport No.:</strong>
+                {{$json.payload.member_id_number}}
+            </p>
+            <p>
+                <strong>Điện thoại</strong>
+                <strong class="en">/ Phone number:</strong>
+                {{$json.payload.member_phone}}
+            </p>
+            <p><strong>Email:</strong> {{$json.payload.member_email}}</p>
+            <p>
+                <strong>Mã Hội viên</strong>
+                <strong class="en">/ Member ID:</strong>
+                {{$json.payload.member_code}}
+            </p>
+            <p>
+                <em>(Sau đây gọi là “Khách Hàng”)/</em>
+                <span class="en">(hereinafter referred to as the “Customer”)</span>
+            </p>
+        </div>
+
+        <p>
+            Hai Bên thống nhất ký kết Phụ lục này để ghi nhận việc nâng cấp gói
+            hội viên của Khách Hàng với các nội dung sau:
+        </p>
+        <p class="en">
+            The Parties agree to sign this Appendix to record the upgrade of the
+            Customer's membership as follows:
+        </p>
+
+        <!-- ===================== ĐIỀU 1 ===================== -->
+        <h2>
+            ĐIỀU 1. ĐIỀU KIỆN NÂNG CẤP<br /><span class="en"
+                >ARTICLE 1. UPGRADE CONDITIONS</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>1.1.</b>Khách Hàng được quyền nâng cấp gói hội viên trong
+                vòng 30 (ba mươi) ngày kể từ Ngày thanh toán đầu tiên, là ngày
+                Khách Hàng hoàn tất khoản thanh toán đầu tiên cho gói hiện tại
+                theo Hợp Đồng.
+                <p class="en">
+                    The Customer may upgrade the membership within thirty (30)
+                    days from the First Payment Date, which is the date the
+                    Customer completed the first payment for the current package
+                    under the Contract.
+                </p>
+            </li>
+            <li>
+                <b>1.2.</b>Nâng cấp là việc chuyển sang gói có thời hạn dài hơn
+                (ví dụ từ gói 03 tháng lên gói 12 tháng) và/hoặc hạng gói cao
+                hơn (ví dụ từ Solo lên Club hoặc House). STEEL không áp dụng việc
+                chuyển sang gói có thời hạn ngắn hơn hoặc hạng gói thấp hơn.
+                <p class="en">
+                    An upgrade means moving to a package with a longer term (for
+                    example, from a 3-month to a 12-month package) and/or a
+                    higher tier (for example, from Solo to Club or House). STEEL
+                    does not allow a change to a shorter term or a lower tier.
+                </p>
+            </li>
+            <li>
+                <b>1.3.</b>Việc nâng cấp chỉ được thực hiện khi gói hiện tại
+                đang còn hiệu lực, không trong thời gian bảo lưu, tạm ngưng hoặc
+                có khoản phí chưa thanh toán. Mỗi Hợp Đồng được nâng cấp theo Phụ
+                lục này 01 (một) lần.
+                <p class="en">
+                    An upgrade may only be made while the current package is
+                    active and not frozen, paused, or subject to any outstanding
+                    fee. Each Contract may be upgraded under this Appendix once
+                    (01).
+                </p>
+            </li>
+            <li>
+                <b>1.4.</b>Phụ lục này được ký sau khi Khách Hàng đã thanh toán
+                đầy đủ Phí nâng cấp theo Điều 3 và được STEEL xác nhận giao dịch
+                thành công.
+                <p class="en">
+                    This Appendix is signed after the Customer has paid the
+                    Upgrade Fee in full under Article 3 and STEEL has confirmed
+                    the transaction as successful.
+                </p>
+            </li>
+        </ol>
+
+        <!-- ===================== ĐIỀU 2 ===================== -->
+        <h2>
+            ĐIỀU 2. THÔNG TIN GÓI TRƯỚC VÀ SAU NÂNG CẤP<br /><span class="en"
+                >ARTICLE 2. PACKAGE BEFORE AND AFTER UPGRADE</span
+            >
+        </h2>
+
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th class="col-item">
+                        Hạng mục / <span class="en">Item</span>
+                    </th>
+                    <th>
+                        Gói hiện tại /
+                        <span class="en">Current package</span>
+                    </th>
+                    <th>
+                        Gói sau nâng cấp /
+                        <span class="en">Upgraded package</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hạng gói / <span class="en">Tier</span></td>
+                    <td>{{$json.payload.current_tier}}</td>
+                    <td>{{$json.payload.upgraded_tier}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Thời hạn gói / <span class="en">Package term</span>
+                    </td>
+                    <td>
+                        {{$json.payload.current_term_months}} tháng /
+                        <span class="en">months</span>
+                    </td>
+                    <td>
+                        {{$json.payload.upgraded_term_months}} tháng /
+                        <span class="en">months</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CLB đăng ký chính / <span class="en">Home club</span>
+                    </td>
+                    <td>{{$json.payload.current_home_club}}</td>
+                    <td>{{$json.payload.upgraded_home_club}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Ngày kích hoạt / <span class="en">Activation date</span>
+                    </td>
+                    <td>{{$json.payload.activation_date}}</td>
+                    <td>
+                        {{$json.payload.activation_date}} (giữ nguyên /
+                        <span class="en">unchanged</span>)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày hết hạn / <span class="en">Expiry date</span></td>
+                    <td>{{$json.payload.current_expiry_date}}</td>
+                    <td>{{$json.payload.upgraded_expiry_date}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Giá gói / <span class="en">Package price</span> (VND,
+                        VAT incl.)
+                    </td>
+                    <td>{{$json.payload.current_price}}</td>
+                    <td>{{$json.payload.upgraded_price}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Class Pass / tháng /
+                        <span class="en">Class Pass per month</span>
+                    </td>
+                    <td>{{$json.payload.current_class_pass}}</td>
+                    <td>{{$json.payload.upgraded_class_pass}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Buổi / <span class="en">Session</span> Personal
+                        Training / Pilates / Sport Massage
+                    </td>
+                    <td>{{$json.payload.current_sessions}}</td>
+                    <td>{{$json.payload.upgraded_sessions}}</td>
+                </tr>
+                <tr>
+                    <td>Ngày bảo lưu / <span class="en">Freeze days</span></td>
+                    <td>{{$json.payload.current_freeze_days}}</td>
+                    <td>{{$json.payload.upgraded_freeze_days}}</td>
+                </tr>
+                <tr>
+                    <td>Invite Pass</td>
+                    <td>{{$json.payload.current_invite_pass}}</td>
+                    <td>{{$json.payload.upgraded_invite_pass}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Quyền lợi khác / <span class="en">Other benefits</span>
+                    </td>
+                    <td>{{$json.payload.current_other_benefits}}</td>
+                    <td>{{$json.payload.upgraded_other_benefits}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Ngày nâng cấp / <span class="en">Upgrade Date</span>:
+            <strong>{{$json.payload.upgrade_date}}</strong> (là ngày Khách Hàng
+            hoàn tất thanh toán Phí nâng cấp /
+            <span class="en"
+                >the date the Customer completes payment of the Upgrade
+                Fee</span
+            >)
+        </p>
+
+        <!-- ===================== ĐIỀU 3 ===================== -->
+        <h2>
+            ĐIỀU 3. PHÍ NÂNG CẤP VÀ THANH TOÁN<br /><span class="en"
+                >ARTICLE 3. UPGRADE FEE AND PAYMENT</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>3.1.</b>Phí nâng cấp bằng giá niêm yết của gói sau nâng cấp
+                tại Ngày thanh toán đầu tiên, trừ đi toàn bộ số tiền phí dịch vụ
+                Khách Hàng đã thanh toán cho gói hiện tại. Trường hợp gói hiện
+                tại có phí đặt cọc, phí đặt cọc được cấn trừ 100% vào Phí nâng
+                cấp.
+                <p class="en">
+                    The Upgrade Fee equals the listed price of the upgraded
+                    package on the First Payment Date, less all service fees the
+                    Customer has paid for the current package. If the current
+                    package includes a security deposit, 100% of the deposit
+                    shall be credited against the Upgrade Fee.
+                </p>
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>Khoản mục / <span class="en">Item</span></th>
+                            <th class="col-amount">
+                                Số tiền / <span class="en">Amount</span> (VND)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                (1) Giá gói sau nâng cấp /
+                                <span class="en">Upgraded package price</span>
+                            </td>
+                            <td>{{$json.payload.upgraded_price}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                (2) Phí dịch vụ đã thanh toán cho gói hiện tại /
+                                <span class="en"
+                                    >Service fees paid for current package</span
+                                >
+                            </td>
+                            <td>{{$json.payload.paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                (3) Phí đặt cọc được cấn trừ (nếu có) /
+                                <span class="en">Deposit credited (if any)</span>
+                            </td>
+                            <td>{{$json.payload.deposit_amount}}</td>
+                        </tr>
+                        <tr class="total">
+                            <td>
+                                Phí nâng cấp /
+                                <span class="en">Upgrade Fee</span> = (1) - (2)
+                                - (3)
+                            </td>
+                            <td>{{$json.payload.upgrade_fee}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <b>3.2.</b>Các ưu đãi, quà tặng hoặc khuyến mãi Khách Hàng đã
+                nhận theo gói hiện tại được giữ nguyên và không được quy đổi
+                thành tiền hay cấn trừ vào Phí nâng cấp. Ưu đãi của gói sau nâng
+                cấp (nếu có) được ghi tại Điều 2.
+                <p class="en">
+                    Promotions, gifts, or offers the Customer received under the
+                    current package remain with the Customer and may not be
+                    converted into cash or credited against the Upgrade Fee.
+                    Offers for the upgraded package (if any) are stated in
+                    Article 2.
+                </p>
+            </li>
+            <li>
+                <b>3.3.</b>Bên A xác nhận đã nhận đủ Phí nâng cấp nêu trên vào
+                ngày {{$json.payload.payment_date}} qua hình thức:
+                <strong>{{$json.payload.payment_method}}</strong>. Phí nâng cấp
+                đã bao gồm thuế VAT và không được hoàn lại, trừ các trường hợp
+                quy định tại Điều 8 Hợp Đồng.
+                <p class="en">
+                    Party A confirms receipt of the full Upgrade Fee above on
+                    {{$json.payload.payment_date_en}} by:
+                    <strong>{{$json.payload.payment_method_en}}</strong>. The
+                    Upgrade Fee is inclusive of VAT and non-refundable, except in
+                    the cases set out in Article 8 of the Contract.
+                </p>
+            </li>
+        </ol>
+
+        <!-- ===================== ĐIỀU 4 ===================== -->
+        <h2>
+            ĐIỀU 4. HIỆU LỰC VÀ QUYỀN LỢI CỦA GÓI SAU NÂNG CẤP<br /><span
+                class="en"
+                >ARTICLE 4. EFFECT AND BENEFITS OF THE UPGRADED PACKAGE</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>4.1.</b>Gói sau nâng cấp có hiệu lực kể từ Ngày nâng cấp.
+                Thời hạn của gói sau nâng cấp được tính từ Ngày kích hoạt của gói
+                hiện tại, không cộng nối tiếp vào thời hạn còn lại của gói hiện
+                tại. Ví dụ: gói 03 tháng kích hoạt ngày 01/11 được nâng cấp lên
+                gói 12 tháng sẽ hết hạn vào ngày 31/10 năm sau.
+                <p class="en">
+                    The upgraded package takes effect from the Upgrade Date. Its
+                    term is counted from the Activation Date of the current
+                    package and is not added on top of the remaining term of the
+                    current package. For example, a 3-month package activated on
+                    November 1 and upgraded to a 12-month package expires on
+                    October 31 of the following year.
+                </p>
+            </li>
+            <li>
+                <b>4.2.</b>Kể từ Ngày nâng cấp, Khách Hàng được hưởng quyền lợi
+                của gói sau nâng cấp theo Điều 2. Các quyền lợi Khách Hàng đã sử
+                dụng theo gói hiện tại (Class Pass, ngày bảo lưu, Invite Pass và
+                các quyền lợi khác) được trừ vào tổng quyền lợi của gói sau nâng
+                cấp.
+                <p class="en">
+                    From the Upgrade Date, the Customer is entitled to the
+                    benefits of the upgraded package under Article 2. Benefits
+                    already used under the current package (Class Passes, freeze
+                    days, Invite Passes, and other benefits) shall be deducted
+                    from the total benefits of the upgraded package.
+                </p>
+            </li>
+            <li>
+                <b>4.3.</b>Kể từ Ngày nâng cấp, các chính sách về bảo lưu, chuyển
+                nhượng, hoàn phí và chấm dứt áp dụng theo loại gói sau nâng cấp,
+                theo quy định tại Hợp Đồng và Phụ lục 01 - Quy định Hội viên.
+                <p class="en">
+                    From the Upgrade Date, the freeze, transfer, refund, and
+                    termination policies applicable to the upgraded package
+                    shall apply, as set out in the Contract and Appendix 01 -
+                    Membership Policies.
+                </p>
+            </li>
+            <li>
+                <b>4.4.</b>Sau khi nâng cấp, Khách Hàng không được chuyển lại gói
+                hiện tại hoặc chuyển sang gói có thời hạn ngắn hơn, hạng thấp
+                hơn.
+                <p class="en">
+                    After the upgrade, the Customer may not return to the
+                    current package or move to a package with a shorter term or a
+                    lower tier.
+                </p>
+            </li>
+        </ol>
+
+        <!-- ===================== ĐIỀU 5 ===================== -->
+        <h2>
+            ĐIỀU 5. ĐIỀU KHOẢN CHUNG<br /><span class="en"
+                >ARTICLE 5. MISCELLANEOUS</span
+            >
+        </h2>
+        <ol class="clauses">
+            <li>
+                <b>5.1.</b>Phụ lục này là một bộ phận không tách rời của Hợp
+                Đồng và có hiệu lực kể từ Ngày nâng cấp. Nội dung tại Phụ lục này
+                thay thế các nội dung tương ứng tại Phụ lục thông tin gói đã ký
+                trước đó.
+                <p class="en">
+                    This Appendix forms an integral part of the Contract and
+                    takes effect from the Upgrade Date. Its contents replace the
+                    corresponding contents of the package information appendix
+                    signed previously.
+                </p>
+            </li>
+            <li>
+                <b>5.2.</b>Các nội dung khác của Hợp Đồng không được đề cập tại
+                Phụ lục này vẫn giữ nguyên hiệu lực.
+                <p class="en">
+                    All other terms of the Contract not addressed in this
+                    Appendix remain in full force.
+                </p>
+            </li>
+            <li>
+                <b>5.3.</b>Phụ lục này được lập song ngữ tiếng Việt và tiếng Anh.
+                Trường hợp có sự khác biệt giữa hai ngôn ngữ, bản tiếng Việt được
+                ưu tiên áp dụng.
+                <p class="en">
+                    This Appendix is made in Vietnamese and English. In case of
+                    any inconsistency, the Vietnamese version shall prevail.
+                </p>
+            </li>
+            <li>
+                <b>5.4.</b>Phụ lục này được lập thành 02 (hai) bản, mỗi Bên giữ
+                01 (một) bản, có giá trị pháp lý như nhau.
+                <p class="en">
+                    This Appendix is made in two (02) copies, each Party keeping
+                    one (01) copy of equal legal validity.
+                </p>
+            </li>
+        </ol>
+
+        <table class="sign">
+            <tr>
+                <td>
+                    <p><strong>ĐẠI DIỆN BÊN A</strong></p>
+                    <p class="en"><strong>ON BEHALF OF PARTY A</strong></p>
+                    <p class="hint">
+                        (Ký, ghi rõ họ tên và đóng dấu /
+                        <span class="en">Sign, full name and seal</span>)
+                    </p>
+                    <img
+                        alt=""
+                        src="https://res.cloudinary.com/duayxbt5d/image/upload/v1784636008/image4_ekqh6y-removebg-preview_kfxrqr.png"
+                    />
+                    <p>
+                        <strong>GĐ</strong> <strong class="en">(CEO)</strong
+                        ><strong>. BÙI TRƯƠNG VIỆT ANH</strong>
+                    </p>
+                </td>
+                <td>
+                    <p><strong>BÊN B</strong></p>
+                    <p class="en"><strong>PARTY B</strong></p>
+                    <p class="hint">
+                        (Ký và ghi rõ họ tên /
+                        <span class="en">Sign and full name</span>)
+                    </p>
+                    <div class="space"></div>
+                     <br/>
+                     <br/>
+                     <br/>
+                      <br/>
+                    <p><strong>{{$json.payload.member_name}}</strong></p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
