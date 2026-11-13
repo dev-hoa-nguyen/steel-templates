@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STEEL Fitness – Thông báo tái kích hoạt gói tập</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 24px;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            /* Greeting */
+            .greeting-label {
+                font-size: 14px;
+                margin: 0 0 4px;
+            }
+            .greeting-label span {
+                color: #555555 !important;
+                font-style: italic;
+            }
+            .greeting-name {
+                font-size: 14px;
+                font-weight: 700;
+                margin: 0 0 16px;
+            }
+
+            /* Body */
+            .body-text {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #000000;
+                margin: 0 0 4px;
+                text-align: justify;
+            }
+            .body-text strong {
+                font-weight: 700;
+            }
+            .body-text-sub {
+                display: block;
+                font-size: 13px;
+                line-height: 1.6;
+                color: #555555;
+                font-style: italic;
+                margin: 0 0 14px;
+                text-align: justify;
+            }
+            .body-text-sub strong {
+                font-weight: 700;
+                color: #333333;
+            }
+
+            .divider {
+                border: none;
+                border-top: 1px solid #000000;
+                margin: 20px 0;
+            }
+
+            /* Section heading */
+            .section-label {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #000000;
+                margin: 0;
+            }
+            .section-label-sub {
+                display: block;
+                font-size: 13px;
+                color: #555555;
+                font-style: italic;
+                margin: 0 0 10px;
+            }
+
+            /* Info table */
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #000000;
+                margin-bottom: 20px;
+            }
+            .info-table td {
+                border: 1px solid #000000;
+                padding: 8px 10px;
+                vertical-align: middle;
+            }
+            .info-table td.td-label {
+                width: 45%;
+                background: #f2f2f2;
+                font-size: 13px;
+                font-weight: 700;
+                color: #000000;
+            }
+            .info-table .td-label-sub {
+                display: block;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: italic;
+                color: #555555;
+            }
+            .info-table td.td-value {
+                width: 55%;
+                font-size: 13px;
+                color: #000000;
+            }
+            .info-table .td-value-sub {
+                display: block;
+                font-size: 12px;
+                font-style: italic;
+                color: #555555;
+            }
+
+            /* Notes */
+            .notice-box {
+                margin-bottom: 20px;
+            }
+            .notice-box .notice-title {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #000000;
+                margin: 0 0 8px;
+            }
+            .notice-box .notice-title-sub {
+                display: block;
+                font-size: 13px;
+                font-weight: normal;
+                font-style: italic;
+                text-transform: none;
+                color: #555555;
+            }
+            .notice-box ol {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .notice-box ol li {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #000000;
+                margin-bottom: 8px;
+                text-align: justify;
+            }
+            .notice-box ol li:last-child {
+                margin-bottom: 0;
+            }
+            .notice-item-sub {
+                display: block;
+                font-size: 13px;
+                font-style: italic;
+                color: #555555;
+            }
+
+            /* Sign-off */
+            .signoff {
+                margin: 0 0 20px;
+            }
+            .signoff .thanks {
+                font-size: 14px;
+                color: #000000;
+                margin: 0;
+            }
+            .signoff .thanks-sub {
+                display: block;
+                font-size: 13px;
+                font-style: italic;
+                color: #555555;
+                margin: 0;
+            }
+
+            /* Contact */
+            .contact-label {
+                font-size: 14px;
+                color: #000000;
+                margin: 0;
+                text-align: justify;
+            }
+            .contact-label-sub {
+                display: block;
+                font-size: 13px;
+                font-style: italic;
+                color: #555555;
+                margin: 0 0 12px;
+            }
+            .contact-item {
+                font-size: 14px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .contact-item a {
+                color: #000000;
+                text-decoration: underline;
+            }
+            .contact-item-sub {
+                display: block;
+                font-size: 13px;
+                font-style: italic;
+                color: #555555;
+                margin: 0 0 8px;
+            }
+
+            /* Mobile: single-column table */
+            @media (max-width: 480px) {
+                body {
+                    padding: 16px;
+                }
+                .info-table,
+                .info-table tbody,
+                .info-table tr,
+                .info-table td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                .info-table td {
+                    border: none;
+                    border-bottom: 1px solid #000000;
+                }
+                .info-table tr:last-child td.td-value {
+                    border-bottom: none;
+                }
+                .info-table td.td-label {
+                    width: 100%;
+                }
+                .info-table td.td-value {
+                    width: 100%;
+                }
+            }
+
+            /* Signature */
+            .signature-wrap {
+                background-color: #111111;
+                padding: 20px 8px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .signature-tagline {
+                font-size: 12px;
+                color: #cccccc;
+                font-style: italic;
+                margin: 0 0 12px;
+            }
+            .signature-logo {
+                display: block;
+                margin: 0 auto 10px;
+            }
+            .signature-website,
+            .signature-email {
+                font-size: 12px;
+                color: #aaaaaa;
+                margin: 0 0 4px;
+            }
+            .signature-website a,
+            .signature-email a {
+                color: #aaaaaa;
+                text-decoration: none;
+            }
+
+            /* Highlighted table row */
+            .info-table tr.highlight-row td {
+                background: #e6e6e6;
+            }
+            .info-table tr.highlight-row td.td-value {
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Greeting -->
+        <p class="greeting-label">
+            Kính gửi Anh/Chị
+            <span
+                style="
+                    display: block;
+                    font-size: 11px;
+                    color: #bbbbbb;
+                    margin-top: 2px;
+                    letter-spacing: 0.3px;
+                "
+                >Dear Mr./Ms.</span
+            >
+        </p>
+        <p class="greeting-name">{{member_name}}</p>
+
+        <!-- Intro -->
+        <p class="body-text">
+            STEEL Fitness &amp; Health xin thông báo gói tập
+            <strong>{{package_name}}</strong> của Quý Khách đã được
+            <strong>tái kích hoạt</strong> sau thời gian bảo lưu. Dưới đây là
+            thông tin chi tiết về giai đoạn bảo lưu:
+        </p>
+        <p class="body-text-sub">
+            STEEL Fitness &amp; Health is pleased to inform you that your
+            <strong>{{package_name}}</strong> package has been
+            <strong>reactivated</strong> after the frozen period. Here are the
+            details of the frozen period:
+        </p>
+
+        <hr class="divider" />
+
+        <!-- Freeze summary -->
+        <p class="section-label">Thông tin bảo lưu</p>
+        <p class="section-label-sub">Freeze Summary</p>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-label">
+                    Ngày bắt đầu bảo lưu
+                    <span class="td-label-sub">Freeze Start Date</span>
+                </td>
+                <td class="td-value">
+                    {{start_freeze_date}}
+                    <span class="td-value-sub">{{start_freeze_date_en}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">
+                    Ngày kết thúc bảo lưu
+                    <span class="td-label-sub">Freeze End Date</span>
+                </td>
+                <td class="td-value">
+                    {{end_freeze_date}}
+                    <span class="td-value-sub">{{end_freeze_date_en}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">
+                    Tổng số ngày đã bảo lưu
+                    <span class="td-label-sub">Total Frozen Days Used</span>
+                </td>
+                <td class="td-value">
+                    {{total_freeze_days}} ngày
+                    <span class="td-value-sub">{{total_freeze_days}} days</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-label">
+                    Số ngày bảo lưu còn lại
+                    <span class="td-label-sub">Remaining Freeze Days</span>
+                </td>
+                <td class="td-value">
+                    {{remaining_freeze_days}} ngày
+                    <span class="td-value-sub"
+                        >{{remaining_freeze_days}} days remaining</span
+                    >
+                </td>
+            </tr>
+            <tr class="highlight-row">
+                <td class="td-label">
+                    Ngày hết hạn mới
+                    <span class="td-label-sub">New Expiration Date</span>
+                </td>
+                <td class="td-value">
+                    {{new_expiration_date}}
+                    <span class="td-value-sub">{{new_expiration_date_en}}</span>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Sign-off -->
+        <div class="signoff">
+            <p class="thanks">
+                STEEL Fitness &amp; Health xin chân thành cảm ơn Quý Khách đã
+                tin tưởng và đồng hành cùng chúng tôi trong suốt thời gian là
+                Hội Viên.
+            </p>
+            <p class="thanks-sub">
+                STEEL Fitness &amp; Health would like to thank you for your
+                trust and patronage throughout your membership.
+            </p>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Contact -->
+        <p class="contact-label">
+            Nếu có bất kỳ thắc mắc nào, Quý Khách vui lòng phản hồi qua email
+            hoặc liên hệ bộ phận chăm sóc khách hàng qua số hotline để được hỗ
+            trợ nhanh nhất.
+        </p>
+        <p class="contact-label-sub">
+            For any further information, please do not hesitate to contact our
+            Customer Service Department via email or hotline below.
+        </p>
+
+        <p class="contact-item">
+            Email:
+            <a href="mailto:membership@steelsaigon.com"
+                >membership@steelsaigon.com</a
+            >
+        </p>
+        <p class="contact-item">0931 302 177 — STEEL Đảo Kim Cương</p>
+        <p class="contact-item-sub">Hotline – Diamond Island Club</p>
+        <p class="contact-item">0901 316 892 — STEEL Phú Mỹ Hưng</p>
+        <p class="contact-item-sub">Hotline – Phu My Hung Club</p>
+
+        <!-- Signature -->
+        <div class="signature-wrap">
+            <p class="signature-tagline">With Strength,</p>
+            <img
+                src="https://res.cloudinary.com/duayxbt5d/image/upload/v1779705694/Group_2314_dgh8ew.svg"
+                alt="STEEL"
+                width="80"
+                class="signature-logo"
+            />
+            <p class="signature-website">
+                <a href="https://www.steelsaigon.com">www.steelsaigon.com</a>
+            </p>
+            <p class="signature-email">
+                <a href="mailto:hello@steelsaigon.com">hello@steelsaigon.com</a>
+            </p>
+        </div>
+    </body>
+</html>
