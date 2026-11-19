@@ -5,58 +5,236 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Giấy miễn trừ trách nhiệm – Khách vãng lai</title>
         <style>
+            /* ---------- page ---------- */
+            @page {
+                size: A4;
+                margin: 18mm 16mm 16mm;
+            }
+
+            :root {
+                --ink: #000;
+                --en: #1c4587;
+                --muted: #666;
+                --rule: #d4d4d4;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
             body {
-                font-family: "Times New Roman", serif;
-                font-size: 12pt;
-                line-height: 1.4;
-                color: #000;
-                max-width: 720px;
                 margin: 0 auto;
-                padding: 40px 24px;
+                padding: 18mm 16mm;
+                max-width: 210mm;
+                background: #fff;
+                color: var(--ink);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10.5pt;
+                line-height: 1.45;
+                text-align: justify;
             }
+
+            /* ---------- masthead ---------- */
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 6pt;
+                border-bottom: 1px solid var(--rule);
+            }
+            .masthead img {
+                width: 124px;
+                height: auto;
+            }
+            .masthead div {
+                text-align: right;
+                font-size: 9pt;
+                color: var(--muted);
+                line-height: 1.35;
+            }
+
+            /* ---------- headings ---------- */
             h1 {
-                font-family: Arial, sans-serif;
-                font-size: 16pt;
+                margin: 18pt 0 6pt;
+                font-size: 14pt;
+                line-height: 1.3;
                 text-align: center;
-                margin: 0 0 4px;
-            }
-            .subtitle {
-                font-family: Arial, sans-serif;
-                font-size: 13pt;
-                font-style: italic;
-                text-align: center;
-                color: #333;
-                margin: 0 0 24px;
             }
             h2 {
-                font-family: Arial, sans-serif;
-                font-size: 12.5pt;
-                margin: 22px 0 6px;
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
+                line-height: 1.3;
+                text-align: left;
             }
-            h2 i {
-                font-weight: normal;
-                color: #333;
+            h3 {
+                margin: 12pt 0 4pt;
+                font-size: 10.5pt;
+                text-align: left;
             }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- text ---------- */
             p {
-                margin: 6px 0;
-                text-align: justify;
+                margin: 5pt 0;
+                orphans: 3;
+                widows: 3;
             }
-            ul {
-                margin: 6px 0;
-                padding-left: 28px;
+            .en {
+                color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
             }
             li {
-                margin: 6px 0;
-                text-align: justify;
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .space {
+                height: 26mm;
+            }
+            /* ---------- compat: legacy markup ---------- */
+            .masthead strong {
+                font-weight: 700;
+                font-style: italic;
+            }
+            h1,
+            h2,
+            h3 {
+                text-transform: uppercase;
             }
             i {
+                color: var(--en);
+                font-style: italic;
+                font-weight: inherit;
+            }
+            h1 .subtitle,
+            .subtitle {
+                margin: 2pt 0 4pt;
+                font-size: 11pt;
+                font-weight: 700;
+                font-style: italic;
+                color: var(--en);
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .no,
+            .scope {
+                margin: 4pt 0 14pt;
+                text-align: center;
+            }
+            .block {
+                margin-top: 12pt;
+                text-align: left;
+            }
+            .note {
+                color: #c00;
                 font-style: italic;
             }
             .fields {
-                margin-top: 40px;
+                margin-top: 28pt;
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
             .fields p {
-                margin: 14px 0;
+                margin: 12pt 0;
+                text-align: left;
+            }
+            div.sign {
+                width: auto;
+                float: right;
+                text-align: center;
+            }
+            .sig {
+                display: block;
+                max-width: 300px;
+                height: auto;
+                margin: 4px auto;
+            }
+
+            /* ---------- print ---------- */
+            @media print {
+                body {
+                    max-width: none;
+                    padding: 0;
+                    font-size: 10pt;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                body {
+                    padding: 16px;
+                    font-size: 11pt;
+                }
             }
         </style>
     </head>

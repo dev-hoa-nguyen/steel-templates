@@ -13,7 +13,7 @@
 
             :root {
                 --ink: #000;
-                --en: #244061;
+                --en: #1c4587;
                 --muted: #666;
                 --rule: #d4d4d4;
             }
@@ -32,7 +32,6 @@
                 font-size: 10.5pt;
                 line-height: 1.45;
                 text-align: justify;
-                -webkit-text-size-adjust: 100%;
             }
 
             /* ---------- masthead ---------- */
@@ -54,32 +53,24 @@
                 color: var(--muted);
                 line-height: 1.35;
             }
-            .masthead strong {
-                font-weight: 700;
-                font-style: italic;
-            }
 
             /* ---------- headings ---------- */
             h1 {
-                margin: 18pt 0 12pt;
+                margin: 18pt 0 6pt;
                 font-size: 14pt;
                 line-height: 1.3;
                 text-align: center;
-                text-transform: uppercase;
             }
             h2 {
-                margin: 20pt 0 8pt;
-                font-size: 11.5pt;
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
                 line-height: 1.3;
                 text-align: left;
-                text-transform: uppercase;
             }
             h3 {
-                margin: 14pt 0 6pt;
+                margin: 12pt 0 4pt;
                 font-size: 10.5pt;
-                line-height: 1.3;
                 text-align: left;
-                text-transform: uppercase;
             }
             h1,
             h2,
@@ -91,12 +82,96 @@
 
             /* ---------- text ---------- */
             p {
-                margin: 6pt 0;
+                margin: 5pt 0;
                 orphans: 3;
                 widows: 3;
             }
             .en {
                 color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
+            }
+            li {
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .space {
+                height: 26mm;
+            }
+
+            /* ---------- compat: legacy markup ---------- */
+            h1,
+            h2,
+            h3 {
+                text-transform: uppercase;
+            }
+            .masthead strong {
+                font-weight: 700;
                 font-style: italic;
             }
             .en strong {
@@ -107,28 +182,10 @@
                 font-size: 10pt;
                 font-style: italic;
             }
-            .note.en {
-                font-style: italic;
-            }
             .end {
                 margin: 18pt 0 0;
                 text-align: center;
                 font-style: italic;
-            }
-
-            /* ---------- lists ---------- */
-            ol,
-            ul {
-                margin: 6pt 0;
-                padding-left: 22pt;
-            }
-            li {
-                margin: 6pt 0;
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-            li > p:first-of-type {
-                margin-top: 4pt;
             }
             li > ul {
                 list-style: none;
@@ -152,19 +209,7 @@
                     padding: 0;
                     font-size: 10pt;
                 }
-                .masthead {
-                    padding-bottom: 4pt;
-                }
-                li,
-                p,
-                h1,
-                h2,
-                h3 {
-                    -webkit-print-color-adjust: exact;
-                    print-color-adjust: exact;
-                }
             }
-
             @media screen and (max-width: 640px) {
                 body {
                     padding: 16px;

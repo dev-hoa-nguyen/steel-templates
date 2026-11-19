@@ -5,56 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hợp đồng cung cấp dịch vụ</title>
         <style>
-            :root {
-                --ink: #000;
-                --en: #244061;
-                --muted: #666;
-                --rule: #d4d4d4;
-            }
-
             /* ---------- page ---------- */
             @page {
                 size: A4;
                 margin: 18mm 16mm 16mm;
             }
 
-            body {
-                font-size: 12pt;
-                line-height: 1.4;
-                color: #000;
-                max-width: 760px;
-                margin: 0 auto;
-                padding: 40px 24px;
+            :root {
+                --ink: #000;
+                --en: #1c4587;
+                --muted: #666;
+                --rule: #d4d4d4;
             }
 
-            /* ---------- headings ---------- */
-            h1 {
-                margin: 18pt 0 12pt;
-                font-size: 14pt;
-                line-height: 1.3;
-                text-align: center;
-                text-transform: uppercase;
+            * {
+                box-sizing: border-box;
             }
-            h2 {
-                margin: 20pt 0 8pt;
-                font-size: 11.5pt;
-                line-height: 1.3;
-                text-align: left;
-                text-transform: uppercase;
-            }
-            h3 {
-                margin: 14pt 0 6pt;
+
+            body {
+                margin: 0 auto;
+                padding: 18mm 16mm;
+                max-width: 210mm;
+                background: #fff;
+                color: var(--ink);
+                font-family: Arial, Helvetica, sans-serif;
                 font-size: 10.5pt;
-                line-height: 1.3;
-                text-align: left;
-                text-transform: uppercase;
-            }
-            h1,
-            h2,
-            h3 {
-                break-after: avoid;
-                page-break-after: avoid;
-                break-inside: avoid;
+                line-height: 1.45;
+                text-align: justify;
             }
 
             /* ---------- masthead ---------- */
@@ -76,64 +53,167 @@
                 color: var(--muted);
                 line-height: 1.35;
             }
+
+            /* ---------- headings ---------- */
+            h1 {
+                margin: 18pt 0 6pt;
+                font-size: 14pt;
+                line-height: 1.3;
+                text-align: center;
+            }
+            h2 {
+                margin: 18pt 0 6pt;
+                font-size: 11pt;
+                line-height: 1.3;
+                text-align: left;
+            }
+            h3 {
+                margin: 12pt 0 4pt;
+                font-size: 10.5pt;
+                text-align: left;
+            }
+            h1,
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+
+            /* ---------- text ---------- */
+            p {
+                margin: 5pt 0;
+                orphans: 3;
+                widows: 3;
+            }
+            .en {
+                color: var(--en);
+                font-style: italic;
+            }
+            .center {
+                text-align: center;
+            }
+
+            /* ---------- lists ---------- */
+            ul,
+            ol {
+                margin: 5pt 0;
+                padding-left: 22pt;
+            }
+            li {
+                margin: 4pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            li > p {
+                margin: 2pt 0 0;
+            }
+            ul.dash {
+                list-style: none;
+            }
+            ul.dash > li::before {
+                content: "– ";
+                margin-left: -12pt;
+            }
+            ol.clauses {
+                list-style: none;
+                padding-left: 26pt;
+            }
+            ol.clauses > li {
+                text-indent: -26pt;
+            }
+            ol.clauses > li > * {
+                text-indent: 0;
+            }
+            ol.clauses b {
+                display: inline-block;
+                width: 26pt;
+                text-indent: 0;
+            }
+
+            /* ---------- parties ---------- */
+            .party {
+                margin: 10pt 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .party p {
+                margin: 3pt 0;
+                text-align: left;
+            }
+
+            /* ---------- signatures ---------- */
+            .sign {
+                width: 100%;
+                margin-top: 18pt;
+                border-collapse: collapse;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .sign td {
+                width: 50%;
+                padding: 0 6pt;
+                vertical-align: top;
+                text-align: center;
+            }
+            .sign p {
+                margin: 2pt 0;
+                text-align: center;
+            }
+            .sign .space {
+                height: 26mm;
+            }
+            /* ---------- compat: legacy markup ---------- */
             .masthead strong {
                 font-weight: 700;
                 font-style: italic;
             }
-
-            .letterhead {
-                display: block;
-                width: 234px;
-                height: auto;
-                margin: 0 0 16px;
+            h1,
+            h2,
+            h3 {
+                text-transform: uppercase;
             }
+            i {
+                color: var(--en);
+                font-style: italic;
+                font-weight: inherit;
+            }
+            h1 .subtitle,
             .subtitle {
-                font-family: Arial, sans-serif;
-                font-size: 13pt;
+                margin: 2pt 0 4pt;
+                font-size: 11pt;
+                font-weight: 700;
                 font-style: italic;
+                color: var(--en);
                 text-align: center;
-                color: #333;
-                margin: 0 0 4px;
+                text-transform: uppercase;
             }
-            .no {
+            .no,
+            .scope {
+                margin: 4pt 0 14pt;
                 text-align: center;
-                margin: 2px 0 16px;
             }
-
-            i {
-                font-weight: normal;
-                color: #333;
-            }
-            p {
-                margin: 6px 0;
-                text-align: justify;
-            }
-            ul,
-            ol {
-                margin: 6px 0;
-                padding-left: 28px;
-            }
-            li {
-                margin: 6px 0;
-                text-align: justify;
-            }
-            i {
-                font-style: italic;
+            .block {
+                margin-top: 12pt;
+                text-align: left;
             }
             .note {
                 color: #c00;
                 font-style: italic;
             }
-            table.sign {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 32px;
+            .fields {
+                margin-top: 28pt;
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
-            table.sign td {
-                width: 50%;
-                vertical-align: top;
+            .fields p {
+                margin: 12pt 0;
+                text-align: left;
+            }
+            div.sign {
+                width: auto;
+                float: right;
                 text-align: center;
-                padding: 8px 8px 24px;
             }
             .sig {
                 display: block;
@@ -149,19 +229,7 @@
                     padding: 0;
                     font-size: 10pt;
                 }
-                .masthead {
-                    padding-bottom: 4pt;
-                }
-                li,
-                p,
-                h1,
-                h2,
-                h3 {
-                    -webkit-print-color-adjust: exact;
-                    print-color-adjust: exact;
-                }
             }
-
             @media screen and (max-width: 640px) {
                 body {
                     padding: 16px;
