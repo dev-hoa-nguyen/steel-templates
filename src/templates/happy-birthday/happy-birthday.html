@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="x-apple-disable-message-reformatting" />
+        <title>Happy Birthday from STEEL</title>
+
+        <!-- Manrope (body). "Happy Birthday!" is an image: Gmail does not load web fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* ===== Base ===== */
+            body {
+                margin: 0;
+                padding: 0;
+                background: #ebe7dd;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            img {
+                border: 0;
+                outline: none;
+                text-decoration: none;
+                display: block;
+            }
+
+            .preheader {
+                display: none;
+                max-height: 0;
+                overflow: hidden;
+                mso-hide: all;
+                font-size: 1px;
+                line-height: 1px;
+                color: #f5f2ea;
+            }
+
+            /* ===== Layout ===== */
+            .wrapper {
+                background: #ebe7dd;
+            }
+            .wrapper-cell {
+                padding: 24px 0;
+            }
+            .card {
+                width: 600px;
+                max-width: 600px;
+                background: #f5f2ea;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+                color: #3e3935;
+            }
+            .px {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            /* Vertical spacing per row */
+            .header-cell {
+                padding-top: 40px;
+            }
+            .header-rule-cell {
+                padding-top: 16px;
+            }
+            .title-cell {
+                padding: 12px 40px;
+            }
+            .tagline-cell {
+                padding-top: 16px;
+            }
+            .letter-cell {
+                padding-top: 32px;
+            }
+            .signoff-cell {
+                padding-top: 26px;
+            }
+            .cake-cell {
+                padding: 28px 24px 0;
+            }
+            .footer-rule-cell {
+                padding-top: 72px;
+            }
+            .footer-cell {
+                padding-bottom: 40px;
+            }
+
+            /* ===== Components ===== */
+            /* Header logo: "HOUSE OF STEEL" image, 537x47 (ratio ~11.43) */
+            .logo {
+                width: 182px;
+                height: 16px;
+            }
+            .rule {
+                border-top: 1px solid #b9b0a5;
+                font-size: 0;
+                line-height: 0;
+                height: 1px;
+            }
+
+            /* "Happy Birthday!" image (Brittany Signature), 1284x396 @3x of 428x132 */
+            .title-img {
+                width: 428px;
+                height: auto;
+            }
+
+            .tagline {
+                margin: 0;
+                font-size: 17px;
+                line-height: 1.5;
+                font-style: italic;
+                font-weight: 400;
+                color: #3e3935;
+            }
+
+            .greeting {
+                margin: 0 0 16px;
+                font-size: 16px;
+                line-height: 1.6;
+                font-style: italic;
+                color: #3e3935;
+            }
+            .body-text {
+                margin: 0 0 22px;
+                font-size: 15px;
+                line-height: 1.75;
+                color: #3e3935;
+            }
+            .signoff {
+                margin: 0;
+                font-size: 15px;
+                line-height: 1.6;
+                color: #3e3935;
+            }
+
+            .cake {
+                width: 220px;
+                height: auto;
+            }
+
+            .footer-link {
+                font-size: 12px;
+                letter-spacing: 0.3px;
+                color: #3e3935 !important;
+                text-decoration: none;
+            }
+
+            /* ===== Mobile ===== */
+            @media only screen and (max-width: 620px) {
+                .card {
+                    width: 100% !important;
+                }
+                .px {
+                    padding-left: 24px !important;
+                    padding-right: 24px !important;
+                }
+                .logo {
+                    width: 150px !important;
+                    height: 13px !important;
+                }
+                .title-cell {
+                    padding: 8px 16px !important;
+                }
+                .title-img {
+                    width: 300px !important;
+                }
+                .cake {
+                    width: 160px !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Preheader (hidden preview text) -->
+        <div class="preheader">
+            STEEL chúc {{$json.salutation}} {{$json.member_name}} tuổi mới thật
+            nhiều sức khỏe. Happy Birthday, #STEELYOU!
+        </div>
+
+        <table
+            role="presentation"
+            class="wrapper"
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+        >
+            <tr>
+                <td align="center" class="wrapper-cell">
+                    <table
+                        role="presentation"
+                        class="card"
+                        width="600"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                    >
+                        <!-- Header -->
+                        <tr>
+                            <td class="px header-cell">
+                                <img
+                                    class="logo"
+                                    src="https://res.cloudinary.com/duayxbt5d/image/upload/v1784564369/image1_ftqqyx.png"
+                                    alt="HOUSE OF STEEL"
+                                    width="182"
+                                    height="16"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px header-rule-cell">
+                                <div class="rule">&nbsp;</div>
+                            </td>
+                        </tr>
+
+                        <!-- Happy Birthday! -->
+                        <tr>
+                            <td class="title-cell">
+                                <img
+                                    class="title-img"
+                                    src="https://res.cloudinary.com/duayxbt5d/image/upload/v1795417422/happy-birthday-title_aip1iw.png"
+                                    alt="Happy Birthday!"
+                                    width="428"
+                                />
+                            </td>
+                        </tr>
+
+                        <!-- Tagline -->
+                        <tr>
+                            <td class="px tagline-cell">
+                                <p class="tagline">
+                                    We wish you<br />NEW AGE, #STEELYOU!
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Letter -->
+                        <tr>
+                            <td class="px letter-cell">
+                                <p class="greeting">
+                                    Thân gửi {{$json.salutation}}
+                                    {{$json.member_name}},
+                                </p>
+
+                                <p class="body-text">
+                                    STEEL chúc {{$json.salutation}} tuổi mới
+                                    thật nhiều sức khỏe, chinh phục thêm những
+                                    cột mốc mới và có thật nhiều khoảnh khắc
+                                    đáng nhớ trên hành trình phát triển bản
+                                    thân, cả trong và ngoài phòng tập.
+                                </p>
+
+                                <p class="body-text">
+                                    STEEL chân thành cảm ơn {{$json.salutation}}
+                                    đã tin tưởng lựa chọn và cho STEEL cơ hội
+                                    được đồng hành cùng {{$json.salutation}}
+                                    trên hành trình xây dựng một lối sống khỏe
+                                    mạnh và bền vững. Chính sự hiện diện, tinh
+                                    thần kỷ luật và cam kết không ngừng hoàn
+                                    thiện bản thân của {{$json.salutation}} đã
+                                    góp phần tạo nên cộng đồng STEEL mạnh mẽ,
+                                    tích cực và đầy cảm hứng mỗi ngày.
+                                </p>
+
+                                <p class="body-text">
+                                    Một lần nữa, STEEL gửi đến
+                                    {{$json.salutation}} những lời chúc tốt đẹp
+                                    nhất trong năm tuổi mới. Chúc
+                                    {{$json.salutation}} luôn dồi dào sức khỏe,
+                                    tràn đầy năng lượng và tiếp tục chinh phục
+                                    những mục tiêu ý nghĩa để trở thành phiên
+                                    bản #STEELyou tốt nhất của chính mình.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Sign-off -->
+                        <tr>
+                            <td class="px signoff-cell">
+                                <p class="signoff">
+                                    With strength,<br />STEEL Team
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Cake illustration -->
+                        <tr>
+                            <td align="center" class="cake-cell">
+                                <img
+                                    class="cake"
+                                    src="https://res.cloudinary.com/duayxbt5d/image/upload/v1795415842/cake_wlobys.png"
+                                    alt="Birthday cake"
+                                    width="220"
+                                />
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td class="px footer-rule-cell">
+                                <div class="rule">&nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px footer-cell">
+                                <a
+                                    class="footer-link"
+                                    href="https://www.steelsaigon.com"
+                                    >WWW.STEELSAIGON.COM</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
