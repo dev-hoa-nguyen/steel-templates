@@ -152,6 +152,9 @@
 
             /* ===== Mobile ===== */
             @media only screen and (max-width: 620px) {
+                .wrapper-cell {
+                    padding: 0;
+                }
                 .card {
                     width: 100% !important;
                 }
@@ -178,7 +181,7 @@
     <body>
         <!-- Preheader (hidden preview text) -->
         <div class="preheader">
-            Happy Birthday, {{$json.member_name}}! Wishing you a strong, healthy
+            Happy Birthday, {{$json.salutation}} {{$json.member_name}}! Wishing you a strong, healthy
             year ahead. #STEELYOU
         </div>
 
@@ -243,7 +246,7 @@
                         <tr>
                             <td class="px letter-cell">
                                 <p class="greeting">
-                                    Dear {{$json.member_name}},
+                                    Dear {{$json.salutation}} {{$json.member_name}},
                                 </p>
 
                                 <p class="body-text">
